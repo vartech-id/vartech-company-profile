@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen bg-black text-white p-4 md:p-8 overflow-hidden ">
+  <div class="min-h-screen bg-black text-white p-4 sm:p-8">
     <AppHeader />
-<main class="mx-auto w-full">
+<main>
   <NuxtPage />
 </main>
     <AppFooter />
