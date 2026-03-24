@@ -1,9 +1,9 @@
 <template>
-  <div class="min-h-screen bg-black text-white p-4 sm:p-8">
+  <div class="min-h-svh bg-black text-white overflow-x-hidden flex flex-col">
     <AppHeader />
-<main>
-  <NuxtPage />
-</main>
+    <main class="flex-1 pt-20 md:flex md:justify-center">
+      <NuxtPage />
+    </main>
     <AppFooter />
   </div>
 </template>

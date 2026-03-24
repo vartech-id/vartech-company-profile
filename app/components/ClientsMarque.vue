@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 const clients = [
   {
     name: "Indomaret",
@@ -69,7 +69,7 @@ const clients = [
 </script>
 
 <template>
-  <section id="clients" class="clients-marquee">
+  <div id="clients" class="clients-marquee">
     <div class="clients-marquee__viewport">
       <div class="clients-marquee__track">
         <!-- group 1 -->
@@ -107,7 +107,7 @@ const clients = [
         </ul>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>
@@ -117,7 +117,7 @@ background: rgba(255, 255, 255, 0.2);
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
-padding: 0.5rem 0
+padding: 0.5rem 0;
 }
 
 .clients-marquee__viewport {

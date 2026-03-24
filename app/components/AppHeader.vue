@@ -24,13 +24,13 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <div class="relative">
-    <header
-      class="relative z-60 flex items-center justify-between border bg-black px-4 py-4 sm:px-8 sm:py-4 lg:px-16"
-    >
+  <header
+    class="fixed inset-x-0 top-0 z-60 flex items-center justify-center border w-full bg-black h-20"
+  >
+    <div class="flex justify-between w-11/12">
       <NuxtLink to="/">
         <img
-          class="h-auto w-32 shrink-0 sm:w-36 lg:w-42"
+          class="h-auto w-38 shrink-0 border-2 lg:w-42 xl:w-44"
           :src="logoSrc"
           alt="vartech logo"
           @click="closeMenu"
@@ -47,35 +47,38 @@ const closeMenu = () => {
           >{{ buttonStatus }}</span
         >
       </button>
-    </header>
+    </div>
+  </header>
 
-    <Transition name="menu-roll">
-      <div
-        v-if="isMenu"
-        class="menu-overlay px-4 pt-24 sm:px-8 sm:pt-28 lg:px-16 lg:pt-32 flex lg:justify-center"
+  <Transition name="menu-roll">
+    <div
+      v-if="isMenu"
+      class="menu-overlay px-4 pt-24 sm:px-8 sm:pt-28 lg:px-16 lg:pt-32 flex lg:justify-center"
+    >
+      <nav
+        class="text-6xl text-center sm:text-left sm:text-8xl font-semibold sm:bg-yellow-950 md:bg-blue-950 lg:bg-red-950 w-full max-w-7xl"
       >
-        <nav
-          class="text-6xl text-center sm:text-left sm:text-8xl font-semibold sm:bg-yellow-950 md:bg-blue-950 lg:bg-red-950 w-full max-w-7xl"
-        >
-          <ul class="flex flex-col gap-4">
-            <li>
-              <NuxtLink to="/" @click="closeMenu">Home</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/about-us" @click="closeMenu">About Us</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/services" @click="closeMenu">Services</NuxtLink>
-            </li>
-            <li><NuxtLink to="/works" @click="closeMenu">Works</NuxtLink></li>
-            <li>
-              <NuxtLink to="/contact" @click="closeMenu">Contact</NuxtLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </Transition>
-  </div>
+        <ul class="flex flex-col gap-4">
+          <li>
+            <NuxtLink to="/" @click="closeMenu">Home</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/about-us" @click="closeMenu">About Us</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/services" @click="closeMenu">Services</NuxtLink>
+          </li>
+          <li><NuxtLink to="/works" @click="closeMenu">Works</NuxtLink></li>
+          <li>
+            <NuxtLink to="/contact" @click="closeMenu">Contact</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/blog" @click="closeMenu">Blog</NuxtLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </Transition>
 </template>
 <style>
 .menu-overlay {
