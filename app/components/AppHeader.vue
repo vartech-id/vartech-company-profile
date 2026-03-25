@@ -70,10 +70,10 @@ const closeMenu = () => {
           </li>
           <li><NuxtLink to="/works" @click="closeMenu">Works</NuxtLink></li>
           <li>
-            <NuxtLink to="/contact" @click="closeMenu">Contact</NuxtLink>
+            <NuxtLink to="/blog" @click="closeMenu">Blog</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/blog" @click="closeMenu">Blog</NuxtLink>
+            <NuxtLink to="/contact" @click="closeMenu">Contact</NuxtLink>
           </li>
         </ul>
       </nav>
