@@ -46,17 +46,22 @@ const logoOnlySrc = "/images/vartech-logo-only.png";
 
     <section
       aria-labelledby="about"
-      class="border-2 flex flex-col gap-10 lg:gap-14 items-center sm:max-w-lg md:max-w-3xl lg:max-w-4xl xl:max-w-5xl"
+      class="border-2 flex flex-col gap-10 items-center sm:max-w-prose md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
     >
-      <h2 id="about" class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase border-2">About Us</h2>
-      <div class="flex flex-col border-2 items-center gap-10 lg:flex-row lg:gap-12 ">
+      <h2
+        id="about"
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase border-2"
+      >
+        About Us
+      </h2>
+      <div class="flex flex-col border-2 items-center gap-10 lg:flex-row">
         <img
           class="border-2 h-24 sm:h-30 md:h-38 lg:h-74 xl:h-80"
           :src="logoOnlySrc"
           alt="vartech logo only"
         />
         <div
-          class="text-sm sm:text-base flex flex-col gap-4 sm:text-center lg:text-left border-2 border-blue-600  md:text-lg xl:text-xl"
+          class="text-sm sm:text-base flex flex-col gap-4 sm:text-center lg:text-left border-2 border-blue-600 md:text-lg xl:text-xl"
         >
           <p>
             Vartech.id was founded with a passion for building technology that
@@ -82,37 +87,54 @@ const logoOnlySrc = "/images/vartech-logo-only.png";
     </section>
     <section
       aria-labelledby="services"
-      class="border-2 border-amber-200 grid gap-10 justify-center "
+      class="border-2 border-amber-200 flex flex-col items-center gap-10 justify-center lg:w-4xl xl:w-5xl"
     >
-      <h2 id="services" class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase border-2 text-center pb-5">Our Services</h2>
-      <article class="border-y border-gray-700 flex flex-col gap-4 md:gap-6 py-4">
+      <h2
+        id="services"
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase border-2 text-center"
+      >
+        Services
+      </h2>
+      <article class="border border-gray-700 flex flex-col gap-4 md:gap-6 p-4">
         <h3 class="text-3xl font-bold">Registration System</h3>
-        <p class="text-sm sm:text-base md:text-lg  lg:text-xl">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl">
           From online registration to on-site QR scanning, we create seamless
           check-in systems with real-time attendance tracking, admin controls,
           and reporting so your crowd flow stays organized and effortless.
         </p>
-        <NuxtLink class="sm:text-base md:text-lg lg:text-xl underline decoration-dotted" to="/registration-system">Learn more →</NuxtLink>
+        <NuxtLink
+          class="sm:text-base md:text-lg lg:text-xl underline decoration-dotted"
+          to="/registration-system"
+          >Learn more →</NuxtLink
+        >
       </article>
-      <article class="border-y border-gray-700 flex flex-col gap-4 md:gap-6 py-4">
+      <article class="border border-gray-700 flex flex-col gap-4 md:gap-6 p-4">
         <h3 class="text-3xl font-bold">Custom Photobooth Development</h3>
         <p class="text-sm sm:text-base md:text-lg lg:text-xl">
           From camera capture to branded overlays, delivery, and printing, we
           develop photobooth workflows that feel premium and intuitive—designed
           for speed on-site and a smooth guest experience.
         </p>
-        <NuxtLink class="sm:text-base md:text-lg lg:text-xl underline decoration-dotted" to="/custom-photobooth">Learn more →</NuxtLink>
+        <NuxtLink
+          class="sm:text-base md:text-lg lg:text-xl underline decoration-dotted"
+          to="/custom-photobooth"
+          >Learn more →</NuxtLink
+        >
       </article>
-      <article class="border-y border-gray-700 flex flex-col gap-4 md:gap-6 py-4">
+      <article class="border border-gray-700 flex flex-col gap-4 md:gap-6 p-4">
         <h3 class="text-3xl font-bold">Ai Photobooth & Image Automation</h3>
         <p class="text-sm sm:text-base md:text-lg lg:text-xl">
           From face swap to enhancement and automated processing, we turn AI
           into practical event-ready features—optimized for consistent results,
           fast turnaround, and scalable output.
         </p>
-        <NuxtLink class="sm:text-base md:text-lg lg:text-xl underline decoration-dotted" to="/ai-photobooth">Learn more →</NuxtLink>
+        <NuxtLink
+          class="sm:text-base md:text-lg lg:text-xl underline decoration-dotted"
+          to="/ai-photobooth"
+          >Learn more →</NuxtLink
+        >
       </article>
-      <article class="border-y border-gray-700 flex flex-col gap-4 md:gap-6 py-4">
+      <article class="border border-gray-700 flex flex-col gap-4 md:gap-6 p-4">
         <h3 class="text-3xl font-bold">Gamification & Interactive Games</h3>
         <p class="text-sm sm:text-base md:text-lg lg:text-xl">
           From quick mini-games to full gamification systems, we build
@@ -120,20 +142,51 @@ const logoOnlySrc = "/images/vartech-logo-only.png";
           retention, and campaign excitement through clear mechanics and
           rewards.
         </p>
-        <NuxtLink class="sm:text-base md:text-lg lg:text-xl underline decoration-dotted" to="/gamification">Learn more →</NuxtLink>
+        <NuxtLink
+          class="sm:text-base md:text-lg lg:text-xl underline decoration-dotted"
+          to="/gamification"
+          >Learn more →</NuxtLink
+        >
       </article>
-      <article class="border-y border-gray-700 flex flex-col gap-4 md:gap-6 py-4">
+      <article class="border border-gray-700 flex flex-col gap-4 md:gap-6 p-4">
         <h3 class="text-3xl font-bold">Interactive Live Experiences</h3>
         <p class="text-sm sm:text-base md:text-lg lg:text-xl">
           From live message walls to real-time screen outputs, we power
           interactive moments that appear instantly on displays turning audience
           participation into a shared experience with moderation and control.
         </p>
-        <NuxtLink class="sm:text-base md:text-lg lg:text-xl underline decoration-dotted" to="interactive-experience">Learn more →</NuxtLink>
+        <NuxtLink
+          class="sm:text-base md:text-lg lg:text-xl underline decoration-dotted"
+          to="interactive-experience"
+          >Learn more →</NuxtLink
+        >
       </article>
-      <NuxtLink to="/services" class="border-2 p-2 px-4 w-24 mx-auto">View All</NuxtLink>
+      <NuxtLink
+        to="/services"
+        class="border-2 p-2 px-4 w-26 mx-auto font-semibold text-center"
+        >View All</NuxtLink
+      >
     </section>
-    <section id="works">Works</section>
+    <section
+      id="works"
+      class="border relative w-full flex flex-col gap-10 items-center"
+    >
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase border-2">
+        Works
+      </h2>
+      <div class="border relative w-full flex flex-col gap-10 items-center py-8">
+        <article
+          class="flex flex-col gap-5 w-full border-2 border-blue-900 items-center overflow-hidden"
+        >
+          <WorksSwiper />
+        </article>
+        <NuxtLink
+          to="/works"
+          class="border-2 p-2 px-4 w-26 mx-auto font-semibold text-center"
+          >View All</NuxtLink
+        >
+      </div>
+    </section>
     <section id="contact">Contact</section>
   </div>
 </template>
