@@ -174,7 +174,9 @@ const logoOnlySrc = "/images/vartech-logo-only.png";
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase border-2">
         Works
       </h2>
-      <div class="border relative w-full flex flex-col gap-10 items-center py-8">
+      <div
+        class="border relative w-full flex flex-col gap-10 items-center py-8"
+      >
         <article
           class="flex flex-col gap-5 w-full border-2 border-blue-900 items-center overflow-hidden"
         >
@@ -187,6 +189,7 @@ const logoOnlySrc = "/images/vartech-logo-only.png";
         >
       </div>
     </section>
+    <FaqSection />
     <section id="contact">Contact</section>
   </div>
 </template>

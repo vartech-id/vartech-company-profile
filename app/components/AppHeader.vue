@@ -2,10 +2,6 @@
 const logoSrc = "/images/logo.png";
 const isMenu = ref(false);
 
-const buttonClass = computed(() => {
-  return isMenu.value ? "activeMenu" : "closeMenu";
-});
-
 const buttonStatus = computed(() => {
   return isMenu.value ? "close" : "menu";
 });
@@ -18,9 +14,9 @@ const changeButton = () => {
   }
 };
 
-const closeMenu = () => {
-  isMenu.value = false;
-};
+const closeMenuLogo = () => {
+  isMenu.value = false
+}
 </script>
 
 <template>
@@ -33,11 +29,10 @@ const closeMenu = () => {
           class="h-auto w-38 shrink-0 border-2 lg:w-42 xl:w-44"
           :src="logoSrc"
           alt="vartech logo"
-          @click="closeMenu"
+          @click="closeMenuLogo"
       /></NuxtLink>
 
       <button
-        :class="buttonClass"
         class="inline-flex items-center justify-center gap-2 rounded-md border px-4 py-2 leading-none text-white"
         @click="changeButton"
       >
@@ -60,20 +55,20 @@ const closeMenu = () => {
       >
         <ul class="flex flex-col gap-4">
           <li>
-            <NuxtLink to="/" @click="closeMenu">Home</NuxtLink>
+            <NuxtLink to="/" @click="changeButton">Home</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/about-us" @click="closeMenu">About Us</NuxtLink>
+            <NuxtLink to="/about-us" @click="changeButton">About Us</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/services" @click="closeMenu">Services</NuxtLink>
+            <NuxtLink to="/services" @click="changeButton">Services</NuxtLink>
           </li>
-          <li><NuxtLink to="/works" @click="closeMenu">Works</NuxtLink></li>
+          <li><NuxtLink to="/works" @click="changeButton">Works</NuxtLink></li>
           <li>
-            <NuxtLink to="/blog" @click="closeMenu">Blog</NuxtLink>
+            <NuxtLink to="/blog" @click="changeButton">Blog</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/contact" @click="closeMenu">Contact</NuxtLink>
+            <NuxtLink to="/contact" @click="changeButton">Contact</NuxtLink>
           </li>
         </ul>
       </nav>
