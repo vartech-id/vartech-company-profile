@@ -41,7 +41,11 @@ const scrollNext = () => emblaApi.value?.scrollNext();
 </script>
 
 <template>
-  <div class="embla flex w-full flex-col gap-5 max-w-70 lg:max-w-80">
+  <div
+    class="embla flex w-full flex-col gap-5 max-w-70 lg:max-w-80"
+    aria-label="Featured work carousel"
+    aria-roledescription="carousel"
+  >
     <div class="embla__viewport" ref="emblaRef">
       <div class="embla__container gap-2 ">
         <div
@@ -54,7 +58,12 @@ const scrollNext = () => emblaApi.value?.scrollNext();
       </div>
     </div>
     <div class="flex gap-5 justify-center">
-      <button class="embla__prev" @click="scrollPrev">
+      <button
+        type="button"
+        class="embla__prev"
+        aria-label="Previous work"
+        @click="scrollPrev"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -66,7 +75,12 @@ const scrollNext = () => emblaApi.value?.scrollNext();
           <path d="M15 18l-6-6 6-6" />
         </svg>
       </button>
-      <button class="embla__next" @click="scrollNext">
+      <button
+        type="button"
+        class="embla__next"
+        aria-label="Next work"
+        @click="scrollNext"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
