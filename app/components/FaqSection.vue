@@ -58,12 +58,12 @@ const afterLeave = (el) => {
 <template>
   <section
     id="faqs"
-    class="flex sm:w-5/6 md:max-w-2xl lg:max-w-3xl flex-col items-center gap-10 border-2 border-emerald-400 max-w-3xl"
+    class="flex sm:w-5/6 md:max-w-2xl lg:max-w-3xl flex-col items-center gap-10 max-w-3xl"
   >
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold border-2 text-center">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center">
       FAQs
     </h2>
-    <p class="text-sm text-center w-5/6 border-2 font-normal">
+    <p class="text-sm text-center w-5/6 font-normal">
       Answers to common questions about custom event tech, AI photobooths, and
       brand activation experiences.
     </p>

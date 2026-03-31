@@ -121,7 +121,7 @@ onBeforeUnmount(() => {
     <div class="flex justify-between w-11/12">
       <NuxtLink to="/">
         <img
-          class="h-auto w-38 shrink-0 border-2 lg:w-42 xl:w-44"
+          class="h-auto w-38 shrink-0 lg:w-42 xl:w-44"
           :src="logoSrc"
           alt="vartech logo"
           @click="closeMenuLogo"
@@ -148,13 +148,13 @@ onBeforeUnmount(() => {
   <Transition name="menu-roll">
     <div
       v-if="isMenu"
-      class="menu-overlay px-4 pt-24 sm:px-8 sm:pt-28 lg:px-16 lg:pt-32 flex lg:justify-center"
+      class="menu-overlay px-4 pt-24 sm:px-8 sm:pt-28 lg:px-16 lg:pt-25 flex lg:justify-center"
     >
       <nav
         ref="menuPanelRef"
         :id="menuId"
         aria-label="Primary"
-        class="text-6xl text-center sm:text-left sm:text-8xl font-semibold sm:bg-yellow-950 md:bg-blue-950 lg:bg-red-950 w-full max-w-7xl"
+        class="text-6xl text-center sm:text-left sm:text-7xl font-semibold  w-full max-w-7xl"
       >
         <ul class="flex flex-col gap-4">
           <li>

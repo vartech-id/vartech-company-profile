@@ -175,18 +175,18 @@ useHead({
 </script>
 <template>
   <div
-    class="mx-auto flex flex-col w-11/12 gap-40 items-center justify-center xl:max-w-350 sm:bg-blue-500 md:bg-amber-700 lg:bg-green-950 xl:bg-red-950 border-red-600 border-2 pt-10 lg:pt-0"
+    class="mx-auto flex flex-col w-11/12 gap-40 items-center justify-center xl:max-w-350 pt-10 lg:pt-0"
   >
     <section
       aria-labelledby="hero-title"
-      class="border-2 border-blue-600 flex w-full flex-col gap-12 pt-20 lg:min-h-[calc(100svh-5rem)] xl:w-full"
+      class=" border-blue-600 flex w-full flex-col gap-12 pt-20 lg:min-h-[calc(100svh-5rem)] xl:w-full"
     >
       <div
         class="flex flex-col items-center gap-12 text-center lg:flex-1 lg:justify-center"
       >
         <h1
           id="hero-title"
-          class="w-full flex flex-col gap-4 font-roboto text-[2.7rem]/12 font-black uppercase sm:flex-row sm:flex-wrap sm:justify-center sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl border-2"
+          class="w-full flex flex-col gap-4 font-roboto text-[2.7rem]/12 font-black uppercase sm:flex-row sm:flex-wrap sm:justify-center sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl "
         >
           <span>Turn Your</span>
           <span>Idea Into</span>
@@ -194,7 +194,7 @@ useHead({
         </h1>
 
         <p
-          class="mx-auto text-xs uppercase md:text-sm md:max-w-2xl xl:max-w-4xl lg:max-w-4xl lg:text-lg xl:text-xl border-2 w-5/6"
+          class="mx-auto text-xs uppercase md:text-sm md:max-w-2xl xl:max-w-4xl lg:max-w-4xl lg:text-lg xl:text-xl w-5/6"
         >
           We build end-to-end tech solutions from ui/ux to development,
           integration, and deployment tailored for brands, events, products, and
@@ -218,24 +218,24 @@ useHead({
 
     <section
       aria-labelledby="about"
-      class="border-2 flex flex-col gap-10 items-center sm:max-w-prose md:max-w-2xl lg:max-w-5xl xl:max-w-7xl"
+      class=" flex flex-col gap-10 items-center sm:max-w-prose md:max-w-2xl lg:max-w-5xl xl:max-w-7xl"
     >
       <h2
         id="about"
-        class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase border-2"
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase"
       >
         About Us
       </h2>
       <div
-        class="lg:w-full flex flex-col border-2 items-center gap-10 xl:gap-20 lg:flex-row"
+        class="lg:w-full flex flex-col items-center gap-10 xl:gap-20 lg:flex-row"
       >
         <img
-          class="border-2 h-24 sm:h-30 md:h-38 lg:h-74 xl:h-90"
+          class=" h-24 sm:h-30 md:h-38 lg:h-74 xl:h-90"
           :src="logoOnlySrc"
           alt="vartech logo only"
         />
         <div
-          class="text-[0.9rem] sm:text-base flex flex-col gap-4 lg:gap-6 border-2 border-blue-600 md:text-lg xl:text-xl"
+          class="text-[0.9rem] sm:text-base flex flex-col gap-4 lg:gap-6 border-blue-600 md:text-lg xl:text-xl"
         >
           <p>
             Vartech.id was founded with a passion for building technology that
@@ -265,7 +265,7 @@ useHead({
     >
       <h2
         id="services"
-        class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase border-2 text-center"
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase text-center"
       >
         Services
       </h2>
@@ -345,11 +345,11 @@ useHead({
     <section
       id="works"
       aria-labelledby="works-title"
-      class="border relative w-full flex flex-col gap-10 items-center"
+      class=" relative w-full flex flex-col gap-10 items-center"
     >
       <h2
         id="works-title"
-        class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase border-2"
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase"
       >
         Works
       </h2>
@@ -357,13 +357,13 @@ useHead({
         class="border relative w-full flex flex-col gap-10 items-center py-8"
       >
         <article
-          class="flex flex-col gap-5 w-full border-2 border-blue-900 items-center overflow-hidden"
+          class="flex flex-col gap-5 w-full items-center overflow-hidden"
         >
           <WorksSwiper />
         </article>
         <NuxtLink
           to="/works"
-        class="inline-flex h-12 items-center justify-center border-2 border-white px-4 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black"
+          class="inline-flex h-12 items-center justify-center border-2 border-white px-4 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black"
           >View All</NuxtLink
         >
       </div>
@@ -372,9 +372,12 @@ useHead({
     <section
       id="faq-cta"
       aria-labelledby="faq-cta-title"
-      class="flex flex-col items-center gap-6 w-11/12 border-2"
+      class="flex flex-col items-center gap-6 w-11/12"
     >
-      <h2 id="faq-cta-title" class="font-bold text-xl sm:text-2xl md:text-3xl text-center">
+      <h2
+        id="faq-cta-title"
+        class="font-bold text-xl sm:text-2xl md:text-3xl text-center"
+      >
         Need Something More Specific?
       </h2>
       <NuxtLink
@@ -386,12 +389,12 @@ useHead({
     <section
       id="contact"
       aria-labelledby="contact-title"
-      class="flex flex-col lg:flex-row gap-12 w-5/6 lg:w-full border-2"
+      class="flex flex-col lg:flex-row gap-12 w-5/6 lg:w-full "
     >
-      <div class="flex flex-col gap-6 text-center lg:text-left border-2 flex-1">
+      <div class="flex flex-col gap-6 text-center lg:text-left  flex-1">
         <h2 id="contact-title" class="font-black md:text-4xl">
-          <span class="block">Share your ideas</span>
-          <span class="block">Let's make them real !</span>
+          <span class="block text-2xl lg:text-5xl">Share your ideas</span>
+          <span class="block text-2xl lg:text-5xl">Let's make them real !</span>
         </h2>
         <div class="flex flex-col gap-6">
           <div>
@@ -421,15 +424,130 @@ useHead({
               >(+62) 81-7711-008 (Heri)</a
             >
           </div>
+          <div>
+            <h3 class="font-bold text-xl">Social Media</h3>
+            <div class="flex justify-center lg:justify-start gap-1">
+              <a
+                class="block w-10 h-10"
+                href="https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              >
+                <svg
+                  class="block h-full w-full"
+                  fill="#ffffff"
+                  viewBox="0 0 32 32"
+                  id="Camada_1"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <path
+                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"
+                      ></path>
+                      <path
+                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"
+                      ></path>
+                      <path
+                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a
+                class="block  w-10 h-10"
+                href="https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              >
+                <svg
+                  class="block h-full w-full"
+                  fill="#ffffff"
+                  viewBox="0 0 32 32"
+                  id="Camada_1"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <path
+                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"
+                      ></path>
+                      <path
+                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"
+                      ></path>
+                      <path
+                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a
+                class="block  w-10 h-10"
+                href="https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              >
+                <svg
+                  class="block h-full w-full"
+                  fill="#ffffff"
+                  viewBox="0 0 32 32"
+                  id="Camada_1"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <path
+                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"
+                      ></path>
+                      <path
+                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"
+                      ></path>
+                      <path
+                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <form
-        class="grid grid-cols-2 gap-4 font-normal flex-1"
+        class=" grid grid-cols-2 gap-4 font-normal flex-1"
         novalidate
         @submit.prevent="handleContactSubmit"
       >
-        <div class="flex flex-col col-span-2 gap-2">
+        <div
+          class="flex flex-col col-span-2 lg:col-start-1 lg:col-span-1 gap-2"
+        >
           <label class="sr-only" for="contact-name">Name</label>
           <input
             id="contact-name"
@@ -458,7 +576,9 @@ useHead({
             {{ contactErrors.name }}
           </p>
         </div>
-        <div class="flex flex-col col-span-2 gap-2">
+        <div
+          class="flex flex-col col-span-2 lg:col-span-1 lg:col-start-2 gap-2"
+        >
           <label class="sr-only" for="contact-email">Your Email</label>
           <input
             id="contact-email"
@@ -548,7 +668,7 @@ useHead({
         </p>
         <button
           type="submit"
-        class="col-start-2 inline-flex h-12 items-center justify-center border-2 border-white font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black"
+          class="place-self-end w-30 col-start-2 inline-flex h-12 items-center justify-center border-2 border-white font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black"
         >
           Reach Us
         </button>
