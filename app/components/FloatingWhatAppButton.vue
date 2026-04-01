@@ -1,5 +1,5 @@
 <template>
-          <a
+  <a
     href="https://wa.me/6285792190233"
     target="_blank"
     rel="noopener noreferrer"

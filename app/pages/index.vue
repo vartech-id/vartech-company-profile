@@ -179,14 +179,14 @@ useHead({
   >
     <section
       aria-labelledby="hero-title"
-      class=" border-blue-600 flex w-full flex-col gap-12 pt-20 lg:min-h-[calc(100svh-5rem)] xl:w-full"
+      class="border-blue-600 flex w-full flex-col gap-12 pt-20 lg:min-h-[calc(100svh-5rem)] xl:w-full"
     >
       <div
         class="flex flex-col items-center gap-12 text-center lg:flex-1 lg:justify-center"
       >
         <h1
           id="hero-title"
-          class="w-full flex flex-col gap-4 font-roboto text-[2.7rem]/12 font-black uppercase sm:flex-row sm:flex-wrap sm:justify-center sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl "
+          class="w-full flex flex-col gap-4 font-roboto text-[2.7rem]/12 font-black uppercase sm:flex-row sm:flex-wrap sm:justify-center sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
         >
           <span>Turn Your</span>
           <span>Idea Into</span>
@@ -218,7 +218,7 @@ useHead({
 
     <section
       aria-labelledby="about"
-      class=" flex flex-col gap-10 items-center sm:max-w-prose md:max-w-2xl lg:max-w-5xl xl:max-w-7xl"
+      class="flex flex-col gap-10 items-center sm:max-w-prose md:max-w-2xl lg:max-w-5xl xl:max-w-7xl"
     >
       <h2
         id="about"
@@ -230,7 +230,7 @@ useHead({
         class="lg:w-full flex flex-col items-center gap-10 xl:gap-20 lg:flex-row"
       >
         <img
-          class=" h-24 sm:h-30 md:h-38 lg:h-74 xl:h-90"
+          class="h-24 sm:h-30 md:h-38 lg:h-74 xl:h-90"
           :src="logoOnlySrc"
           alt="vartech logo only"
         />
@@ -345,7 +345,7 @@ useHead({
     <section
       id="works"
       aria-labelledby="works-title"
-      class=" relative w-full flex flex-col gap-10 items-center"
+      class="relative w-full flex flex-col gap-10 items-center"
     >
       <h2
         id="works-title"
@@ -389,12 +389,12 @@ useHead({
     <section
       id="contact"
       aria-labelledby="contact-title"
-      class="flex flex-col lg:flex-row gap-12 w-5/6 lg:w-full "
+      class="flex flex-col lg:flex-row gap-12 w-5/6 lg:w-full"
     >
-      <div class="flex flex-col gap-6 text-center lg:text-left  flex-1">
+      <div class="flex flex-col gap-6 text-center lg:text-left flex-1">
         <h2 id="contact-title" class="font-black md:text-4xl">
-          <span class="block text-2xl lg:text-5xl">Share your ideas</span>
-          <span class="block text-2xl lg:text-5xl">Let's make them real !</span>
+          <span class="block text-3xl lg:text-5xl">Share your ideas</span>
+          <span class="block text-3xl lg:text-5xl">Let's make them real !</span>
         </h2>
         <div class="flex flex-col gap-6">
           <div>
@@ -424,124 +424,131 @@ useHead({
               >(+62) 81-7711-008 (Heri)</a
             >
           </div>
-          <div>
-            <h3 class="font-bold text-xl">Social Media</h3>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-bold text-xl">SOCIAL MEDIA</h3>
             <div class="flex justify-center lg:justify-start gap-1">
-              <a
-                class="block w-10 h-10"
-                href="https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              >
-                <svg
-                  class="block h-full w-full"
-                  fill="#ffffff"
-                  viewBox="0 0 32 32"
-                  id="Camada_1"
-                  version="1.1"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  stroke="#ffffff"
+              <div class="flex h-12 w-12 items-center justify-center rounded-full border border-white bg-white/20 backdrop-blur-md shadow-lg">
+                <a
+                  class="block w-10 h-10"
+                  href="https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <g>
-                      <path
-                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"
-                      ></path>
-                      <path
-                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"
-                      ></path>
-                      <path
-                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"
-                      ></path>
+                  <svg
+                    class="block h-full w-full"
+                    fill="#ffffff"
+                    viewBox="0 0 32 32"
+                    id="Camada_1"
+                    version="1.1"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    stroke="#ffffff"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g>
+                        <path
+                          d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"
+                        ></path>
+                        <path
+                          d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"
+                        ></path>
+                        <path
+                          d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"
+                        ></path>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </a>
-              <a
-                class="block  w-10 h-10"
-                href="https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              >
-                <svg
-                  class="block h-full w-full"
-                  fill="#ffffff"
-                  viewBox="0 0 32 32"
-                  id="Camada_1"
-                  version="1.1"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  stroke="#ffffff"
+                  </svg>
+                </a>
+              </div>
+
+              <div class="flex h-12 w-12 items-center justify-center rounded-full border border-white bg-white/20 backdrop-blur-md shadow-lg">
+                <a
+                  class="block w-10 h-10"
+                  href="https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <g>
-                      <path
-                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"
-                      ></path>
-                      <path
-                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"
-                      ></path>
-                      <path
-                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"
-                      ></path>
+                  <svg
+                    class="block h-full w-full"
+                    fill="#ffffff"
+                    viewBox="0 0 32 32"
+                    id="Camada_1"
+                    version="1.1"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    stroke="#ffffff"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g>
+                        <path
+                          d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"
+                        ></path>
+                        <path
+                          d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"
+                        ></path>
+                        <path
+                          d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"
+                        ></path>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </a>
-              <a
-                class="block  w-10 h-10"
-                href="https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              >
-                <svg
-                  class="block h-full w-full"
-                  fill="#ffffff"
-                  viewBox="0 0 32 32"
-                  id="Camada_1"
-                  version="1.1"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  stroke="#ffffff"
+                  </svg>
+                </a>
+              </div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-full border border-white bg-white/20 backdrop-blur-md shadow-lg">
+                <a
+                  class="block w-10 h-10"
+                  href="https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <g>
-                      <path
-                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"
-                      ></path>
-                      <path
-                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"
-                      ></path>
-                      <path
-                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"
-                      ></path>
+                  <svg
+                    class="block h-full w-full"
+                    fill="#ffffff"
+                    viewBox="0 0 32 32"
+                    id="Camada_1"
+                    version="1.1"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    stroke="#ffffff"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g>
+                        <path
+                          d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"
+                        ></path>
+                        <path
+                          d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"
+                        ></path>
+                        <path
+                          d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"
+                        ></path>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </a>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <form
-        class=" grid grid-cols-2 gap-4 font-normal flex-1"
+        class="grid grid-cols-2 gap-4 font-normal flex-1"
         novalidate
         @submit.prevent="handleContactSubmit"
       >
@@ -555,7 +562,7 @@ useHead({
             name="name"
             autocomplete="name"
             placeholder="Name"
-            class="text-xl p-4 border-2 h-12"
+            class="text-xl p-4 border-2 h-12 lg:h-14"
             :aria-describedby="
               contactErrors.name ? 'contact-name-error' : undefined
             "
@@ -586,7 +593,7 @@ useHead({
             name="email"
             autocomplete="email"
             placeholder="Your Email"
-            class="text-xl p-4 border-2 h-12"
+            class="text-xl p-4 border-2 h-12 lg:h-14"
             :aria-describedby="
               contactErrors.email ? 'contact-email-error' : undefined
             "
@@ -614,7 +621,7 @@ useHead({
             v-model="contactForm.subject"
             name="subject"
             placeholder="Subject"
-            class="text-xl p-4 border-2 col-span-2 h-12"
+            class="text-xl p-4 border-2 col-span-2 h-12 lg:h-14"
             :aria-describedby="
               contactErrors.subject ? 'contact-subject-error' : undefined
             "
