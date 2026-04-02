@@ -86,7 +86,6 @@ const scrollNext = () => emblaApi.value?.scrollNext();
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
           class="w-10 border-2"
         >
           <path d="M9 18l6-6-6-6" />
