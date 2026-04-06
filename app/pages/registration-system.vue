@@ -1,17 +1,36 @@
 <script setup>
-import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
+import ImageSwiper from "~/components/ImageSwiper.vue";
+
+const invitationsAsset = [
+  {
+    name: "Journey NHPV",
+    src: "/invitations/invitation-1.png",
+    alt: "Journey NHPV preview",
+  },
+  {
+    name: "Journey NHPV",
+    src: "/invitations/invitation-2.png",
+    alt: "Journey NHPV preview",
+  },
+    {
+    name: "Journey NHPV",
+    src: "/invitations/invitation-3.png",
+    alt: "Journey NHPV preview",
+  },
+];
+
 </script>
 
 <template>
   <main class="pt-10">
     <article
       aria-labelledby="registration-system-title"
-      class="w-5/6 xl:max-w-350 flex flex-col gap-10 mx-auto border-2 border-amber-600 sm:bg-pink-600 md:bg-green-500 lg:bg-blue-500 xl:bg-red-800"
+      class="mx-auto flex w-5/6 flex-col gap-10 md:gap-14 xl:max-w-350"
     >
       <header>
         <h1
           id="registration-system-title"
-          class="text-3xl md:text-4xl uppercase font-bold text-center"
+          class="text-center text-4xl font-bold uppercase tracking-wide md:text-5xl"
         >
           Registration System
         </h1>
@@ -19,9 +38,9 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
 
       <section
         aria-labelledby="overview-title"
-        class="border-2 grid md:grid-cols-2 gap-4 bg-amber-950"
+        class="grid gap-6 md:grid-cols-2"
       >
-        <figure class="border-2 border-red-700 bg-amber-100">
+        <figure>
           <NuxtImg
             src="/services/regist-example.jpg"
             alt="Guests using a QR-based registration system during an event check-in"
@@ -29,14 +48,15 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
           />
         </figure>
 
-        <div class="border-2 bg-blue-900 flex flex-col gap-4">
+        <div class="flex flex-col gap-5">
           <h2
             id="overview-title"
-            class="text-2xl md:text-3xl font-medium border-2 max-w-60 md:max-w-70 bg-amber-500"
+            class="max-w-xs text-2xl font-semibold leading-tight md:max-w-md md:text-3xl"
           >
             Seamless Event Check-in Experience
           </h2>
-          <p class="text-gray-400 font-normal text-normal">
+
+          <p class="text-sm leading-7 text-gray-400 md:text-base">
             We design and build custom event registration systems that eliminate
             long queues and streamline guest check-in from pre-event
             registration to on-site execution, ensuring a smooth and
@@ -45,15 +65,17 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
 
           <ul
             aria-label="Registration system highlights"
-            class="flex flex-col gap-4 bg-amber-700 w-5/6 sm:w-1/2 md:w-full md:max-w-xs"
+            class="flex w-5/6 flex-col gap-4 sm:w-1/2 md:w-full md:max-w-sm"
           >
             <li>
-              <div class="border border-amber-600 bg-red-900 flex gap-2">
+              <div class="flex gap-2">
                 <span
                   aria-hidden="true"
-                  class="flex h-5 w-5 rounded-full items-center justify-center bg-gray-400/60 backdrop-blur-md shadow-lg"
+                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
                 >
                   <svg
+                    aria-hidden="true"
+                    focusable="false"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -68,19 +90,21 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                     />
                   </svg>
                 </span>
-                <p class="leading-5">
+                <p class="text-sm leading-6 md:text-base">
                   Guests register through a fully branded digital invitation
                 </p>
               </div>
             </li>
 
             <li>
-              <div class="border border-amber-600 bg-red-900 flex gap-2">
+              <div class="flex gap-2">
                 <span
                   aria-hidden="true"
-                  class="flex h-5 w-5 rounded-full items-center justify-center bg-gray-400/60 backdrop-blur-md shadow-lg"
+                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
                 >
                   <svg
+                    aria-hidden="true"
+                    focusable="false"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -95,19 +119,21 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                     />
                   </svg>
                 </span>
-                <p class="leading-5">
+                <p class="text-sm leading-6 md:text-base">
                   Each attendee receives a unique QR code for fast verification
                 </p>
               </div>
             </li>
 
             <li>
-              <div class="border border-amber-600 bg-red-900 flex gap-2">
+              <div class="flex gap-2">
                 <span
                   aria-hidden="true"
-                  class="flex h-5 w-5 rounded-full items-center justify-center bg-gray-400/60 backdrop-blur-md shadow-lg"
+                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
                 >
                   <svg
+                    aria-hidden="true"
+                    focusable="false"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -122,17 +148,21 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                     />
                   </svg>
                 </span>
-                <p>Instant check-in with high-speed and accurate scanning</p>
+                <p class="text-sm leading-6 md:text-base">
+                  Instant check-in with high-speed and accurate scanning
+                </p>
               </div>
             </li>
 
             <li>
-              <div class="border border-amber-600 bg-red-900 flex gap-2">
+              <div class="flex gap-2">
                 <span
                   aria-hidden="true"
-                  class="flex h-5 w-5 rounded-full items-center justify-center bg-gray-400/60 backdrop-blur-md shadow-lg"
+                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
                 >
                   <svg
+                    aria-hidden="true"
+                    focusable="false"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
@@ -147,7 +177,7 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                     />
                   </svg>
                 </span>
-                <p class="leading-5">
+                <p class="text-sm leading-6 md:text-base">
                   Real-time attendance tracking for organizers
                 </p>
               </div>
@@ -158,45 +188,49 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
 
       <section
         aria-labelledby="key-features-title"
-        class="flex flex-col border-2 items-center gap-8"
+        class="flex flex-col items-center gap-8"
       >
         <h2
           id="key-features-title"
-          class="text-2xl md:3xl lg:4xl uppercase font-bold"
+          class="text-2xl font-bold uppercase tracking-wide md:text-3xl"
         >
           Key Features
         </h2>
+
         <section
           aria-labelledby="digital-invitation-title"
-          class="flex flex-col gap-5 items-center border-2"
+          class="flex flex-col items-center gap-5"
         >
           <h3
             id="digital-invitation-title"
-            class="text-lg sm:text-xl font-semibold"
+            class="text-xl font-semibold md:text-2xl"
           >
             Custom Digital Invitation
           </h3>
 
-          <p class="text-sm md:text-base text-center border-2 max-w-xl">
+          <p class="max-w-2xl text-center text-sm leading-7 text-gray-400 md:text-base">
             A fully customized digital invitation tailored to your event’s
             branding, allowing guests to register seamlessly through a
             mobile-friendly experience with a clean and intuitive interface.
           </p>
-          <!-- CAROUSEL HERE -->
-          <figure>
-            <CustomDigitalInvitation />
-          </figure>
+
+          <ClientOnly>
+            <ImageSwiper
+            :images="invitationsAsset"
+            />
+          </ClientOnly>
         </section>
-        <!-- MINI KEY FEATURES HERE -->
-        <ul class="grid gap-4 lg:grid-cols-2 border-2 border-amber-300">
+
+        <ul class="grid gap-5 lg:grid-cols-2">
           <li>
-            <article class="flex border-2 max-w-md h-full">
-              <div class="flex min-w-20 border-2 items-center">
+            <article class="flex h-full max-w-md">
+              <div class="flex min-w-20 items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
                   fill="none"
                   aria-hidden="true"
+                  focusable="false"
                 >
                   <rect
                     x="16"
@@ -250,10 +284,10 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                 </svg>
               </div>
               <div class="min-w-0 flex-1">
-                <h3 class="text-lg sm:text-xl font-semibold">
+                <h3 class="text-lg font-semibold leading-snug md:text-xl">
                   Instant QR Code Verification
                 </h3>
-                <p class="border-2 break-words text-xs sm:text-sm">
+                <p class="mt-1 break-words text-sm leading-6 text-gray-400">
                   Verify guest entries instantly with a responsive QR scanning
                   system designed for fast, reliable, and low-error event
                   check-in operations.
@@ -263,13 +297,14 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
           </li>
 
           <li>
-            <article class="flex border-2 max-w-md h-full">
-              <div class="flex min-w-20 border-2 items-center">
+            <article class="flex h-full max-w-md">
+              <div class="flex min-w-20 items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
                   fill="none"
                   aria-hidden="true"
+                  focusable="false"
                 >
                   <rect
                     x="10"
@@ -306,10 +341,10 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                 </svg>
               </div>
               <div class="min-w-0 flex-1">
-                <h3 class="text-lg sm:text-xl font-semibold">
+                <h3 class="text-lg font-semibold leading-snug md:text-xl">
                   Real-time Tracking Dashboard
                 </h3>
-                <p class="border-2 break-words text-xs sm:text-sm">
+                <p class="mt-1 break-words text-sm leading-6 text-gray-400">
                   Monitor guest attendance in real time through a clear and
                   responsive dashboard, giving organizers instant visibility and
                   full control during the event.
@@ -317,14 +352,16 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
               </div>
             </article>
           </li>
+
           <li>
-            <article class="flex border-2 max-w-md h-full">
-              <div class="flex min-w-20 border-2 items-center">
+            <article class="flex h-full max-w-md">
+              <div class="flex min-w-20 items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
                   fill="none"
                   aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     d="M10 30 52 12 40 52 30 36 10 30Z"
@@ -347,10 +384,10 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                 </svg>
               </div>
               <div class="min-w-0 flex-1">
-                <h3 class="text-lg sm:text-xl font-semibold">
+                <h3 class="text-lg font-semibold leading-snug md:text-xl">
                   WhatsApp / Email Blast
                 </h3>
-                <p class="border-2 break-words text-xs sm:text-sm">
+                <p class="mt-1 break-words text-sm leading-6 text-gray-400">
                   Distribute invitations, confirmations, and event updates
                   efficiently via WhatsApp or email with a streamlined
                   communication flow.
@@ -358,14 +395,16 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
               </div>
             </article>
           </li>
+
           <li>
-            <article class="flex border-2 max-w-md h-full">
-              <div class="flex min-w-20 border-2 items-center">
+            <article class="flex h-full max-w-md">
+              <div class="flex min-w-20 items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
                   fill="none"
                   aria-hidden="true"
+                  focusable="false"
                 >
                   <circle
                     cx="32"
@@ -401,10 +440,10 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                 </svg>
               </div>
               <div class="min-w-0 flex-1">
-                <h3 class="text-lg sm:text-xl font-semibold">
+                <h3 class="text-lg font-semibold leading-snug md:text-xl">
                   Custom Domain for Each Event
                 </h3>
-                <p class="border-2 break-words text-xs sm:text-sm">
+                <p class="mt-1 break-words text-sm leading-6 text-gray-400">
                   Use a dedicated custom domain for each event to deliver a more
                   professional, branded, and seamless experience for your
                   guests.
@@ -414,23 +453,21 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
           </li>
 
           <li>
-            <article class="flex border-2 max-w-md h-full">
-              <div class="flex min-w-20 border-2 items-center">
+            <article class="flex h-full max-w-md">
+              <div class="flex min-w-20 items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
                   fill="none"
                   aria-hidden="true"
+                  focusable="false"
                 >
-                  <!-- Headband -->
                   <path
                     d="M12 34a20 20 0 0 1 40 0"
                     stroke="white"
                     stroke-width="3"
                     stroke-linecap="round"
                   />
-
-                  <!-- Left ear -->
                   <rect
                     x="10"
                     y="32"
@@ -440,8 +477,6 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                     stroke="white"
                     stroke-width="3"
                   />
-
-                  <!-- Right ear -->
                   <rect
                     x="44"
                     y="32"
@@ -451,24 +486,20 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                     stroke="white"
                     stroke-width="3"
                   />
-
-                  <!-- Mic arm -->
                   <path
                     d="M44 48c0 4-3 6-7 6h-3"
                     stroke="white"
                     stroke-width="3"
                     stroke-linecap="round"
                   />
-
-                  <!-- Mic tip -->
                   <circle cx="30" cy="54" r="2.5" fill="white" />
                 </svg>
               </div>
               <div class="min-w-0 flex-1">
-                <h3 class="text-lg sm:text-xl font-semibold">
+                <h3 class="text-lg font-semibold leading-snug md:text-xl">
                   On-site Support Team
                 </h3>
-                <p class="border-2 break-words text-xs sm:text-sm">
+                <p class="mt-1 break-words text-sm leading-6 text-gray-400">
                   Ensure smooth event operations with on-site technical support,
                   handling everything from check-in systems to troubleshooting
                   during live execution.
@@ -476,14 +507,16 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
               </div>
             </article>
           </li>
+
           <li>
-            <article class="flex border-2 max-w-md h-full">
-              <div class="flex min-w-20 border-2 items-center">
+            <article class="flex h-full max-w-md">
+              <div class="flex min-w-20 items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
                   fill="none"
                   aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     d="M20 10h18l10 10v30a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4Z"
@@ -518,10 +551,10 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
                 </svg>
               </div>
               <div class="min-w-0 flex-1">
-                <h3 class="text-lg sm:text-xl font-semibold">
+                <h3 class="text-lg font-semibold leading-snug md:text-xl">
                   Exportable Reports
                 </h3>
-                <p class="border-2 break-words text-xs sm:text-sm">
+                <p class="mt-1 break-words text-sm leading-6 text-gray-400">
                   Easily generate and export structured attendance data for
                   post-event analysis, reporting, and future event planning.
                 </p>
@@ -533,51 +566,74 @@ import CustomDigitalInvitation from "~/components/CustomDigitalInvitation.vue";
 
       <section
         aria-labelledby="related-projects-title"
-        class="flex flex-col gap-4 items-center justify-center border-2"
+        class="flex flex-col items-center justify-center gap-4"
       >
         <h2
           id="related-projects-title"
-          class="text-2xl md:text-3xl font-bold uppercase flex flex-col items-center"
+          class="flex flex-col items-center text-2xl font-bold uppercase tracking-wide md:text-3xl"
         >
           Related Projects
         </h2>
-        <ul class="grid md:grid-cols-4 border-2 lg:flex border-amber-500 gap-4">
-          <li  class="min-w-70 md:col-start-1 md:col-end-3">
-            <article class="border-2">
-              <figure>
-                <NuxtImg
-                  src="/services/varbel-regist.webp"
-                  alt="QR registration system used in a corporate event"
-                />
-              </figure>
-              <h3>BNI Banking Journey QR Registration</h3>
-              <p>Registration System</p>
-            </article>
+
+        <ul class="grid gap-4 md:grid-cols-4 lg:flex">
+          <li class="md:col-start-1 md:col-end-3">
+            <NuxtLink
+              to="/about"
+              class="block min-w-70 rounded-lg hover:underline hover:shadow-xs hover:shadow-white hover:transition hover:duration-150 hover:ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            >
+              <article>
+                <figure>
+                  <NuxtImg
+                    src="/services/varbel-regist.webp"
+                    alt="QR registration system used in a corporate event"
+                  />
+                </figure>
+                <h3 class="mt-3 text-lg font-semibold md:text-xl">
+                  BNI Banking Journey
+                </h3>
+                <p class="text-sm text-gray-400">Registration System</p>
+              </article>
+            </NuxtLink>
           </li>
 
-          <li class="min-w-70 md:col-start-3 md:-col-end-1">
-            <article class="border-2">
-              <figure>
-                <NuxtImg
-                  src="/services/varbel-regist.webp"
-                  alt="On-site guest registration system at an exhibition"
-                />
-              </figure>
-              <h3>SRI Summit Indonesia 2025</h3>
-              <p>Registration System</p>
-            </article>
+          <li class="md:col-start-3 md:col-end-5">
+            <NuxtLink
+              to="/about"
+              class="block min-w-70 rounded-lg hover:underline hover:shadow-xs hover:shadow-white hover:transition hover:duration-150 hover:ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            >
+              <article>
+                <figure>
+                  <NuxtImg
+                    src="/services/varbel-regist.webp"
+                    alt="On-site guest registration system at an exhibition"
+                  />
+                </figure>
+                <h3 class="mt-3 text-lg font-semibold md:text-xl">
+                  SRI Summit Indonesia 2025
+                </h3>
+                <p class="text-sm text-gray-400">Registration System</p>
+              </article>
+            </NuxtLink>
           </li>
-          <li class="min-w-70 md:col-start-2 md:col-end-4">
-            <article class="border-2">
-              <figure>
-                <NuxtImg
-                  src="/services/varbel-regist.webp"
-                  alt="On-site guest registration system at an exhibition"
-                />
-              </figure>
-              <h3>SRI Summit Indonesia 2025</h3>
-              <p>Registration System</p>
-            </article>
+
+          <li class="md:col-start-2 md:col-end-4">
+            <NuxtLink
+              to="/about"
+              class="block min-w-70 rounded-lg hover:underline hover:shadow-xs hover:shadow-white hover:transition hover:duration-150 hover:ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            >
+              <article>
+                <figure>
+                  <NuxtImg
+                    src="/services/varbel-regist.webp"
+                    alt="On-site guest registration system at an exhibition"
+                  />
+                </figure>
+                <h3 class="mt-3 text-lg font-semibold md:text-xl">
+                  SRI Summit Indonesia 2025
+                </h3>
+                <p class="text-sm text-gray-400">Registration System</p>
+              </article>
+            </NuxtLink>
           </li>
         </ul>
       </section>

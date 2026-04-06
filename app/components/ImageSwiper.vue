@@ -1,26 +1,17 @@
 <script setup>
 import { ref } from "vue";
 
+const props = defineProps({
+  images:{
+    type: Array,
+    required:true
+  }
+})
+
+console.log(props.images)
+
 const open = ref(false);
 const selectedImage = ref(null);
-
-const invitations = [
-  {
-    name: "Journey NHPV",
-    src: "/invitations/invitation-1.png",
-    alt: "Journey NHPV preview",
-  },
-  {
-    name: "Journey NHPV",
-    src: "/invitations/invitation-2.png",
-    alt: "Journey NHPV preview",
-  },
-    {
-    name: "Journey NHPV",
-    src: "/invitations/invitation-3.png",
-    alt: "Journey NHPV preview",
-  },
-];
 
 const openPreview = (item) => {
   selectedImage.value = item;
@@ -36,7 +27,7 @@ const closePreview = () => {
   <UCarousel
     v-slot="{ item }"
     arrows
-    :items="invitations"
+    :items="images"
     :prev="{
       color: 'neutral',
       variant: 'solid',
