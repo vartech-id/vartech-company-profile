@@ -15,4 +15,7 @@
       "path": "./.nuxt/tsconfig.node.json"
     }
   ],
+    "compilerOptions": { 
+    "types": ["vue3-compare-image/client"]
+  }
 }
