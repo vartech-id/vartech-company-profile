@@ -349,7 +349,6 @@ const imagesAsset = [
               </div>
             </article>
           </li>
-
           <li>
             <article class="flex h-full max-w-md">
               <div class="flex min-w-20 items-center">

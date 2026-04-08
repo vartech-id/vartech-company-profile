@@ -32,11 +32,15 @@ watch(
     <div class="embla__viewport" ref="emblaRef">
       <div class="embla__container">
         <div
-          class="embla__slide grow-0 shrink-0 basis-full sm:basis-[85%] md:basis-[70%] lg:basis-1/2 min-w-0"
+          class="embla__slide"
           v-for="(slide, index) in props.slides"
           :key="index"
         >
-          <img class="object-cover w-full h-full" :src="slide.image" :alt="slide.alt" />
+          <img
+            class="object-cover w-full h-full"
+            :src="slide.image"
+            :alt="slide.alt"
+          />
           <p v-if="slide.caption">{{ slide.caption }}</p>
         </div>
       </div>
@@ -56,15 +60,24 @@ watch(
   display: flex;
   touch-action: pan-y pinch-zoom;
   height: 400px;
-  border: 2px solid pink;
+  /* border: 2px solid pink; */
 }
 
 .embla__slide {
-  flex: 0 0 20%;
+  flex: 0 0 100%;
+  max-height: 300px;
+  max-width: 300px;
   min-width: 0;
   border: 2px solid orange;
-  margin: 1rem
+  margin: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-
+@media only screen and (min-width: 600px) {
+  .embla__slide {
+    max-height: 400px;
+    max-width: 400px;
+  }
+}
 </style>
