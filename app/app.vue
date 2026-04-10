@@ -7,7 +7,7 @@ useHead({
 </script>
 
 <template>
-  <div class="min-h-svh bg-black text-white overflow-x-hidden flex flex-col">
+  <div class="min-h-svh bg-black  text-white overflow-x-hidden flex flex-col ">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <AppHeader />
     <main

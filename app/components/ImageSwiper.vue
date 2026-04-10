@@ -51,8 +51,6 @@ const closePreview = () => {
     <NuxtImg
       :src="item.src"
       :alt="item.alt"
-      width="300"
-      height="500"
       class="mx-auto cursor-zoom-in"
       loading="lazy"
       @click="openPreview(item)"
@@ -61,7 +59,7 @@ const closePreview = () => {
 
   <UModal v-model:open="open">
     <template #content>
-      <div class="p-4" @click="closePreview">
+      <div class="p-4 bg-black" @click="closePreview">
         <NuxtImg
           v-if="selectedImage"
           :src="selectedImage.src"

@@ -54,12 +54,13 @@ watch(
 <style scoped>
 .embla__viewport {
   overflow: hidden;
+  width: 100vw;
 }
 
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
-  height: 400px;
+  /* height: 400px; */
   /* border: 2px solid pink; */
 }
 

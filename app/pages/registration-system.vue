@@ -12,20 +12,52 @@ const invitationsAsset = [
     src: "/invitations/invitation-2.png",
     alt: "Journey NHPV preview",
   },
-    {
+  {
     name: "Journey NHPV",
     src: "/invitations/invitation-3.png",
     alt: "Journey NHPV preview",
   },
 ];
 
+const carouselAssets = [
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "example-a",
+    caption: "Blackmores Event Booth",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "example-a",
+    caption: "Blackmores Event Booth",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "example-a",
+    caption: "Blackmores Event Booth",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "example-a",
+    caption: "Blackmores Event Booth",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "example-a",
+    caption: "Blackmores Event Booth",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "example-a",
+    caption: "Blackmores Event Booth",
+  },
+];
 </script>
 
 <template>
   <main class="pt-10">
     <article
       aria-labelledby="registration-system-title"
-      class="mx-auto flex w-5/6 flex-col gap-10 md:gap-14 xl:max-w-350"
+      class="mx-auto flex w-5/6 flex-col gap-20"
     >
       <header>
         <h1
@@ -38,15 +70,15 @@ const invitationsAsset = [
 
       <section
         aria-labelledby="overview-title"
-        class="grid gap-6 md:grid-cols-2"
+        class="grid gap-6 lg:grid-cols-2 sm:bg-pink-800 md:bg-red-700 lg:bg-green-800 max-w-[90rem] mx-auto"
       >
-        <figure>
+        <div class="border-2 w-full h-full flex-1">
           <NuxtImg
             src="/services/regist-example.jpg"
             alt="Guests using a QR-based registration system during an event check-in"
-            class="w-full object-cover sm:h-70 md:h-80"
+            class="w-full object-cover"
           />
-        </figure>
+        </div>
 
         <div class="flex flex-col gap-5">
           <h2
@@ -208,20 +240,21 @@ const invitationsAsset = [
             Custom Digital Invitation
           </h3>
 
-          <p class="max-w-2xl text-center text-sm leading-7 text-gray-400 md:text-base">
+          <p
+            class="max-w-2xl text-center text-sm leading-7 text-gray-400 md:text-base"
+          >
             A fully customized digital invitation tailored to your event’s
             branding, allowing guests to register seamlessly through a
             mobile-friendly experience with a clean and intuitive interface.
           </p>
-
+          <div class="w-full border-2 my-4">
           <ClientOnly>
-            <ImageSwiper
-            :images="invitationsAsset"
-            />
+            <ImageSwiper :images="invitationsAsset" />
           </ClientOnly>
+          </div>
         </section>
 
-        <ul class="grid gap-5 lg:grid-cols-2">
+        <ul class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           <li>
             <article class="flex h-full max-w-md">
               <div class="flex min-w-20 items-center">
@@ -564,9 +597,16 @@ const invitationsAsset = [
         </ul>
       </section>
 
+      <section class="mx-auto w-full flex flex-col items-center">
+        <h2 class="text-2xl font-bold uppercase tracking-wide md:text-3xl">
+          Our Gallery
+        </h2>
+        <EndlessLoop :slides="carouselAssets" />
+      </section>
+
       <section
         aria-labelledby="related-projects-title"
-        class="flex flex-col items-center justify-center gap-4"
+        class="flex flex-col items-center justify-center gap-4 xl:w-full max-w-[100rem]"
       >
         <h2
           id="related-projects-title"
