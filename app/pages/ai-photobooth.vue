@@ -49,41 +49,42 @@ const carouselAssets = [
 </script>
 
 <template>
-  <main class="pt-10">
+  <main class="bg-black pt-10 text-zinc-100">
     <article
       aria-labelledby="registration-system-title"
-      class="mx-auto flex w-5/6 flex-col gap-20"
+      class="mx-auto flex w-11/12 flex-col items-center gap-20"
     >
       <header>
         <h1
           id="registration-system-title"
-          class="text-center text-4xl font-bold uppercase tracking-wide md:text-5xl"
+          class="text-center text-4xl font-bold uppercase tracking-wide text-white md:text-5xl"
         >
           AI PHOTOBOOTH
         </h1>
       </header>
+
       <!-- HERO -->
       <section
         aria-labelledby="overview-title"
-        class="grid gap-6 lg:grid-cols-2 sm:bg-pink-800 md:bg-red-700 lg:bg-green-800 max-w-[90rem] mx-auto"
+        class="mx-auto grid max-w-[90rem] gap-8  border border-zinc-800 bg-zinc-950/80 p-4 md:p-8 lg:grid-cols-2"
       >
-        <div class="border-2 w-full h-full flex-1">
+        <div class="flex h-full w-full flex-1 overflow-hidden  border border-zinc-800 bg-zinc-900">
           <NuxtImg
             src="/services/regist-example.jpg"
             alt="Guests using a QR-based registration system during an event check-in"
-            class="w-full h-full object-cover"
+            class="h-full w-full object-cover"
           />
         </div>
 
         <div class="flex flex-col gap-5">
           <h2
             id="overview-title"
-            class="max-w-xs text-2xl font-semibold leading-tight md:max-w-md md:text-3xl"
+            class="max-w-xs text-2xl font-semibold leading-tight text-white md:max-w-md md:text-3xl"
           >
             Premium Photobooth Experience
           </h2>
 
-          <p class="text-sm leading-7 text-gray-400 md:text-base">
+          <p class="text-sm leading-7 text-zinc-300 md:text-base">
             From camera capture and branded overlays to instant delivery and
             on-site printing, we develop custom photobooth workflows designed
             for events, brand activations, and a smooth guest experience.
@@ -94,10 +95,10 @@ const carouselAssets = [
             class="flex w-5/6 flex-col gap-4 sm:w-full lg:max-w-xs"
           >
             <li>
-              <div class="flex gap-2">
+              <div class="flex items-start gap-3">
                 <span
                   aria-hidden="true"
-                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
+                  class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zinc-700 text-white"
                 >
                   <svg
                     aria-hidden="true"
@@ -105,7 +106,7 @@ const carouselAssets = [
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
-                    class="h-5 w-5"
+                    class="h-4 w-4"
                   >
                     <path
                       d="M5 12.5l4 4L19 7"
@@ -116,17 +117,17 @@ const carouselAssets = [
                     />
                   </svg>
                 </span>
-                <p class="text-sm leading-6 md:text-base">
+                <p class="text-sm leading-6 text-zinc-200 md:text-base">
                   DSLR or webcam capture workflow tailored for your event
                 </p>
               </div>
             </li>
 
             <li>
-              <div class="flex gap-2">
+              <div class="flex items-start gap-3">
                 <span
                   aria-hidden="true"
-                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
+                  class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zinc-700 text-white"
                 >
                   <svg
                     aria-hidden="true"
@@ -134,7 +135,7 @@ const carouselAssets = [
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
-                    class="h-5 w-5"
+                    class="h-4 w-4"
                   >
                     <path
                       d="M5 12.5l4 4L19 7"
@@ -145,17 +146,17 @@ const carouselAssets = [
                     />
                   </svg>
                 </span>
-                <p class="text-sm leading-6 md:text-base">
+                <p class="text-sm leading-6 text-zinc-200 md:text-base">
                   Branded overlays and templates aligned with campaign visuals
                 </p>
               </div>
             </li>
 
             <li>
-              <div class="flex gap-2">
+              <div class="flex items-start gap-3">
                 <span
                   aria-hidden="true"
-                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
+                  class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zinc-700 text-white"
                 >
                   <svg
                     aria-hidden="true"
@@ -163,7 +164,7 @@ const carouselAssets = [
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
-                    class="h-5 w-5"
+                    class="h-4 w-4"
                   >
                     <path
                       d="M5 12.5l4 4L19 7"
@@ -174,17 +175,17 @@ const carouselAssets = [
                     />
                   </svg>
                 </span>
-                <p class="text-sm leading-6 md:text-base">
+                <p class="text-sm leading-6 text-zinc-200 md:text-base">
                   Instant photo delivery via QR, email, or sharing station
                 </p>
               </div>
             </li>
 
             <li>
-              <div class="flex gap-2">
+              <div class="flex items-start gap-3">
                 <span
                   aria-hidden="true"
-                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
+                  class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zinc-700 text-white"
                 >
                   <svg
                     aria-hidden="true"
@@ -192,7 +193,7 @@ const carouselAssets = [
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
-                    class="h-5 w-5"
+                    class="h-4 w-4"
                   >
                     <path
                       d="M5 12.5l4 4L19 7"
@@ -203,7 +204,7 @@ const carouselAssets = [
                     />
                   </svg>
                 </span>
-                <p class="text-sm leading-6 md:text-base">
+                <p class="text-sm leading-6 text-zinc-200 md:text-base">
                   On-site printing designed for fast and reliable guest output
                 </p>
               </div>
@@ -211,21 +212,24 @@ const carouselAssets = [
           </ul>
         </div>
       </section>
+
       <!-- KEY FEATURES -->
       <section
         aria-labelledby="key-features-title"
-        class="flex flex-col items-center gap-8 xl:flex-row"
+        class="flex w-full flex-col items-center justify-center gap-8 border border-zinc-800 bg-zinc-950/80 p-4 md:p-8 xl:flex-row"
       >
-        <div
-          class="flex flex-col items-center gap-8 lg:bg-green-700 xl:bg-red-700"
-        >
-          <h2 class="text-2xl font-bold uppercase tracking-wide md:text-3xl">
+        <div class="flex flex-col items-center gap-8">
+          <h2
+            id="key-features-title"
+            class="text-2xl font-bold uppercase tracking-wide text-white md:text-3xl"
+          >
             Key Features
           </h2>
+
           <ul class="grid gap-5 md:grid-cols-2">
             <li>
-              <article class="flex h-full max-w-md">
-                <div class="flex min-w-20 items-center">
+              <article class="flex h-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4">
+                <div class="flex min-w-20 items-center text-zinc-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -234,7 +238,7 @@ const carouselAssets = [
                     stroke-width="1.8"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="text-white"
+                    class="text-zinc-100"
                     aria-hidden="true"
                   >
                     <rect x="4" y="3" width="16" height="18" rx="3" />
@@ -245,10 +249,10 @@ const carouselAssets = [
                   </svg>
                 </div>
                 <div class="min-w-0 flex-1">
-                  <h3 class="text-lg font-semibold leading-snug md:text-xl">
+                  <h3 class="text-lg font-semibold leading-snug text-white md:text-xl">
                     Camera Capture Workflow
                   </h3>
-                  <p class="mt-1 break-words text-sm leading-6 text-gray-400">
+                  <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
                     Build a custom capture flow with countdown, live preview,
                     retake options, and smooth guest interaction from start to
                     finish.
@@ -258,8 +262,8 @@ const carouselAssets = [
             </li>
 
             <li>
-              <article class="flex h-full max-w-md">
-                <div class="flex min-w-20 items-center">
+              <article class="flex h-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4">
+                <div class="flex min-w-20 items-center text-zinc-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 64 64"
@@ -273,39 +277,39 @@ const carouselAssets = [
                       width="44"
                       height="30"
                       rx="6"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                     />
                     <path
                       d="M20 48h24"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linecap="round"
                     />
                     <path
                       d="M32 42v6"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linecap="round"
                     />
                     <path
                       d="M18 34l8-8 6 5 12-12"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-                    <circle cx="18" cy="34" r="2" fill="white" />
-                    <circle cx="26" cy="26" r="2" fill="white" />
-                    <circle cx="32" cy="31" r="2" fill="white" />
-                    <circle cx="44" cy="19" r="2" fill="white" />
+                    <circle cx="18" cy="34" r="2" fill="currentColor" />
+                    <circle cx="26" cy="26" r="2" fill="currentColor" />
+                    <circle cx="32" cy="31" r="2" fill="currentColor" />
+                    <circle cx="44" cy="19" r="2" fill="currentColor" />
                   </svg>
                 </div>
                 <div class="min-w-0 flex-1">
-                  <h3 class="text-lg font-semibold leading-snug md:text-xl">
+                  <h3 class="text-lg font-semibold leading-snug text-white md:text-xl">
                     Branded Overlay System
                   </h3>
-                  <p class="mt-1 break-words text-sm leading-6 text-gray-400">
+                  <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
                     Apply custom frames, campaign graphics, and branded layouts
                     automatically to every photo output.
                   </p>
@@ -314,8 +318,8 @@ const carouselAssets = [
             </li>
 
             <li>
-              <article class="flex h-full max-w-md">
-                <div class="flex min-w-20 items-center">
+              <article class="flex h-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4">
+                <div class="flex min-w-20 items-center text-zinc-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 64 64"
@@ -325,29 +329,29 @@ const carouselAssets = [
                   >
                     <path
                       d="M10 30 52 12 40 52 30 36 10 30Z"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linejoin="round"
                     />
                     <path
                       d="M52 12 30 36"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linecap="round"
                     />
                     <path
                       d="M24 42l6-6"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linecap="round"
                     />
                   </svg>
                 </div>
                 <div class="min-w-0 flex-1">
-                  <h3 class="text-lg font-semibold leading-snug md:text-xl">
+                  <h3 class="text-lg font-semibold leading-snug text-white md:text-xl">
                     Instant Photo Delivery
                   </h3>
-                  <p class="mt-1 break-words text-sm leading-6 text-gray-400">
+                  <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
                     Deliver final photos instantly through QR code, email, or
                     digital sharing flow for a faster guest experience.
                   </p>
@@ -356,8 +360,8 @@ const carouselAssets = [
             </li>
 
             <li>
-              <article class="flex h-full max-w-md">
-                <div class="flex min-w-20 items-center">
+              <article class="flex h-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4">
+                <div class="flex min-w-20 items-center text-zinc-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -366,7 +370,7 @@ const carouselAssets = [
                     stroke-width="1.8"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="text-white"
+                    class="text-zinc-100"
                     aria-hidden="true"
                   >
                     <path d="M12 3v11" />
@@ -375,10 +379,10 @@ const carouselAssets = [
                   </svg>
                 </div>
                 <div class="min-w-0 flex-1">
-                  <h3 class="text-lg font-semibold leading-snug md:text-xl">
+                  <h3 class="text-lg font-semibold leading-snug text-white md:text-xl">
                     Sharing and Download Flow
                   </h3>
-                  <p class="mt-1 break-words text-sm leading-6 text-gray-400">
+                  <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
                     Create a seamless post-capture flow for downloading,
                     sharing, and accessing branded photo results.
                   </p>
@@ -387,8 +391,8 @@ const carouselAssets = [
             </li>
 
             <li>
-              <article class="flex h-full max-w-md">
-                <div class="flex min-w-20 items-center">
+              <article class="flex h-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4">
+                <div class="flex min-w-20 items-center text-zinc-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 64 64"
@@ -398,7 +402,7 @@ const carouselAssets = [
                   >
                     <path
                       d="M12 34a20 20 0 0 1 40 0"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linecap="round"
                     />
@@ -408,7 +412,7 @@ const carouselAssets = [
                       width="10"
                       height="16"
                       rx="4"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                     />
                     <rect
@@ -417,23 +421,23 @@ const carouselAssets = [
                       width="10"
                       height="16"
                       rx="4"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                     />
                     <path
                       d="M44 48c0 4-3 6-7 6h-3"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linecap="round"
                     />
-                    <circle cx="30" cy="54" r="2.5" fill="white" />
+                    <circle cx="30" cy="54" r="2.5" fill="currentColor" />
                   </svg>
                 </div>
                 <div class="min-w-0 flex-1">
-                  <h3 class="text-lg font-semibold leading-snug md:text-xl">
+                  <h3 class="text-lg font-semibold leading-snug text-white md:text-xl">
                     On-site Technical Support
                   </h3>
-                  <p class="mt-1 break-words text-sm leading-6 text-gray-400">
+                  <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
                     Support live event operations with on-site setup,
                     troubleshooting, and workflow monitoring when needed.
                   </p>
@@ -442,8 +446,8 @@ const carouselAssets = [
             </li>
 
             <li>
-              <article class="flex h-full max-w-md">
-                <div class="flex min-w-20 items-center">
+              <article class="flex h-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4">
+                <div class="flex min-w-20 items-center text-zinc-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 64 64"
@@ -453,41 +457,41 @@ const carouselAssets = [
                   >
                     <path
                       d="M20 10h18l10 10v30a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4Z"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linejoin="round"
                     />
                     <path
                       d="M38 10v10h10"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linejoin="round"
                     />
                     <path
                       d="M24 30h16"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linecap="round"
                     />
                     <path
                       d="M24 38h16"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linecap="round"
                     />
                     <path
                       d="M24 46h10"
-                      stroke="white"
+                      stroke="currentColor"
                       stroke-width="3"
                       stroke-linecap="round"
                     />
                   </svg>
                 </div>
                 <div class="min-w-0 flex-1">
-                  <h3 class="text-lg font-semibold leading-snug md:text-xl">
+                  <h3 class="text-lg font-semibold leading-snug text-white md:text-xl">
                     Print-ready Output
                   </h3>
-                  <p class="mt-1 break-words text-sm leading-6 text-gray-400">
+                  <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
                     Prepare final photo outputs for instant printing with
                     layouts optimized for quality, speed, and reliable event
                     production.
@@ -497,59 +501,67 @@ const carouselAssets = [
             </li>
           </ul>
         </div>
-        <div class="w-full max-w-2xl">
+
+        <div class="w-full max-w-2xl overflow-hidden  border border-zinc-800 bg-zinc-900/70 p-2">
           <ClientOnly>
             <BeforeAfter />
           </ClientOnly>
         </div>
       </section>
+
       <!-- HOW IT WORKS -->
-      <section id="how-it-works" class="flex flex-col items-center gap-8">
-        <h2 class="text-2xl font-bold uppercase tracking-wide md:text-3xl">
+      <section
+        id="how-it-works"
+        class="flex w-full flex-col items-center gap-8 border border-zinc-800 bg-zinc-950/80 p-6 md:p-8"
+      >
+        <h2 class="text-2xl font-bold uppercase tracking-wide text-white md:text-3xl">
           How It Works
         </h2>
-        <div class="flex flex-col md:flex-row gap-6">
-          <div class="border-2 flex-1 p-4 rounded-2xl max-w-sm">
-            <div>
+
+        <div class="flex flex-col gap-6 md:flex-row">
+          <div class="max-w-sm flex-1 border border-zinc-800 bg-zinc-900/70 p-4">
+            <div class="overflow-hidden border border-zinc-800">
               <NuxtImg
                 src="/services/regist-example.jpg"
                 alt="Guests using a QR-based registration system during an event check-in"
                 class="w-full object-cover"
               />
             </div>
-            <h3 class="font-bold text-2xl text-center py-2">Take a photo</h3>
-            <p>
+            <h3 class="py-3 text-center text-2xl font-bold text-white">Take a photo</h3>
+            <p class="leading-7 text-zinc-300">
               Step into the photobooth or be photographed by a professional.
               Capture your moments in high quality, whether you're at a wedding,
               corporate event, or any special gathering.
             </p>
           </div>
-          <div class="border-2 flex-1 p-4 rounded-2xl max-w-sm">
-            <div>
+
+          <div class="max-w-sm flex-1  border border-zinc-800 bg-zinc-900/70 p-4">
+            <div class="overflow-hidden border border-zinc-800">
               <NuxtImg
                 src="/services/regist-example.jpg"
                 alt="Guests using a QR-based registration system during an event check-in"
                 class="w-full object-cover"
               />
             </div>
-            <h3 class="font-bold text-2xl text-center py-2">A.I Magic</h3>
-            <p>
+            <h3 class="py-3 text-center text-2xl font-bold text-white">A.I Magic</h3>
+            <p class="leading-7 text-zinc-300">
               Watch as our AI technology enhances your photo. Based on your
               chosen theme or design prompt, the AI applies custom overlays,
               background effects, and styling, transforming your image into
               something extraordinary.
             </p>
           </div>
-          <div class="border-2 flex-1 p-4 rounded-2xl max-w-sm">
-            <div>
+
+          <div class="max-w-sm flex-1  border border-zinc-800 bg-zinc-900/70 p-4">
+            <div class="overflow-hidden border border-zinc-800">
               <NuxtImg
                 src="/services/regist-example.jpg"
                 alt="Guests using a QR-based registration system during an event check-in"
                 class="w-full object-cover"
               />
             </div>
-            <h3 class="font-bold text-2xl text-center py-2">Share</h3>
-            <p>
+            <h3 class="py-3 text-center text-2xl font-bold text-white">Share</h3>
+            <p class="leading-7 text-zinc-300">
               Instantly share your enhanced photo with friends and family.
               Whether via QR code, social media, or email, your personalized
               photo is ready to go, ensuring everyone can enjoy the fun
@@ -558,21 +570,20 @@ const carouselAssets = [
           </div>
         </div>
       </section>
+
       <!-- ENDLESS LOOP -->
-      <section class="mx-auto w-full flex flex-col items-center">
-        <h2 class="text-2xl font-bold uppercase tracking-wide md:text-3xl">
-          Our Gallery
-        </h2>
+      <section class="flex w-full flex-col items-center p-4">
         <EndlessLoop :slides="carouselAssets" />
       </section>
 
+      <!-- RELATED PROJECTS -->
       <section
         aria-labelledby="related-projects-title"
-        class="flex flex-col items-center justify-center gap-4 max-w-[100rem] mx-auto"
+        class="mx-auto flex max-w-[100rem] flex-col items-center justify-center gap-6 border border-zinc-800 bg-zinc-950/80 p-6 md:p-8"
       >
         <h2
           id="related-projects-title"
-          class="flex flex-col items-center text-2xl font-bold uppercase tracking-wide md:text-3xl"
+          class="flex flex-col items-center text-2xl font-bold uppercase tracking-wide text-white md:text-3xl"
         >
           Related Projects
         </h2>
@@ -581,19 +592,19 @@ const carouselAssets = [
           <li class="md:col-start-1 md:col-end-3">
             <NuxtLink
               to="/about"
-              class="block min-w-70 rounded-lg hover:underline hover:shadow-xs hover:shadow-white hover:transition hover:duration-150 hover:ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              class="block min-w-70  border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <article>
-                <figure>
+                <figure class="overflow-hidden border border-zinc-800">
                   <NuxtImg
                     src="/services/varbel-regist.webp"
                     alt="QR registration system used in a corporate event"
                   />
                 </figure>
-                <h3 class="mt-3 text-lg font-semibold md:text-xl">
+                <h3 class="mt-3 text-lg font-semibold text-white md:text-xl">
                   AI Face Swap Photobooth
                 </h3>
-                <p class="text-sm text-gray-400">Custom Photobooth</p>
+                <p class="text-sm text-zinc-400">Custom Photobooth</p>
               </article>
             </NuxtLink>
           </li>
@@ -601,19 +612,19 @@ const carouselAssets = [
           <li class="md:col-start-3 md:col-end-5">
             <NuxtLink
               to="/about"
-              class="block min-w-70 rounded-lg hover:underline hover:shadow-xs hover:shadow-white hover:transition hover:duration-150 hover:ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              class="block min-w-70  border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <article>
-                <figure>
+                <figure class="overflow-hidden border border-zinc-800">
                   <NuxtImg
                     src="/services/varbel-regist.webp"
                     alt="On-site guest registration system at an exhibition"
                   />
                 </figure>
-                <h3 class="mt-3 text-lg font-semibold md:text-xl">
+                <h3 class="mt-3 text-lg font-semibold text-white md:text-xl">
                   Branded Event Photobooth
                 </h3>
-                <p class="text-sm text-gray-400">Custom Photobooth</p>
+                <p class="text-sm text-zinc-400">Custom Photobooth</p>
               </article>
             </NuxtLink>
           </li>
@@ -621,19 +632,19 @@ const carouselAssets = [
           <li class="md:col-start-2 md:col-end-4">
             <NuxtLink
               to="/about"
-              class="block min-w-70 rounded-lg hover:underline hover:shadow-xs hover:shadow-white hover:transition hover:duration-150 hover:ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              class="block min-w-70  border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <article>
-                <figure>
+                <figure class="overflow-hidden border border-zinc-800">
                   <NuxtImg
                     src="/services/varbel-regist.webp"
                     alt="On-site guest registration system at an exhibition"
                   />
                 </figure>
-                <h3 class="mt-3 text-lg font-semibold md:text-xl">
+                <h3 class="mt-3 text-lg font-semibold text-white md:text-xl">
                   Instant Print Booth System
                 </h3>
-                <p class="text-sm text-gray-400">Custom Photobooth</p>
+                <p class="text-sm text-zinc-400">Custom Photobooth</p>
               </article>
             </NuxtLink>
           </li>

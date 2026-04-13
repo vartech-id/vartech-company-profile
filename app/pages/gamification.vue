@@ -1,19 +1,4 @@
 <script setup>
-import ImageSwiper from "~/components/ImageSwiper.vue";
-
-const imagesAsset = [
-  {
-    name: "Blackmores",
-    src: "/photobooth-ui/blackmores-1.webp",
-    alt: "Journey NHPV preview",
-  },
-  {
-    name: "Journey NHPV",
-    src: "/photobooth-ui/blackmores-2.webp",
-    alt: "Journey NHPV preview",
-  },
-];
-
 const carouselAssets = [
   {
     image: "/images/carousel-ai-pb/sample-ai.jpeg",
@@ -52,7 +37,7 @@ const carouselAssets = [
   <main class="pt-10">
     <article
       aria-labelledby="registration-system-title"
-      class="mx-auto flex w-5/6 flex-col gap-20"
+      class="mx-auto flex flex-col gap-20 w-11/12 max-w-[100rem]"
     >
       <header>
         <h1
@@ -62,754 +47,282 @@ const carouselAssets = [
           GAMIFICATION & INTERACTIVE GAMES
         </h1>
       </header>
-      <!-- HERO -->
-      <section
-        aria-labelledby="overview-title"
-        class="grid gap-6 lg:grid-cols-2 sm:bg-pink-800 md:bg-red-700 lg:bg-green-800 max-w-[90rem] mx-auto"
-      >
-        <div class="border-2 w-full h-full flex-1">
-          <NuxtImg
-            src="/services/regist-example.jpg"
-            alt="Guests using a QR-based registration system during an event check-in"
-            class="w-full h-full object-cover"
-          />
-        </div>
-
-        <div class="flex flex-col gap-5">
-          <h2
-            id="overview-title"
-            class="max-w-xs text-2xl font-semibold leading-tight md:max-w-md md:text-3xl"
+      <!-- Scream Game -->
+      <section class="border border-zinc-700 bg-zinc-950 p-3 shadow-sm">
+        <div class="flex flex-col gap-3 md:flex-row md:gap-5">
+          <div
+            class="flex h-70 w-full overflow-hidden border border-zinc-800 bg-zinc-900 md:w-90 lg:h-100 lg:w-110 xl:h-120 xl:w-140"
           >
-            Premium Photobooth Experience
-          </h2>
+            <NuxtImg
+              class="h-full w-full object-cover"
+              src="/services/regist-example.jpg"
+              alt="People playing scream game at an event booth"
+            />
+          </div>
 
-          <p class="text-sm leading-7 text-gray-400 md:text-base">
-            From camera capture and branded overlays to instant delivery and
-            on-site printing, we develop custom photobooth workflows designed
-            for events, brand activations, and a smooth guest experience.
-          </p>
+          <div class="flex flex-1 flex-col gap-3 text-zinc-100">
+            <div class="border-b border-zinc-800 pb-4">
+              <h2
+                class="text-2xl font-bold tracking-tight text-white xl:text-3xl"
+              >
+                Scream Game
+              </h2>
 
-          <ul
-            aria-label="Registration system highlights"
-            class="flex w-5/6 flex-col gap-4 sm:w-full lg:max-w-xs"
-          >
-            <li>
-              <div class="flex gap-2">
-                <span
-                  aria-hidden="true"
-                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
+              <p
+                class="py-3 leading-relaxed text-zinc-200 sm:text-sm md:text-base xl:text-lg"
+              >
+                Scream as loud as you can, beat the system, and aim for the
+                highest score to win exciting prizes. A perfect crowd magnet for
+                booths that want to feel lively, fun, and full of interaction.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
                 >
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    class="h-5 w-5"
-                  >
-                    <path
-                      d="M5 12.5l4 4L19 7"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-                <p class="text-sm leading-6 md:text-base">
-                  DSLR or webcam capture workflow tailored for your event
+                  Crowd magnet
+                </p>
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Interactive game
+                </p>
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Customizable
                 </p>
               </div>
-            </li>
+            </div>
 
-            <li>
-              <div class="flex gap-2">
-                <span
-                  aria-hidden="true"
-                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
-                >
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    class="h-5 w-5"
-                  >
-                    <path
-                      d="M5 12.5l4 4L19 7"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-                <p class="text-sm leading-6 md:text-base">
-                  Branded overlays and templates aligned with campaign visuals
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div class="flex gap-2">
-                <span
-                  aria-hidden="true"
-                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
-                >
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    class="h-5 w-5"
-                  >
-                    <path
-                      d="M5 12.5l4 4L19 7"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-                <p class="text-sm leading-6 md:text-base">
-                  Instant photo delivery via QR, email, or sharing station
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div class="flex gap-2">
-                <span
-                  aria-hidden="true"
-                  class="flex h-5 w-5 shrink-0 rounded-full items-center justify-center bg-gray-400/60 shadow-lg backdrop-blur-md"
-                >
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    class="h-5 w-5"
-                  >
-                    <path
-                      d="M5 12.5l4 4L19 7"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-                <p class="text-sm leading-6 md:text-base">
-                  On-site printing designed for fast and reliable guest output
-                </p>
-              </div>
-            </li>
-          </ul>
+            <div class="pt-2">
+              <h3 class="text-xl font-semibold text-white xl:text-2xl">
+                How it works
+              </h3>
+              <ol
+ class="list-decimal list-outside pl-4 space-y-1 pt-3 leading-relaxed text-zinc-200 xl:text-lg"
+              >
+                <li>Tap Start to begin</li>
+                <li>Wait for the countdown</li>
+                <li>Scream as loud as you can to reveal the logo</li>
+                <li>Fill the logo completely to reach a perfect score of 100
+                </li>
+                <li>Get your final score at the end</li>
+              </ol>
+            </div>
+          </div>
         </div>
       </section>
-      <!-- KEY FEATURES -->
-      <section aria-labelledby="products" class="">
-        <h2 class="text-3xl font-bold text-left">Scrabble Words</h2>
-        <div class="flex flex-col border-2 lg:flex-row">
-          <div class="flex flex-col items-center gap-8 order-2">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Praesentium, numquam? Excepturi eveniet perferendis reiciendis ad
-              sapiente. Enim obcaecati natus voluptatum quidem reiciendis porro
-              dolorum modi, asperiores, nulla suscipit non temporibus. lore
-            </p>
-            <ul class="grid gap-5 md:grid-cols-2">
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="text-white"
-                      aria-hidden="true"
-                    >
-                      <rect x="4" y="3" width="16" height="18" rx="3" />
-                      <rect x="7" y="6" width="10" height="7" rx="1.5" />
-                      <circle cx="12" cy="16.5" r="1.2" />
-                      <path d="M9 9h6" />
-                      <path d="M10 11.2h4" />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      Camera Capture Workflow
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Build a custom capture flow with countdown, live preview,
-                      retake options, and smooth guest interaction from start to
-                      finish.
-                    </p>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 64 64"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <rect
-                        x="10"
-                        y="12"
-                        width="44"
-                        height="30"
-                        rx="6"
-                        stroke="white"
-                        stroke-width="3"
-                      />
-                      <path
-                        d="M20 48h24"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M32 42v6"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M18 34l8-8 6 5 12-12"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <circle cx="18" cy="34" r="2" fill="white" />
-                      <circle cx="26" cy="26" r="2" fill="white" />
-                      <circle cx="32" cy="31" r="2" fill="white" />
-                      <circle cx="44" cy="19" r="2" fill="white" />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      Branded Overlay System
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Apply custom frames, campaign graphics, and branded
-                      layouts automatically to every photo output.
-                    </p>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 64 64"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path
-                        d="M10 30 52 12 40 52 30 36 10 30Z"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M52 12 30 36"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M24 42l6-6"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      Instant Photo Delivery
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Deliver final photos instantly through QR code, email, or
-                      digital sharing flow for a faster guest experience.
-                    </p>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="text-white"
-                      aria-hidden="true"
-                    >
-                      <path d="M12 3v11" />
-                      <path d="M8 10l4 4 4-4" />
-                      <rect x="4" y="17" width="16" height="3" rx="1.5" />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      Sharing and Download Flow
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Create a seamless post-capture flow for downloading,
-                      sharing, and accessing branded photo results.
-                    </p>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 64 64"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path
-                        d="M12 34a20 20 0 0 1 40 0"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <rect
-                        x="10"
-                        y="32"
-                        width="10"
-                        height="16"
-                        rx="4"
-                        stroke="white"
-                        stroke-width="3"
-                      />
-                      <rect
-                        x="44"
-                        y="32"
-                        width="10"
-                        height="16"
-                        rx="4"
-                        stroke="white"
-                        stroke-width="3"
-                      />
-                      <path
-                        d="M44 48c0 4-3 6-7 6h-3"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <circle cx="30" cy="54" r="2.5" fill="white" />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      On-site Technical Support
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Support live event operations with on-site setup,
-                      troubleshooting, and workflow monitoring when needed.
-                    </p>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 64 64"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path
-                        d="M20 10h18l10 10v30a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4Z"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M38 10v10h10"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M24 30h16"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M24 38h16"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M24 46h10"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      Print-ready Output
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Prepare final photo outputs for instant printing with
-                      layouts optimized for quality, speed, and reliable event
-                      production.
-                    </p>
-                  </div>
-                </article>
-              </li>
-            </ul>
-          </div>
-          <div class="w-full max-w-2xl">
+      <!-- Scrabble Words Game -->
+      <section class="border border-zinc-700 bg-zinc-950 p-3 shadow-sm">
+        <div class="flex flex-col gap-3 md:flex-row md:gap-5">
+          <div
+            class="flex h-70 w-full overflow-hidden border border-zinc-800 bg-zinc-900 md:w-90 lg:h-100 lg:w-110 xl:h-120 xl:w-140 md:order-1"
+          >
             <NuxtImg
+              class="h-full w-full object-cover"
               src="/services/regist-example.jpg"
-              alt="Guests using a QR-based registration system during an event check-in"
-              class="w-full h-full object-cover"
+              alt="People playing scream game at an event booth"
             />
+          </div>
+
+          <div class="flex flex-1 flex-col gap-3 text-zinc-100">
+            <div class="border-b border-zinc-800 pb-4">
+              <h2
+                class="text-2xl font-bold tracking-tight text-white xl:text-3xl"
+              >
+                Scrabble Words
+              </h2>
+
+              <p
+                class="py-3 leading-relaxed text-zinc-200 sm:text-sm md:text-base xl:text-lg"
+              >
+                A fun word puzzle game where guests arrange letters to form the
+                correct words within a limited time. Perfect for booths that
+                want an interactive activity that feels engaging, competitive,
+                and enjoyable for all ages.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Word challenge
+                </p>
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Brain game
+                </p>
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Customizable
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <h3 class="text-xl font-semibold text-white xl:text-2xl">
+                How it works
+              </h3>
+              <ol
+ class="list-decimal list-outside pl-4 space-y-1 pt-3 leading-relaxed text-zinc-200 xl:text-lg"
+              >
+                <li>Tap Start to begin the game.</li>
+                <li>Player arranges the given letters into the correct word.
+                </li>
+                <li>The player must answer within the time limit.</li>
+                <li>Each correct answer adds to the total score.</li>
+                <li>The final score appears at the end of the game.</li>
+              </ol>
+            </div>
           </div>
         </div>
-        <h2 class="text-3xl font-bold text-right">Scream Game</h2>
-        <div class="flex flex-col border-2 lg:flex-row">
-          <div class="flex flex-col items-center gap-8">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Praesentium, numquam? Excepturi eveniet perferendis reiciendis ad
-              sapiente. Enim obcaecati natus voluptatum quidem reiciendis porro
-              dolorum modi, asperiores, nulla suscipit non temporibus. lore
-            </p>
-            <ul class="grid gap-5 md:grid-cols-2">
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="text-white"
-                      aria-hidden="true"
-                    >
-                      <rect x="4" y="3" width="16" height="18" rx="3" />
-                      <rect x="7" y="6" width="10" height="7" rx="1.5" />
-                      <circle cx="12" cy="16.5" r="1.2" />
-                      <path d="M9 9h6" />
-                      <path d="M10 11.2h4" />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      Camera Capture Workflow
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Build a custom capture flow with countdown, live preview,
-                      retake options, and smooth guest interaction from start to
-                      finish.
-                    </p>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 64 64"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <rect
-                        x="10"
-                        y="12"
-                        width="44"
-                        height="30"
-                        rx="6"
-                        stroke="white"
-                        stroke-width="3"
-                      />
-                      <path
-                        d="M20 48h24"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M32 42v6"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M18 34l8-8 6 5 12-12"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <circle cx="18" cy="34" r="2" fill="white" />
-                      <circle cx="26" cy="26" r="2" fill="white" />
-                      <circle cx="32" cy="31" r="2" fill="white" />
-                      <circle cx="44" cy="19" r="2" fill="white" />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      Branded Overlay System
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Apply custom frames, campaign graphics, and branded
-                      layouts automatically to every photo output.
-                    </p>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 64 64"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path
-                        d="M10 30 52 12 40 52 30 36 10 30Z"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M52 12 30 36"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M24 42l6-6"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      Instant Photo Delivery
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Deliver final photos instantly through QR code, email, or
-                      digital sharing flow for a faster guest experience.
-                    </p>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="text-white"
-                      aria-hidden="true"
-                    >
-                      <path d="M12 3v11" />
-                      <path d="M8 10l4 4 4-4" />
-                      <rect x="4" y="17" width="16" height="3" rx="1.5" />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      Sharing and Download Flow
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Create a seamless post-capture flow for downloading,
-                      sharing, and accessing branded photo results.
-                    </p>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 64 64"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path
-                        d="M12 34a20 20 0 0 1 40 0"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <rect
-                        x="10"
-                        y="32"
-                        width="10"
-                        height="16"
-                        rx="4"
-                        stroke="white"
-                        stroke-width="3"
-                      />
-                      <rect
-                        x="44"
-                        y="32"
-                        width="10"
-                        height="16"
-                        rx="4"
-                        stroke="white"
-                        stroke-width="3"
-                      />
-                      <path
-                        d="M44 48c0 4-3 6-7 6h-3"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <circle cx="30" cy="54" r="2.5" fill="white" />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      On-site Technical Support
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Support live event operations with on-site setup,
-                      troubleshooting, and workflow monitoring when needed.
-                    </p>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="flex h-full max-w-md">
-                  <div class="flex min-w-20 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 64 64"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path
-                        d="M20 10h18l10 10v30a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4Z"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M38 10v10h10"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M24 30h16"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M24 38h16"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M24 46h10"
-                        stroke="white"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h3 class="text-lg font-semibold leading-snug md:text-xl">
-                      Print-ready Output
-                    </h3>
-                    <p class="mt-1 break-words text-sm leading-6 text-gray-400">
-                      Prepare final photo outputs for instant printing with
-                      layouts optimized for quality, speed, and reliable event
-                      production.
-                    </p>
-                  </div>
-                </article>
-              </li>
-            </ul>
-          </div>
-          <div class="w-full max-w-2xl">
+      </section>
+      <!-- QUIZ Game -->
+      <section class="border border-zinc-700 bg-zinc-950 p-3 shadow-sm">
+        <div class="flex flex-col gap-3 md:flex-row md:gap-5">
+          <div
+            class="flex h-70 w-full overflow-hidden border border-zinc-800 bg-zinc-900 md:w-90 lg:h-100 lg:w-110 xl:h-120 xl:w-140"
+          >
             <NuxtImg
+              class="h-full w-full object-cover"
               src="/services/regist-example.jpg"
-              alt="Guests using a QR-based registration system during an event check-in"
-              class="w-full h-full object-cover"
+              alt="People playing scream game at an event booth"
             />
+          </div>
+
+          <div class="flex flex-1 flex-col gap-3 text-zinc-100">
+            <div class="border-b border-zinc-800 pb-4">
+              <h2
+                class="text-2xl font-bold tracking-tight text-white xl:text-3xl"
+              >
+                Quiz Game
+              </h2>
+
+              <p
+                class="py-3 leading-relaxed text-zinc-200 sm:text-sm md:text-base xl:text-lg"
+              >
+                An interactive quiz game where guests answer questions to earn
+                points and test their knowledge. Perfect for booths that want a
+                fun, simple, and competitive activity that keeps participants
+                engaged.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Knowledge game
+                </p>
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Interactive quiz
+                </p>
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Customizable
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <h3 class="text-xl font-semibold text-white xl:text-2xl">
+                How it works
+              </h3>
+              <ol
+ class="list-decimal list-outside pl-4 space-y-1 pt-3 leading-relaxed text-zinc-200 xl:text-lg"
+              >
+                <li>Tap Start to begin the game.</li>
+                <li>Read each question carefully.</li>
+                <li>Select the correct answer before moving to the next question.
+                </li>
+                <li>Each correct answer earns points.</li>
+                <li>The final score appears at the end of the game.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="border border-zinc-700 bg-zinc-950 p-3 shadow-sm">
+        <div class="flex flex-col gap-3 md:flex-row md:gap-5">
+          <div
+            class="flex h-70 w-full overflow-hidden border border-zinc-800 bg-zinc-900 md:w-90 lg:h-100 lg:w-110 xl:h-120 xl:w-140 md:order-1"
+          >
+            <NuxtImg
+              class="h-full w-full object-cover"
+              src="/services/regist-example.jpg"
+              alt="People playing scream game at an event booth"
+            />
+          </div>
+
+          <div class="flex flex-1 flex-col gap-3 text-zinc-100">
+            <div class="border-b border-zinc-800 pb-4">
+              <h2
+                class="text-2xl font-bold tracking-tight text-white xl:text-3xl"
+              >
+                Catch The Falling Item
+              </h2>
+
+              <p
+                class="py-3 leading-relaxed text-zinc-200 sm:text-sm md:text-base xl:text-lg"
+              >
+                A fast-paced catching game where guests collect falling items to
+                earn points while avoiding bombs and penalty items that can
+                reduce their score. Perfect for booths that want a fun,
+                energetic, and competitive activity that is easy for everyone to
+                enjoy.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Reflex game
+                </p>
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Point-based
+                </p>
+                <p
+                  class="border border-zinc-600 bg-zinc-800 px-3 py-1 text-xs font-medium text-zinc-100 xl:text-sm"
+                >
+                  Customizable
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <h3 class="text-xl font-semibold text-white xl:text-2xl">
+                How it works
+              </h3>
+              <ol
+ class="list-decimal list-outside pl-4 space-y-1 pt-3 leading-relaxed text-zinc-200 xl:text-lg"
+              >
+                <li>Tap Start to begin.</li>
+                <li>Move the catcher to collect the falling items.</li>
+                <li>Different items give different point values.</li>
+                <li>Avoid bombs and penalty items, as they will reduce your score.
+                </li>
+                <li>The final score appears at the end of the game.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ENDLESS LOOP -->
-      <section class="mx-auto w-full flex flex-col items-center">
-        <h2 class="text-2xl font-bold uppercase tracking-wide md:text-3xl">
-          Our Gallery
-        </h2>
+      <section class="w-full flex flex-col items-center">
         <EndlessLoop :slides="carouselAssets" />
       </section>
 
       <section
         aria-labelledby="related-projects-title"
-        class="flex flex-col items-center justify-center gap-4 max-w-[100rem] mx-auto"
+        class="mx-auto flex max-w-[100rem] flex-col items-center justify-center gap-6 border border-zinc-800 bg-zinc-950/80 p-4 md:p-8 xl:w-full"
       >
         <h2
           id="related-projects-title"
@@ -822,7 +335,7 @@ const carouselAssets = [
           <li class="md:col-start-1 md:col-end-3">
             <NuxtLink
               to="/about"
-              class="block min-w-70 rounded-lg hover:underline hover:shadow-xs hover:shadow-white hover:transition hover:duration-150 hover:ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              class="block min-w-70  border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <article>
                 <figure>
@@ -842,7 +355,7 @@ const carouselAssets = [
           <li class="md:col-start-3 md:col-end-5">
             <NuxtLink
               to="/about"
-              class="block min-w-70 rounded-lg hover:underline hover:shadow-xs hover:shadow-white hover:transition hover:duration-150 hover:ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              class="block min-w-70  border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <article>
                 <figure>
@@ -862,7 +375,7 @@ const carouselAssets = [
           <li class="md:col-start-2 md:col-end-4">
             <NuxtLink
               to="/about"
-              class="block min-w-70 rounded-lg hover:underline hover:shadow-xs hover:shadow-white hover:transition hover:duration-150 hover:ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              class="block min-w-70  border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               <article>
                 <figure>
