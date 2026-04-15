@@ -69,7 +69,7 @@ watch(
   max-height: 300px;
   max-width: 300px;
   min-width: 0;
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   margin: 1rem;
   border-radius: 10px;
   overflow: hidden;

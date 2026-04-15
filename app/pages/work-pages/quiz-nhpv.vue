@@ -1,3 +1,183 @@
+<script setup>
+const pageTitle = "NHPV Quiz";
+const seoTitle =
+  "NHPV Quiz Project - Interactive Couple Quiz Web App for Event Engagement and Partner Awareness";
+const seoDescription =
+  "NHPV Quiz is an interactive couple quiz project developed for ngobrolinhpv.com, designed to test how well partners know each other through playful questions, individual turns, right and wrong answer scoring, and sensitivity-based results in a memorable event experience.";
+
+const seoImage = "/services/regist-example.jpg";
+
+useSeoMeta({
+  title: seoTitle,
+  description: seoDescription,
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
+  ogImage: seoImage,
+  ogType: "article",
+  twitterCard: "summary_large_image",
+  twitterTitle: seoTitle,
+  twitterDescription: seoDescription,
+  twitterImage: seoImage,
+});
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        name: pageTitle,
+        description: seoDescription,
+        image: seoImage,
+        genre: [
+          "Interactive Event Experience",
+          "Web App",
+          "Event Gamification",
+        ],
+        about: [
+          "Couple Quiz",
+          "Relationship Awareness",
+          "Interactive Event Game",
+        ],
+        creator: {
+          "@type": "Organization",
+          name: "Vartech",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Vartech",
+        },
+      }),
+    },
+  ],
+});
+
+const showcaseImages = [
+  {
+    src: "/services/regist-example.jpg",
+    alt: "NHPV Quiz interactive couple quiz booth at ngobrolinhpv.com event activation",
+  },
+  {
+    src: "/services/regist-example.jpg",
+    alt: "Couples playing the NHPV Quiz web app experience at the event venue",
+  },
+];
+
+const summaryItems = [
+  {
+    title: "Couple Registration",
+    description:
+      "Participants begin by entering the male and female partner names into the web app. This registration step personalizes the quiz flow and prepares the experience for both turns.",
+  },
+  {
+    title: "Male Partner Quiz Turn",
+    description:
+      "The male participant plays first and answers a series of questions designed to test how well he understands his partner. The interaction is playful, relatable, and built around relationship awareness.",
+  },
+  {
+    title: "Male Sensitivity Result",
+    description:
+      "After completing his turn, the system displays a score and ranking that shows how aware or sensitive he is toward his partner based on the number of correct and incorrect answers.",
+  },
+  {
+    title: "Female Partner Quiz Turn",
+    description:
+      "Once the first round is finished, the female participant takes her turn and answers her own set of questions. This keeps the experience balanced and allows both participants to be evaluated individually.",
+  },
+  {
+    title: "Female Sensitivity Result",
+    description:
+      "After the female participant completes the quiz, the web app calculates and displays her final score and ranking using the same right and wrong answer logic.",
+  },
+  {
+    title: "Playful Couple Interaction",
+    description:
+      "The project is designed to create a fun and memorable moment between couples through playful questions, light teasing, and individual results that help them reflect on how well they know each other.",
+    featured: true,
+  },
+];
+
+const aboutText = [
+  "NHPV Quiz is an interactive couple quiz project created for ngobrolinhpv.com at the same event location as the NHPV Journey activation.",
+  "The goal of this project was to build a web app experience that could test how well partners know each other through a series of playful questions, individual turns, and clear right or wrong answer scoring.",
+  "The concept focuses on kepekaan between partners, meaning how aware they are of each other's habits, preferences, and personality, presented in a light, teasing, and engaging format that makes the experience feel fun in an event setting.",
+].join(" ");
+
+const carouselAssets = [
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "NHPV Quiz couple game activation at the event venue",
+    caption: "NHPV Quiz Event Booth",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "Interactive couple quiz web app for event guests",
+    caption: "Couple Quiz Experience",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "Relationship awareness quiz activity for couples",
+    caption: "Partner Awareness Game",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "Event gamification project with right and wrong answer scoring",
+    caption: "Scored Quiz Interaction",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "Male and female partner turns in the NHPV Quiz flow",
+    caption: "Individual Quiz Turns",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "Interactive event game designed to help couples know each other better",
+    caption: "Closer Through Gameplay",
+  },
+];
+
+const relatedProjects = [
+  {
+    title: "NHPV Journey",
+    category: "Interactive Experience",
+    image: "/services/varbel-regist.webp",
+    alt: "NHPV Journey interactive educational experience for couples",
+    href: "/work-pages/nhpv-journey",
+    listClass: "md:col-start-1 md:col-end-3",
+  },
+  {
+    title: "Realtime Photobooth",
+    category: "Event Technology",
+    image: "/services/varbel-regist.webp",
+    alt: "Realtime photobooth activation for event engagement",
+    href: "/work-pages/realtime-photobooth",
+    listClass: "md:col-start-3 md:col-end-5",
+  },
+  {
+    title: "Registration System",
+    category: "Web App",
+    image: "/services/varbel-regist.webp",
+    alt: "Registration system web app for event guest management",
+    href: "/registration-system",
+    listClass: "md:col-start-2 md:col-end-4",
+  },
+];
+</script>
+
 <template>
-    <h1>quiz-nhpv</h1>
+  <WorkLayout
+    title="NHPV Quiz"
+    heading-id="nhpv-quiz-title"
+    showcase-title="NHPV Quiz Showcase"
+    about-title="About"
+    summary-title="Project Summary"
+    gallery-title="NHPV Quiz Project Gallery"
+    related-title="Related Projects"
+    :showcase-images="showcaseImages"
+    :about="aboutText"
+    :summary-items="summaryItems"
+    :gallery-slides="carouselAssets"
+    :related-projects="relatedProjects"
+  />
 </template>

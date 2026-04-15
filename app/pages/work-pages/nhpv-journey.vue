@@ -1,3 +1,175 @@
+<script setup>
+const pageTitle = "NHPV Journey";
+const seoTitle =
+  "NHPV Journey Project - Interactive HPV Education Web App, IoT Lighting, and Photobooth Experience";
+const seoDescription =
+  "NHPV Journey is an interactive HPV education project developed for ngobrolinhpv.com, combining a web app, personalized couple flow, synchronized IoT lighting, dramatic countdown moments, and photobooth integration to create a memorable event experience.";
+
+const seoImage = "/services/regist-example.jpg";
+
+useSeoMeta({
+  title: seoTitle,
+  description: seoDescription,
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
+  ogImage: seoImage,
+  ogType: "article",
+  twitterCard: "summary_large_image",
+  twitterTitle: seoTitle,
+  twitterDescription: seoDescription,
+  twitterImage: seoImage,
+});
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        name: pageTitle,
+        description: seoDescription,
+        image: seoImage,
+        genre: ["Interactive Event Experience", "Web App", "IoT Integration"],
+        about: ["HPV Education", "Couple Journey", "Event Activation"],
+        creator: {
+          "@type": "Organization",
+          name: "Vartech",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Vartech",
+        },
+      }),
+    },
+  ],
+});
+
+const showcaseImages = [
+  {
+    src: "/services/regist-example.jpg",
+    alt: "NHPV Journey interactive HPV education booth experience for couples at an event activation",
+  },
+  {
+    src: "/services/regist-example.jpg",
+    alt: "Web app and IoT lighting experience inside the NHPV Journey couple education booth",
+  },
+];
+
+const summaryItems = [
+  {
+    title: "Couple Registration",
+    description:
+      "Participants begin by entering the male and female partner names into the web app. This registration data is then used to personalize prompts and guide each participant through the interactive HPV education journey.",
+  },
+  {
+    title: "Female Turn and Dramatic Reveal",
+    description:
+      "After registration, the female participant enters the booth while the lights remain off during the countdown. When the countdown ends, the center light turns on to create a dramatic reveal moment for the male partner.",
+  },
+  {
+    title: "Male Reading Journey",
+    description:
+      "The web app displays a personalized prompt asking the male participant to look at his partner, followed by educational HPV content created to help him understand information related to female HPV awareness.",
+  },
+  {
+    title: "Role Switch Experience",
+    description:
+      "Once the first phase is completed, the journey moves into a role-switching stage. A new countdown begins, the male participant enters the booth, and the same dramatic lighting flow is repeated for the second experience.",
+  },
+  {
+    title: "Female Reading Journey",
+    description:
+      "After the countdown finishes, the center light turns on and the female participant sees a personalized prompt before continuing to the HPV educational content designed to give insight from the male perspective.",
+  },
+  {
+    title: "Photobooth Finale with Full Lighting",
+    description:
+      "At the end of the journey, participants are invited to take a photo together. When they confirm, the lighting transitions from a single dramatic center light to five active lights, fully illuminating the booth for the final photobooth capture.",
+    featured: true,
+  },
+];
+
+const aboutText = [
+  "NHPV Journey is an interactive HPV education project created for ngobrolinhpv.com to turn health information into a more immersive and memorable couple-based event experience.",
+  "The challenge was to build an informational journey that encouraged both participants to actively read, reflect, and take turns experiencing each stage instead of passively consuming static content.",
+  "To achieve this, we integrated a web app with synchronized IoT lighting, personalized participant prompts, countdown-based dramatic reveals, and a final photobooth moment, creating a connected experience that blends education, interaction, and event technology.",
+].join(" ");
+
+const carouselAssets = [
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "NHPV Journey event activation gallery image",
+    caption: "NHPV Journey Event Booth",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "Interactive HPV education experience for couples",
+    caption: "Interactive Couple Experience",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "Web app powered HPV education activation",
+    caption: "Web App Experience",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "Synchronized IoT lighting inside event booth",
+    caption: "IoT Lighting Integration",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "Couple journey and countdown activation moment",
+    caption: "Countdown Journey Flow",
+  },
+  {
+    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    alt: "Final photobooth moment after HPV education journey",
+    caption: "Photobooth Finale",
+  },
+];
+
+const relatedProjects = [
+  {
+    title: "AI Face Swap Photobooth",
+    category: "Custom Photobooth",
+    image: "/services/varbel-regist.webp",
+    alt: "AI face swap photobooth for branded event activation",
+    href: "/about",
+    listClass: "md:col-start-1 md:col-end-3",
+  },
+  {
+    title: "Branded Event Photobooth",
+    category: "Custom Photobooth",
+    image: "/services/varbel-regist.webp",
+    alt: "Branded event photobooth system for on-site guest engagement",
+    href: "/about",
+    listClass: "md:col-start-3 md:col-end-5",
+  },
+  {
+    title: "Instant Print Booth System",
+    category: "Custom Photobooth",
+    image: "/services/varbel-regist.webp",
+    alt: "Instant print photobooth system for event experience and guest interaction",
+    href: "/about",
+    listClass: "md:col-start-2 md:col-end-4",
+  },
+];
+</script>
+
 <template>
-    <h1>nhpv-journey</h1>
+  <WorkLayout
+    title="NHPV Journey"
+    heading-id="nhpv-journey-title"
+    showcase-title="NHPV Journey Showcase"
+    about-title="About"
+    summary-title="Project Summary"
+    gallery-title="NHPV Journey Project Gallery"
+    related-title="Related Projects"
+    :showcase-images="showcaseImages"
+    :about="aboutText"
+    :summary-items="summaryItems"
+    :gallery-slides="carouselAssets"
+    :related-projects="relatedProjects"
+  />
 </template>

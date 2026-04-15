@@ -576,80 +576,9 @@ const carouselAssets = [
         <EndlessLoop :slides="carouselAssets" />
       </section>
 
-      <!-- RELATED PROJECTS -->
-      <section
-        aria-labelledby="related-projects-title"
-        class="mx-auto flex max-w-[100rem] flex-col items-center justify-center gap-6 border border-zinc-800 bg-zinc-950/80 p-6 md:p-8"
-      >
-        <h2
-          id="related-projects-title"
-          class="flex flex-col items-center text-2xl font-bold uppercase tracking-wide text-white md:text-3xl"
-        >
-          Related Projects
-        </h2>
-
-        <ul class="grid gap-4 md:grid-cols-4 lg:flex">
-          <li class="md:col-start-1 md:col-end-3">
-            <NuxtLink
-              to="/about"
-              class="block min-w-70  border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-            >
-              <article>
-                <figure class="overflow-hidden border border-zinc-800">
-                  <NuxtImg
-                    src="/services/varbel-regist.webp"
-                    alt="QR registration system used in a corporate event"
-                  />
-                </figure>
-                <h3 class="mt-3 text-lg font-semibold text-white md:text-xl">
-                  AI Face Swap Photobooth
-                </h3>
-                <p class="text-sm text-zinc-400">Custom Photobooth</p>
-              </article>
-            </NuxtLink>
-          </li>
-
-          <li class="md:col-start-3 md:col-end-5">
-            <NuxtLink
-              to="/about"
-              class="block min-w-70  border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-            >
-              <article>
-                <figure class="overflow-hidden border border-zinc-800">
-                  <NuxtImg
-                    src="/services/varbel-regist.webp"
-                    alt="On-site guest registration system at an exhibition"
-                  />
-                </figure>
-                <h3 class="mt-3 text-lg font-semibold text-white md:text-xl">
-                  Branded Event Photobooth
-                </h3>
-                <p class="text-sm text-zinc-400">Custom Photobooth</p>
-              </article>
-            </NuxtLink>
-          </li>
-
-          <li class="md:col-start-2 md:col-end-4">
-            <NuxtLink
-              to="/about"
-              class="block min-w-70  border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-            >
-              <article>
-                <figure class="overflow-hidden border border-zinc-800">
-                  <NuxtImg
-                    src="/services/varbel-regist.webp"
-                    alt="On-site guest registration system at an exhibition"
-                  />
-                </figure>
-                <h3 class="mt-3 text-lg font-semibold text-white md:text-xl">
-                  Instant Print Booth System
-                </h3>
-                <p class="text-sm text-zinc-400">Custom Photobooth</p>
-              </article>
-            </NuxtLink>
-          </li>
-        </ul>
-      </section>
+      <RelatedProjects
+        section-class="mx-auto flex max-w-[100rem] flex-col items-center justify-center gap-6 border border-zinc-800 bg-zinc-950/80 p-6 md:p-8"
+      />
     </article>
   </main>
 </template>
