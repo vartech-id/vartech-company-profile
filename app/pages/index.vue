@@ -306,7 +306,7 @@ const worksAsset = [
         </p>
         <NuxtLink
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
-          to="/registration-system"
+          to="/services/registration-system"
           >Learn more →</NuxtLink
         >
       </article>
@@ -319,7 +319,7 @@ const worksAsset = [
         </p>
         <NuxtLink
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
-          to="/custom-photobooth"
+          to="/services/custom-photobooth"
           >Learn more →</NuxtLink
         >
       </article>
@@ -332,7 +332,7 @@ const worksAsset = [
         </p>
         <NuxtLink
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
-          to="/ai-photobooth"
+          to="/services/ai-photobooth"
           >Learn more →</NuxtLink
         >
       </article>
@@ -346,7 +346,7 @@ const worksAsset = [
         </p>
         <NuxtLink
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
-          to="/gamification"
+          to="/services/gamification"
           >Learn more →</NuxtLink
         >
       </article>
@@ -359,7 +359,7 @@ const worksAsset = [
         </p>
         <NuxtLink
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
-          to="/interactive-experience"
+          to="/services/interactive-experience"
           >Learn more →</NuxtLink
         >
       </article>
@@ -463,6 +463,7 @@ const worksAsset = [
                 <a
                   class="block w-8 h-8"
                   href="https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  aria-label="Instagram"
                 >
                   <svg
                     class="block h-full w-full"
