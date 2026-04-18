@@ -142,6 +142,7 @@ useHead({
         logo: ogImageUrl,
         description:
           "Vartech.id builds custom event technology, AI photobooths, registration systems, interactive games, and live brand activation experiences.",
+        sameAs: ["https://www.instagram.com/vartech_idn"],
       }),
     },
     {

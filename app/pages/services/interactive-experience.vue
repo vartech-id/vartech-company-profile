@@ -1,4 +1,21 @@
 <script setup>
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
+          { "@type": "ListItem", position: 2, name: "Services", item: "https://vartech.id/services" },
+          { "@type": "ListItem", position: 3, name: "Interactive Live Experiences", item: "https://vartech.id/services/interactive-experience" },
+        ],
+      }),
+    },
+  ],
+});
+
 const carouselAssets = [
   {
     image: "/images/carousel-ai-pb/sample-ai.jpeg",
@@ -34,10 +51,9 @@ const carouselAssets = [
 </script>
 
 <template>
-  <main class="pt-10">
-    <article
+  <article
       aria-labelledby="registration-system-title"
-      class="mx-auto flex flex-col gap-20 w-11/12 max-w-[100rem]"
+      class="pt-10 mx-auto flex flex-col gap-20 w-11/12 max-w-[100rem]"
     >
       <header>
         <h1
@@ -204,6 +220,5 @@ const carouselAssets = [
       </section>
 
       <RelatedProjects />
-    </article>
-  </main>
+  </article>
 </template>

@@ -1,4 +1,20 @@
 <script setup>
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
+          { "@type": "ListItem", position: 2, name: "Services", item: "https://vartech.id/services" },
+        ],
+      }),
+    },
+  ],
+});
+
 const relatedProjects = [
   {
     title: "BNI Banking Journey",
@@ -29,12 +45,12 @@ const relatedProjects = [
 <template>
   <section class="max-w-[90rem] w-11/12 mx-auto flex flex-col gap-10">
     <h1
-      class="text-center text-4xl font-bold uppercase tracking-wide md:text-5xl"
+      class="text-center text-4xl font-bold uppercase tracking-wide md:text-5xl my-10"
     >
-      Our Services
+      Services
     </h1>
     <article
-      class="border-2 flex flex-col md:flex-row gap-6 p-4 border-gray-700"
+      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-gray-700"
     >
       <div class="flex flex-col gap-4 flex-1">
         <h2 class="text-2xl font-bold">Registration System</h2>
@@ -57,7 +73,7 @@ const relatedProjects = [
       </div>
     </article>
     <article
-      class="border-2 flex flex-col md:flex-row gap-6 p-4 border-gray-700"
+      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-gray-700"
     >
       <div class="flex flex-col gap-4 flex-1">
         <h2 class="text-2xl font-bold">Custom Photobooth Development</h2>
@@ -68,7 +84,7 @@ const relatedProjects = [
         </p>
         <NuxtLink
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
-          to="/services/registration-system"
+          to="/services/custom-photobooth"
           >Learn more →</NuxtLink
         >
       </div>
@@ -80,18 +96,18 @@ const relatedProjects = [
       </div>
     </article>
     <article
-      class="border-2 flex flex-col md:flex-row gap-6 p-4 border-gray-700"
+      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-gray-700"
     >
       <div class="flex flex-col gap-4 flex-1">
-        <h2 class="text-2xl font-bold">Registration System</h2>
+        <h2 class="text-2xl font-bold">Ai Photobooth & Image Automation</h2>
         <p class="text-base md:text-lg lg:text-xl text-gray-400 font-semibold">
-          From online registration to on-site QR scanning, we create seamless
-          check-in systems with real-time attendance tracking, admin controls,
-          and reporting so your crowd flow stays organized and effortless.
+          From face swap to enhancement and automated processing, we turn AI
+          into practical event-ready features optimized for consistent results,
+          fast turnaround, and scalable output.
         </p>
         <NuxtLink
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
-          to="/services/registration-system"
+          to="/services/ai-photobooth"
           >Learn more →</NuxtLink
         >
       </div>
@@ -103,18 +119,19 @@ const relatedProjects = [
       </div>
     </article>
     <article
-      class="border-2 flex flex-col md:flex-row gap-6 p-4 border-gray-700"
+      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-gray-700"
     >
       <div class="flex flex-col gap-4 flex-1">
-        <h2 class="text-2xl font-bold">Registration System</h2>
+        <h2 class="text-2xl font-bold">Gamification & Interactive Games</h2>
         <p class="text-base md:text-lg lg:text-xl text-gray-400 font-semibold">
-          From online registration to on-site QR scanning, we create seamless
-          check-in systems with real-time attendance tracking, admin controls,
-          and reporting so your crowd flow stays organized and effortless.
+          From quick mini-games to full gamification systems, we build
+          interactive experiences that drive engagement boosting participation,
+          retention, and campaign excitement through clear mechanics and
+          rewards.
         </p>
         <NuxtLink
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
-          to="/services/registration-system"
+          to="/services/gamification"
           >Learn more →</NuxtLink
         >
       </div>
@@ -125,14 +142,37 @@ const relatedProjects = [
         />
       </div>
     </article>
-    <div id="CTA" class="flex flex-col items-center gap-4">
-      <h3 class="font-bold text-xl sm:text-2xl md:text-3xl">Need a More Custom Solutions?</h3>
-      <p>
+    <article
+      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-gray-700"
+    >
+      <div class="flex flex-col gap-4 flex-1">
+        <h2 class="text-2xl font-bold">Interactive Live Experiences</h2>
+        <p class="text-base md:text-lg lg:text-xl text-gray-400 font-semibold">
+          From live message walls to real-time screen outputs, we power
+          interactive moments that appear instantly on displays turning audience
+          participation into a shared experience with moderation and control.
+        </p>
+        <NuxtLink
+          class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
+          to="/services/interactive-experience"
+          >Learn more →</NuxtLink
+        >
+      </div>
+      <div class="flex-1 md:max-w-xl">
+        <NuxtImg
+          class="object-cover aspect-3/2 w-full h-full"
+          src="/services/regist-example.jpg"
+        />
+      </div>
+    </article>
+    <section id="CTA" aria-labelledby="cta-title" class="flex flex-col items-center gap-4 py-50 text-center">
+      <h3 id="cta-title" class="font-bold text-xl sm:text-2xl md:text-3xl">Need More Custom Solutions?</h3>
+      <p class="text-sm md:text-base lg:text-lg">
         We help brands, agencies, and event organizers build tailored digital
         solutions based on their goals, workflow, and audience experience.
       </p>
       <NuxtLink class="inline-flex h-12 items-center justify-center border-2 border-white px-4 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black" to="contact" >Talk to Us</NuxtLink>
-    </div>
+    </section>
     <RelatedProjects :projects="relatedProjects" />
   </section>
 </template>

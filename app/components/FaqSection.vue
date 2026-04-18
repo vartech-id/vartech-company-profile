@@ -63,7 +63,7 @@ const afterLeave = (el) => {
     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center">
       FAQs
     </h2>
-    <p class="text-sm text-center w-5/6 font-normal">
+      <p class="text-sm md:text-base lg:text-lg text-center w-5/6">
       Answers to common questions about custom event tech, AI photobooths, and
       brand activation experiences.
     </p>

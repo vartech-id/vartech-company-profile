@@ -1,6 +1,23 @@
 <script setup>
 import ImageSwiper from "~/components/ImageSwiper.vue";
 
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
+          { "@type": "ListItem", position: 2, name: "Services", item: "https://vartech.id/services" },
+          { "@type": "ListItem", position: 3, name: "Custom Photobooth Development", item: "https://vartech.id/services/custom-photobooth" },
+        ],
+      }),
+    },
+  ],
+});
+
 const imagesAsset = [
   {
     name: "Blackmores",
@@ -49,10 +66,9 @@ const carouselAssets = [
 </script>
 
 <template>
-  <main class="bg-black pt-10 text-zinc-100">
-    <article
+  <article
       aria-labelledby="registration-system-title"
-      class="mx-auto flex w-11/12 flex-col items-center gap-20"
+      class="bg-black pt-10 text-zinc-100 mx-auto flex w-11/12 flex-col items-center gap-20"
     >
       <header>
         <h1
@@ -527,6 +543,5 @@ const carouselAssets = [
       </section>
 
       <RelatedProjects />
-    </article>
-  </main>
+  </article>
 </template>

@@ -1,4 +1,20 @@
 <script setup>
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
+          { "@type": "ListItem", position: 2, name: "Works", item: "https://vartech.id/works" },
+        ],
+      }),
+    },
+  ],
+});
+
 const works = [
   {
     title: "Nhpv Interactive Journey",
@@ -58,8 +74,7 @@ const works = [
 </script>
 
 <template>
-  <main class="bg-black px-4 py-8 text-zinc-100">
-    <section aria-labelledby="works-title" class="mx-auto w-full max-w-[90rem]">
+  <section aria-labelledby="works-title" class="bg-black px-4 py-8 text-zinc-100 mx-auto w-full max-w-[90rem]">
       <h1
         id="works-title"
         class="mb-8 text-center text-3xl font-bold text-white md:text-4xl"
@@ -99,6 +114,5 @@ const works = [
           </article>
         </NuxtLink>
       </div>
-    </section>
-  </main>
+  </section>
 </template>
