@@ -83,36 +83,14 @@ const works = [
       </h1>
 
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <NuxtLink
+        <CardItem
           v-for="(work, index) in works"
           :key="`${work.href}-${index}`"
-          :to="work.href"
-          :aria-label="`View project ${work.title} by ${work.company}`"
-          class="group block h-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-        >
-          <article
-            class="flex h-full flex-col overflow-hidden border border-zinc-800 bg-zinc-900/70 shadow-sm transition duration-150 ease-in-out group-hover:border-zinc-600 group-hover:bg-zinc-900 group-hover:shadow-lg group-hover:shadow-black/20 group-focus-visible:border-zinc-500 group-focus-visible:bg-zinc-900 group-focus-visible:shadow-lg group-focus-visible:shadow-black/20 motion-reduce:transition-none"
-          >
-            <div
-              class="aspect-16/10 w-full overflow-hidden border-b border-zinc-800 bg-zinc-950"
-            >
-              <NuxtImg
-                :src="work.image"
-                :alt="`Preview image for ${work.title} by ${work.company}`"
-                class="h-full w-full object-cover"
-              />
-            </div>
-
-            <div class="flex flex-1 flex-col p-4">
-              <h2 class="text-lg font-bold leading-snug text-white">
-                {{ work.title }}
-              </h2>
-              <p class="mt-1 text-sm leading-6 text-zinc-300">
-                {{ work.company }}
-              </p>
-            </div>
-          </article>
-        </NuxtLink>
+          :title="work.title"
+          :subtitle="work.company"
+          :image="work.image"
+          :href="work.href"
+        />
       </div>
   </section>
 </template>
