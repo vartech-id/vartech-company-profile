@@ -6,7 +6,16 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ["embla-carousel-vue"],
+    },
   },
 
-  modules: ['@nuxt/image','@nuxt/ui'],
+  content: {
+    renderer: {
+      anchorLinks: false,
+    },
+  },
+
+  modules: ['@nuxt/image', '@nuxt/ui', '@nuxt/content'],
 })

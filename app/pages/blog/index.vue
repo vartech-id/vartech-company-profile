@@ -25,7 +25,9 @@ useSeoMeta({
   ogUrl: "https://vartech.id/blog",
 });
 
-const posts = useBlogPosts();
+const { data: posts } = await useAsyncData("blog-posts", () =>
+  queryCollection("blog").order("date", "DESC").all()
+);
 </script>
 
 <template>
@@ -34,14 +36,13 @@ const posts = useBlogPosts();
       Blog
     </h1>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
       <CardItem
         v-for="(post, index) in posts"
-        :key="`${post.href}-${index}`"
+        :key="`${post.path}-${index}`"
         :title="post.title"
         :subtitle="post.subtitle"
         :image="post.image"
-        :href="post.href"
+        :href="post.path"
         :date="post.date"
         :excerpt="post.excerpt"
         :tags="post.tags"

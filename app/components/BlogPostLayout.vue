@@ -22,7 +22,10 @@ defineProps({
         </span>
       </div>
 
-      <h1 id="blog-post-title" class="text-3xl font-bold text-white md:text-4xl">
+      <h1
+        id="blog-post-title"
+        class="text-3xl font-bold text-white md:text-4xl"
+      >
         {{ post.title }}
       </h1>
 
@@ -35,6 +38,8 @@ defineProps({
       />
     </header>
 
-    <ContentRenderer :value="post" prose class="max-w-none" />
+    <div class="prose prose-invert prose-zinc max-w-none">
+      <ContentRenderer :value="post" />
+    </div>
   </article>
 </template>

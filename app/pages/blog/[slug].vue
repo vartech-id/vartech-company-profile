@@ -1,21 +1,43 @@
 <script setup>
 const route = useRoute();
-const posts = useBlogPosts();
-const post = posts.find((p) => p.slug === route.params.slug);
+const slug = route.params.slug;
+
+const { data: post } = await useAsyncData(slug, () =>
+  queryCollection("blog").path(`/blog/${slug}`).first()
+);
+
+if (!post.value) {
+  throw createError({ statusCode: 404, statusMessage: "Post not found" });
+}
+
+useSeoMeta({
+  title: `${post.value.title} | Vartech.id`,
+  description: post.value.excerpt,
+  ogTitle: `${post.value.title} | Vartech.id`,
+  ogDescription: post.value.excerpt,
+  ogImage: post.value.image,
+  ogType: "article",
+  ogUrl: `https://vartech.id/blog/${slug}`,
+});
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://vartech.id/blog" },
+          { "@type": "ListItem", position: 3, name: post.value.title, item: `https://vartech.id/blog/${slug}` },
+        ],
+      }),
+    },
+  ],
+});
 </script>
 
 <template>
-  <article
-    aria-labelledby="blog-post-title"
-    class="mx-auto w-11/12 max-w-[90rem] py-10"
-  >
-    <BlogContentLayout
-      :title="post?.title"
-      :author="post?.author"
-      :publish-at="post?.date"
-      :excerpt="post?.excerpt"
-      :tags="post?.tags"
-      :img-path="post.image" 
-      :content="post.content"></BlogContentLayout>
-  </article>
+  <BlogPostLayout :post="post" />
 </template>

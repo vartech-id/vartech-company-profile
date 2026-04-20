@@ -178,7 +178,7 @@ onBeforeUnmount(() => {
     </div>
   </Transition>
 </template>
-<style>
+<style scoped>
 .menu-overlay {
   position: fixed;
   inset: 0;
