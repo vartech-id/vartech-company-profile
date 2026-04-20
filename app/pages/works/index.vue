@@ -1,17 +1,26 @@
 <script setup>
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
-          { "@type": "ListItem", position: 2, name: "Works", item: "https://vartech.id/works" },
-        ],
-      }),
-    },
+import {
+  breadcrumbSchema,
+  jsonLdScript,
+  usePageSeo,
+} from "~/composables/useSiteSeo";
+
+const seoTitle = "Works | Vartech.id - Event Technology Case Studies";
+const seoDescription =
+  "See Vartech.id work across event registration systems, AI photobooths, interactive games, digital signage, and brand activation technology.";
+
+usePageSeo({
+  title: seoTitle,
+  description: seoDescription,
+  path: "/works",
+  scripts: [
+    jsonLdScript(
+      "schema-breadcrumb-works",
+      breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Works", path: "/works" },
+      ]),
+    ),
   ],
 });
 

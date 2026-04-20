@@ -7,7 +7,7 @@ defineProps({
 <template>
   <article
     aria-labelledby="blog-post-title"
-    class="mx-auto flex w-11/12 max-w-3xl flex-col gap-8 py-10"
+    class="mx-auto flex w-11/12 max-w-5xl flex-col gap-8 py-10"
   >
     <NuxtLink class="hover:underline" to="/blog">← All posts</NuxtLink>
 
@@ -29,7 +29,7 @@ defineProps({
         {{ post.title }}
       </h1>
 
-      <p class="text-sm text-zinc-500">{{ post.date }}</p>
+      <p class="text-sm text-zinc-500">{{ formatPostDate(post.date) }}</p>
 
       <NuxtImg
         :src="post.image"
@@ -41,5 +41,13 @@ defineProps({
     <div class="prose prose-invert prose-zinc max-w-none">
       <ContentRenderer :value="post" />
     </div>
+
+    <FaqSection
+      v-if="post.faqs?.length"
+      id="blog-faqs"
+      title="Frequently Asked Questions"
+      title-class="text-left text-2xl font-bold text-white md:text-3xl"
+      :items="post.faqs"
+    />
   </article>
 </template>

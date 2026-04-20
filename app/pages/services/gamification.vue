@@ -1,18 +1,32 @@
 <script setup>
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
-          { "@type": "ListItem", position: 2, name: "Services", item: "https://vartech.id/services" },
-          { "@type": "ListItem", position: 3, name: "Gamification & Interactive Games", item: "https://vartech.id/services/gamification" },
-        ],
-      }),
-    },
+import {
+  breadcrumbSchema,
+  jsonLdScript,
+  usePageSeo,
+} from "~/composables/useSiteSeo";
+
+const seoTitle =
+  "Gamification and Interactive Games | Vartech.id - Event Engagement Systems";
+const seoDescription =
+  "Create custom event games, quizzes, leaderboards, scoring flows, and gamified booth experiences for brand activations and exhibitions.";
+
+usePageSeo({
+  title: seoTitle,
+  description: seoDescription,
+  path: "/services/gamification",
+  image: "/services/regist-example.jpg",
+  scripts: [
+    jsonLdScript(
+      "schema-breadcrumb-gamification",
+      breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Services", path: "/services" },
+        {
+          name: "Gamification & Interactive Games",
+          path: "/services/gamification",
+        },
+      ]),
+    ),
   ],
 });
 

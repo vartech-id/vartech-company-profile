@@ -1,28 +1,27 @@
 <script setup>
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
-          { "@type": "ListItem", position: 2, name: "Blog", item: "https://vartech.id/blog" },
-        ],
-      }),
-    },
-  ],
-});
+import {
+  breadcrumbSchema,
+  jsonLdScript,
+  usePageSeo,
+} from "~/composables/useSiteSeo";
 
-useSeoMeta({
-  title: "Blog | Vartech.id — Event Tech Insights & Case Studies",
-  description: "Explore articles, case studies, and insights on custom event technology, AI photobooths, registration systems, and interactive experiences by Vartech.id.",
-  robots: "index,follow",
-  ogTitle: "Blog | Vartech.id — Event Tech Insights & Case Studies",
-  ogDescription: "Explore articles, case studies, and insights on custom event technology, AI photobooths, registration systems, and interactive experiences by Vartech.id.",
-  ogType: "website",
-  ogUrl: "https://vartech.id/blog",
+const seoTitle = "Blog | Vartech.id - Event Tech Insights and Case Studies";
+const seoDescription =
+  "Explore articles, case studies, and insights on custom event technology, AI photobooths, registration systems, and interactive experiences by Vartech.id.";
+
+usePageSeo({
+  title: seoTitle,
+  description: seoDescription,
+  path: "/blog",
+  scripts: [
+    jsonLdScript(
+      "schema-breadcrumb-blog",
+      breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Blog", path: "/blog" },
+      ]),
+    ),
+  ],
 });
 
 const { data: posts } = await useAsyncData("blog-posts", () =>

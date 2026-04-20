@@ -17,5 +17,11 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml'],
+    },
+  },
+
   modules: ['@nuxt/image', '@nuxt/ui', '@nuxt/content'],
 })

@@ -1,18 +1,32 @@
 <script setup>
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
-          { "@type": "ListItem", position: 2, name: "Services", item: "https://vartech.id/services" },
-          { "@type": "ListItem", position: 3, name: "Interactive Live Experiences", item: "https://vartech.id/services/interactive-experience" },
-        ],
-      }),
-    },
+import {
+  breadcrumbSchema,
+  jsonLdScript,
+  usePageSeo,
+} from "~/composables/useSiteSeo";
+
+const seoTitle =
+  "Interactive Live Experiences | Vartech.id - Event Display and Audience Tech";
+const seoDescription =
+  "Build interactive live experiences for events, including message walls, digital journeys, real-time displays, audience participation, and screen integrations.";
+
+usePageSeo({
+  title: seoTitle,
+  description: seoDescription,
+  path: "/services/interactive-experience",
+  image: "/services/regist-example.jpg",
+  scripts: [
+    jsonLdScript(
+      "schema-breadcrumb-interactive-experience",
+      breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Services", path: "/services" },
+        {
+          name: "Interactive Live Experiences",
+          path: "/services/interactive-experience",
+        },
+      ]),
+    ),
   ],
 });
 

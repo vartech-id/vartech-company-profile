@@ -1,9 +1,20 @@
 <script setup>
-useHead({
+import { withSiteUrl } from "~/composables/useSiteSeo";
+
+const route = useRoute();
+
+useHead(() => ({
   htmlAttrs: {
     lang: "en",
   },
-});
+  link: [
+    {
+      key: "canonical",
+      rel: "canonical",
+      href: withSiteUrl(route.path),
+    },
+  ],
+}));
 </script>
 
 <template>

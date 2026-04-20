@@ -126,6 +126,7 @@ useSeoMeta({
 useHead({
   link: [
     {
+      key: "canonical",
       rel: "canonical",
       href: homepageUrl,
     },
@@ -399,7 +400,10 @@ const worksAsset = [
         >
       </div>
     </section>
-    <FaqSection />
+    <FaqSection
+      description="Answers to common questions about custom event tech, AI photobooths, and brand activation experiences."
+      :items="faqItems"
+    />
     <section
       id="faq-cta"
       aria-labelledby="faq-cta-title"

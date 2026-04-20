@@ -1,17 +1,26 @@
 <script setup>
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
-          { "@type": "ListItem", position: 2, name: "Services", item: "https://vartech.id/services" },
-        ],
-      }),
-    },
+import {
+  breadcrumbSchema,
+  jsonLdScript,
+  usePageSeo,
+} from "~/composables/useSiteSeo";
+
+const seoTitle = "Services | Vartech.id - Custom Event Technology Solutions";
+const seoDescription =
+  "Explore Vartech.id services for custom event registration systems, photobooth software, AI photobooths, gamification, and interactive live experiences.";
+
+usePageSeo({
+  title: seoTitle,
+  description: seoDescription,
+  path: "/services",
+  scripts: [
+    jsonLdScript(
+      "schema-breadcrumb-services",
+      breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Services", path: "/services" },
+      ]),
+    ),
   ],
 });
 
@@ -166,12 +175,12 @@ const relatedProjects = [
       </div>
     </article>
     <section id="CTA" aria-labelledby="cta-title" class="flex flex-col items-center gap-4 py-50 text-center">
-      <h3 id="cta-title" class="font-bold text-xl sm:text-2xl md:text-3xl">Need More Custom Solutions?</h3>
+      <h2 id="cta-title" class="font-bold text-xl sm:text-2xl md:text-3xl">Need More Custom Solutions?</h2>
       <p class="text-sm md:text-base lg:text-lg">
         We help brands, agencies, and event organizers build tailored digital
         solutions based on their goals, workflow, and audience experience.
       </p>
-      <NuxtLink class="inline-flex h-12 items-center justify-center border-2 border-white px-4 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black" to="contact" >Talk to Us</NuxtLink>
+      <NuxtLink class="inline-flex h-12 items-center justify-center border-2 border-white px-4 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black" to="/contact" >Talk to Us</NuxtLink>
     </section>
     <RelatedProjects :projects="relatedProjects" />
   </section>

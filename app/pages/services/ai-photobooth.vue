@@ -1,20 +1,33 @@
 <script setup>
 import ImageSwiper from "~/components/ImageSwiper.vue";
+import {
+  breadcrumbSchema,
+  jsonLdScript,
+  usePageSeo,
+} from "~/composables/useSiteSeo";
 
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
-          { "@type": "ListItem", position: 2, name: "Services", item: "https://vartech.id/services" },
-          { "@type": "ListItem", position: 3, name: "AI Photobooth & Image Automation", item: "https://vartech.id/services/ai-photobooth" },
-        ],
-      }),
-    },
+const seoTitle =
+  "AI Photobooth | Vartech.id - AI Image Automation for Events";
+const seoDescription =
+  "Build AI photobooth experiences with face swap, themed image generation, automated photo processing, QR delivery, and branded event output.";
+
+usePageSeo({
+  title: seoTitle,
+  description: seoDescription,
+  path: "/services/ai-photobooth",
+  image: "/photobooth-ui/blackmores-1.webp",
+  scripts: [
+    jsonLdScript(
+      "schema-breadcrumb-ai-photobooth",
+      breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Services", path: "/services" },
+        {
+          name: "AI Photobooth & Image Automation",
+          path: "/services/ai-photobooth",
+        },
+      ]),
+    ),
   ],
 });
 

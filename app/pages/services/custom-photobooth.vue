@@ -1,20 +1,33 @@
 <script setup>
 import ImageSwiper from "~/components/ImageSwiper.vue";
+import {
+  breadcrumbSchema,
+  jsonLdScript,
+  usePageSeo,
+} from "~/composables/useSiteSeo";
 
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
-          { "@type": "ListItem", position: 2, name: "Services", item: "https://vartech.id/services" },
-          { "@type": "ListItem", position: 3, name: "Custom Photobooth Development", item: "https://vartech.id/services/custom-photobooth" },
-        ],
-      }),
-    },
+const seoTitle =
+  "Custom Photobooth Development | Vartech.id - Branded Event Photo Systems";
+const seoDescription =
+  "Create custom photobooth software for events with camera capture, branded overlays, instant delivery, QR sharing, and print-ready workflows.";
+
+usePageSeo({
+  title: seoTitle,
+  description: seoDescription,
+  path: "/services/custom-photobooth",
+  image: "/photobooth-ui/blackmores-1.webp",
+  scripts: [
+    jsonLdScript(
+      "schema-breadcrumb-custom-photobooth",
+      breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Services", path: "/services" },
+        {
+          name: "Custom Photobooth Development",
+          path: "/services/custom-photobooth",
+        },
+      ]),
+    ),
   ],
 });
 

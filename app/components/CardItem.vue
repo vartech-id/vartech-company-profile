@@ -39,7 +39,7 @@ defineProps({
         <h2 class="text-lg font-bold leading-snug text-white">{{ title }}</h2>
         <p v-if="subtitle" class="text-sm leading-6 text-zinc-300">{{ subtitle }}</p>
         <p v-if="excerpt" class="mt-1 text-sm leading-6 text-zinc-400 line-clamp-2">{{ excerpt }}</p>
-        <p v-if="date" class="mt-auto pt-2 text-xs text-zinc-500">{{ date }}</p>
+        <p v-if="date" class="mt-auto pt-2 text-xs text-zinc-500">{{ formatPostDate(date) }}</p>
       </div>
     </article>
   </NuxtLink>

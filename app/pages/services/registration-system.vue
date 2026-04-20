@@ -1,20 +1,30 @@
 <script setup>
 import ImageSwiper from "~/components/ImageSwiper.vue";
+import {
+  breadcrumbSchema,
+  jsonLdScript,
+  usePageSeo,
+} from "~/composables/useSiteSeo";
 
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://vartech.id/" },
-          { "@type": "ListItem", position: 2, name: "Services", item: "https://vartech.id/services" },
-          { "@type": "ListItem", position: 3, name: "Registration System", item: "https://vartech.id/services/registration-system" },
-        ],
-      }),
-    },
+const seoTitle =
+  "Registration System | Vartech.id - QR Check-in and Event Attendance";
+const seoDescription =
+  "Build custom event registration systems with online sign-up, QR code check-in, attendance tracking, admin controls, and reporting dashboards.";
+
+usePageSeo({
+  title: seoTitle,
+  description: seoDescription,
+  path: "/services/registration-system",
+  image: "/services/regist-example.jpg",
+  scripts: [
+    jsonLdScript(
+      "schema-breadcrumb-registration-system",
+      breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Services", path: "/services" },
+        { name: "Registration System", path: "/services/registration-system" },
+      ]),
+    ),
   ],
 });
 
