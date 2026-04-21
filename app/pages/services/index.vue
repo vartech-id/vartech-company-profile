@@ -59,7 +59,7 @@ const relatedProjects = [
       Services
     </h1>
     <article
-      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-gray-700"
+      class="border border-zinc-700 bg-zinc-950 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 p-4"
     >
       <div class="flex flex-col gap-4 flex-1">
         <h2 class="text-2xl font-bold">Registration System</h2>
@@ -82,7 +82,7 @@ const relatedProjects = [
       </div>
     </article>
     <article
-      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-gray-700"
+      class="border border-zinc-700 bg-zinc-950 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 p-4"
     >
       <div class="flex flex-col gap-4 flex-1">
         <h2 class="text-2xl font-bold">Custom Photobooth Development</h2>
@@ -105,7 +105,7 @@ const relatedProjects = [
       </div>
     </article>
     <article
-      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-gray-700"
+      class="border border-zinc-700 bg-zinc-950 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 p-4"
     >
       <div class="flex flex-col gap-4 flex-1">
         <h2 class="text-2xl font-bold">Ai Photobooth & Image Automation</h2>
@@ -128,7 +128,7 @@ const relatedProjects = [
       </div>
     </article>
     <article
-      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-gray-700"
+      class="border border-zinc-700 bg-zinc-950 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 p-4"
     >
       <div class="flex flex-col gap-4 flex-1">
         <h2 class="text-2xl font-bold">Gamification & Interactive Games</h2>
@@ -152,7 +152,7 @@ const relatedProjects = [
       </div>
     </article>
     <article
-      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-gray-700"
+      class="border-2 flex flex-col md:flex-row gap-6 lg:gap-8 p-4 border-zinc-700 bg-zinc-950 shadow-sm"
     >
       <div class="flex flex-col gap-4 flex-1">
         <h2 class="text-2xl font-bold">Interactive Live Experiences</h2>
