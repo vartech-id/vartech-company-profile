@@ -3,26 +3,14 @@ import {
   breadcrumbSchema,
   jsonLdScript,
   usePageSeo,
+  SITE_URL,
+  SITE_NAME,
+  SITE_LOGO,
 } from "~/composables/useSiteSeo";
 
 const seoTitle = "About Vartech.id | Custom Event Technology Team";
 const seoDescription =
   "Learn about Vartech.id, a custom event technology team building registration systems, photobooth software, interactive experiences, and digital solutions.";
-
-usePageSeo({
-  title: seoTitle,
-  description: seoDescription,
-  path: "/about-us",
-  scripts: [
-    jsonLdScript(
-      "schema-breadcrumb-about",
-      breadcrumbSchema([
-        { name: "Home", path: "/" },
-        { name: "About Us", path: "/about-us" },
-      ]),
-    ),
-  ],
-});
 
 const team = [
   {
@@ -46,6 +34,47 @@ const team = [
     photo: "/services/regist-example.jpg",
   },
 ];
+
+usePageSeo({
+  title: seoTitle,
+  description: seoDescription,
+  path: "/about-us",
+  scripts: [
+    jsonLdScript(
+      "schema-breadcrumb-about",
+      breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "About Us", path: "/about-us" },
+      ]),
+    ),
+    jsonLdScript("schema-about-page", {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: seoTitle,
+      description: seoDescription,
+      url: `${SITE_URL}/about-us`,
+      publisher: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: SITE_URL,
+        logo: SITE_LOGO,
+      },
+    }),
+    jsonLdScript("schema-organization", {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: SITE_LOGO,
+      description: seoDescription,
+      member: team.map((m) => ({
+        "@type": "Person",
+        name: m.name,
+        jobTitle: m.role,
+      })),
+    }),
+  ],
+});
 </script>
 
 <template>
@@ -54,7 +83,7 @@ const team = [
     class="flex flex-col w-11/12 mx-auto max-w-[70rem] gap-15 pt-10 text-white"
   >
     <section class="flex flex-col gap-6">
-      <h1 class="text-4xl md:text-center" id="about-title">About Us</h1>
+      <h1 class="text-3xl font-bold text-white md:text-4xl md:text-center" id="about-title">About Us</h1>
       <p class="md:text-center lg:w-5/6 mx-auto text-zinc-300">
         Vartech.id is a custom event technology team focused on building digital
         experiences that solve real problems in live events and brand
@@ -66,6 +95,7 @@ const team = [
         <NuxtImg
           class="object-cover w-full max-h-120 aspect-video"
           src="/services/regist-example.jpg"
+          alt="Vartech.id team working on custom event technology"
         />
       </div>
 
@@ -78,6 +108,7 @@ const team = [
       </p>
 
       <NuxtLink
+        aria-label="Contact Vartech.id"
         class="my-6 flex mx-auto h-12 w-fit items-center justify-center border border-zinc-700 bg-white px-4 font-semibold text-black transition-colors duration-300 hover:bg-zinc-200"
         to="/contact"
       >
@@ -92,13 +123,13 @@ const team = [
         <NuxtImg
           class="object-cover h-full w-full"
           src="/services/regist-example.jpg"
+          alt="Vartech.id founder vision"
         />
       </div>
 
       <div class="p-6 flex-1 md:place-content-center">
-        <h2 class="text-2xl font-bold pb-2 text-white">
-          Our Vision - Message From Founder
-        </h2>
+        <h2 class="text-2xl font-bold text-white">Our Vision</h2>
+        <p class="text-sm text-zinc-400 pb-2">Message from the Founder</p>
         <p class="text-zinc-300">
           At Vartech, our vision is to bridge the gap between creative ideas and
           technical execution in the event industry. We believe that technology
@@ -113,10 +144,10 @@ const team = [
     </section>
 
     <section class="flex flex-col gap-6">
-      <h2 class="text-3xl lg:text-center text-white">Our Team</h2>
+      <h2 class="text-3xl font-bold lg:text-center text-white">Meet the Vartech Team</h2>
       <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <li v-for="member in team" :key="member.name">
-          <article
+          <div
             class="border border-zinc-800 bg-[#101012] shadow-sm p-4 rounded-xl overflow-hidden transition-colors duration-300 hover:border-zinc-700"
           >
             <div
@@ -131,7 +162,7 @@ const team = [
 
             <h3 class="text-white">{{ member.name }}</h3>
             <p class="text-xs text-zinc-400">{{ member.role }}</p>
-          </article>
+          </div>
         </li>
       </ul>
     </section>
@@ -152,6 +183,7 @@ const team = [
         </p>
 
         <NuxtLink
+          aria-label="Book a call with Vartech.id"
           class="flex mx-auto h-12 w-fit items-center justify-center border border-zinc-700 bg-white px-4 font-semibold text-black transition-colors duration-300 hover:bg-zinc-200"
           to="/contact"
         >

@@ -10,9 +10,12 @@ defineProps({
   socials: { type: Array, default: () => [] },
 });
 
+const CONTACT_FIELDS = ["name", "email", "subject", "message"];
+
 const contactForm = reactive({ name: "", email: "", subject: "", message: "" });
 const contactErrors = reactive({ name: "", email: "", subject: "", message: "" });
 const contactFeedback = ref("");
+const hasSubmittedContactForm = ref(false);
 
 const clearContactFeedback = () => { contactFeedback.value = ""; };
 
@@ -28,10 +31,30 @@ const validateContactField = (field) => {
   return true;
 };
 
-const validateContactForm = () =>
-  ["name", "email", "subject", "message"].every((f) => validateContactField(f));
+const validateContactForm = () => {
+  let isValid = true;
+
+  CONTACT_FIELDS.forEach((field) => {
+    if (!validateContactField(field)) {
+      isValid = false;
+    }
+  });
+
+  return isValid;
+};
+
+const handleContactInput = (field) => {
+  clearContactFeedback();
+
+  if (!hasSubmittedContactForm.value) {
+    return;
+  }
+
+  validateContactField(field);
+};
 
 const handleContactSubmit = () => {
+  hasSubmittedContactForm.value = true;
   clearContactFeedback();
   contactFeedback.value = validateContactForm()
     ? "Form validation passed. Connect this form to your backend or email service to receive submissions."
@@ -98,8 +121,7 @@ const handleContactSubmit = () => {
           :aria-describedby="contactErrors.name ? 'contact-name-error' : undefined"
           :aria-invalid="contactErrors.name ? 'true' : 'false'"
           required type="text"
-          @blur="validateContactField('name')"
-          @input="validateContactField('name'); clearContactFeedback();"
+          @input="handleContactInput('name')"
         />
         <p v-if="contactErrors.name" id="contact-name-error" class="text-sm text-red-300">{{ contactErrors.name }}</p>
       </div>
@@ -111,8 +133,7 @@ const handleContactSubmit = () => {
           :aria-describedby="contactErrors.email ? 'contact-email-error' : undefined"
           :aria-invalid="contactErrors.email ? 'true' : 'false'"
           required type="email"
-          @blur="validateContactField('email')"
-          @input="validateContactField('email'); clearContactFeedback();"
+          @input="handleContactInput('email')"
         />
         <p v-if="contactErrors.email" id="contact-email-error" class="text-sm text-red-300">{{ contactErrors.email }}</p>
       </div>
@@ -124,8 +145,7 @@ const handleContactSubmit = () => {
           :aria-describedby="contactErrors.subject ? 'contact-subject-error' : undefined"
           :aria-invalid="contactErrors.subject ? 'true' : 'false'"
           required type="text"
-          @blur="validateContactField('subject')"
-          @input="validateContactField('subject'); clearContactFeedback();"
+          @input="handleContactInput('subject')"
         />
         <p v-if="contactErrors.subject" id="contact-subject-error" class="text-sm text-red-300">{{ contactErrors.subject }}</p>
       </div>
@@ -137,8 +157,7 @@ const handleContactSubmit = () => {
           :aria-describedby="contactErrors.message ? 'contact-message-error' : undefined"
           :aria-invalid="contactErrors.message ? 'true' : 'false'"
           required rows="10"
-          @blur="validateContactField('message')"
-          @input="validateContactField('message'); clearContactFeedback();"
+          @input="handleContactInput('message')"
         ></textarea>
         <p v-if="contactErrors.message" id="contact-message-error" class="text-sm text-red-300">{{ contactErrors.message }}</p>
       </div>
