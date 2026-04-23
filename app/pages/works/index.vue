@@ -26,13 +26,13 @@ usePageSeo({
 
 const works = [
   {
-    title: "Nhpv Interactive Journey",
+    title: "Interactive Journey",
     company: "Ngobrolinhpv.com",
     image: "/works/journey-nhpv.png",
     href: "/works/nhpv-journey",
   },
   {
-    title: "Nhpv Quiz",
+    title: "Educational Quiz",
     company: "Ngobrolinhpv.com",
     image: "/works/quiz-nhpv.png",
     href: "/works/quiz-nhpv",

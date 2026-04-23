@@ -28,56 +28,48 @@ usePageSeo({
   ],
 });
 
-const invitationsAsset = [
+const uiExampleAssets = [
   {
-    name: "Journey NHPV",
-    src: "/invitations/invitation-1.png",
-    alt: "Journey NHPV preview",
+    src: "/services/registration-system/ui-example/ui-1.webp",
+    alt: "Registration system UI example 1",
   },
   {
-    name: "Journey NHPV",
-    src: "/invitations/invitation-2.png",
-    alt: "Journey NHPV preview",
-  },
-  {
-    name: "Journey NHPV",
-    src: "/invitations/invitation-3.png",
-    alt: "Journey NHPV preview",
+    src: "/services/registration-system/ui-example/ui-2.webp",
+    alt: "Registration system UI example 2",
   },
 ];
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/registration-system/carousel-assets/registration-moment-1.webp",
+    alt: "Registration moment 1",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/registration-system/carousel-assets/registration-moment-2.webp",
+    alt: "Registration moment 2",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/registration-system/carousel-assets/registration-moment-3.webp",
+    alt: "Registration moment 3",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/registration-system/carousel-assets/registration-moment-4.webp",
+    alt: "Registration moment 4",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/registration-system/carousel-assets/registration-moment-5.webp",
+    alt: "Registration moment 5",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/registration-system/carousel-assets/registration-moment-6.webp",
+    alt: "Registration moment 6",
+  },
+  {
+    image: "/services/registration-system/carousel-assets/registration-moment-7.webp",
+    alt: "Registration moment 7",
   },
 ];
+
 
 const relatedProjects = [
   {
@@ -127,7 +119,7 @@ const relatedProjects = [
       >
         <div class="flex h-full w-full flex-1 overflow-hidden border border-zinc-800 bg-zinc-900">
           <NuxtImg
-            src="/services/regist-example.jpg"
+            src="/services/registration-system/hero-registration.webp"
             alt="Guests using a QR-based registration system during an event check-in"
             class="w-full object-cover"
           />
@@ -302,7 +294,7 @@ const relatedProjects = [
           </p>
           <div class="my-4 w-full border border-zinc-800 bg-zinc-900/70 p-2">
             <ClientOnly>
-              <ImageSwiper :images="invitationsAsset" />
+              <ImageSwiper :images="uiExampleAssets" />
             </ClientOnly>
           </div>
         </section>

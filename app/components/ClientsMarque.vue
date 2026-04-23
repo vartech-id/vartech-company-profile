@@ -2,67 +2,67 @@
 const clients = [
   {
     name: "Indomaret",
-    src: "/clients/Indomaret.png",
+    src: "/clients/indomaret-logo.webp",
     alt: "Indomaret logo",
   },
   {
     name: "TAKEDA",
-    src: "/clients/takeda.png",
+    src: "/clients/takeda-logo.webp",
     alt: "Takeda logo",
   },
   {
     name: "FIF",
-    src: "/clients/fifgo.png",
+    src: "/clients/fifgo-logo.webp",
     alt: "FIF logo",
   },
   {
     name: "blackmores",
-    src: "/clients/blackmores.png",
+    src: "/clients/blackmores-logo.webp",
     alt: "Blackmores logo",
   },
   {
     name: "CIMB Niaga",
-    src: "/clients/cimbniaga.png",
+    src: "/clients/cimbniaga-logo.webp",
     alt: "CIMB Niaga logo",
   },
   {
     name: "MSD",
-    src: "/clients/msd.png",
+    src: "/clients/msd-logo.webp",
     alt: "MSD logo",
   },
   {
     name: "Purina",
-    src: "/clients/purina.png",
+    src: "/clients/purina-logo.webp",
     alt: "Purina logo",
   },
   {
     name: "Systema",
-    src: "/clients/systema.png",
+    src: "/clients/systema-logo.webp",
     alt: "Systema logo",
   },
   {
     name: "BCA",
-    src: "/clients/bca.png",
+    src: "/clients/bca-logo.webp",
     alt: "BCA logo",
   },
   {
     name: "HIPMI",
-    src: "/clients/hipmi.png",
+    src: "/clients/hipmi-logo.webp",
     alt: "HIPMI logo",
   },
   {
     name: "Mandiri",
-    src: "/clients/mandiri.png",
+    src: "/clients/mandiri-logo.webp",
     alt: "Mandiri logo",
   },
   {
     name: "Plaza Indonesia",
-    src: "/clients/plaza-indonesia.png",
+    src: "/clients/plazaindonesia-logo.webp",
     alt: "Plaza Indonesia logo",
   },
   {
     name: "Toyota",
-    src: "/clients/toyota.png",
+    src: "/clients/toyota-logo.webp",
     alt: "Toyota logo",
   },
 ];
@@ -79,12 +79,16 @@ const clients = [
             :key="`group-a-${client.name}`"
             class="clients-marquee__item"
           >
-            <img
+            <NuxtImg
               :src="client.src"
               :alt="client.alt"
+              width="400"
+              height="200"
               class="clients-marquee__logo"
-              loading="lazy"
+              loading="eager"
               draggable="false"
+              format="webp"
+              quality="80"
             />
           </li>
         </ul>
@@ -96,12 +100,16 @@ const clients = [
             :key="`group-b-${client.name}`"
             class="clients-marquee__item"
           >
-            <img
+            <NuxtImg
               :src="client.src"
               :alt="client.alt"
+              width="400"
+              height="200"
               class="clients-marquee__logo"
               loading="lazy"
               draggable="false"
+              format="webp"
+              quality="80"
             />
           </li>
         </ul>
@@ -112,12 +120,12 @@ const clients = [
 
 <style scoped>
 .clients-marquee {
-width: 100%;
-background: rgba(255, 255, 255, 0.2);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-padding: 0.5rem 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 0 0.75rem;
 }
 
 .clients-marquee__viewport {
@@ -139,8 +147,8 @@ padding: 0.5rem 0;
 }
 
 .clients-marquee__item {
-  height: 38px;
-  padding-inline: 1rem;
+  height: 60px; /* Lebar baru untuk mobile */
+  padding-inline: 0.5rem;
 }
 
 .clients-marquee__logo {
@@ -161,15 +169,15 @@ padding: 0.5rem 0;
 
 @media (min-width: 768px) {
   .clients-marquee__item {
-    height: 40px;
-    padding-inline: 1.25rem;
+    height: 70px; /* Lebar baru untuk tablet */
+    padding-inline: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .clients-marquee__item {
-    height: 48px;
-    padding-inline: 1.5rem;
+    height: 70px; /* Lebar baru untuk desktop */
+    padding-inline: 2rem;
   }
 }
 </style>
