@@ -5,7 +5,7 @@ const seoTitle =
 const seoDescription =
   "Real-Time LED Photobooth Experience is an interactive event project for Allianz ASN Kick Off Meeting 2026, combining digital signage photo capture, automatic background removal, football-themed visual compositing, and sequential real-time display across three large LED panels.";
 
-const seoImage = "/services/regist-example.jpg";
+const seoImage = "/works/realtime-photobooth/carousel-assets/journey-1.webp";
 
 useSeoMeta({
   title: seoTitle,
@@ -106,22 +106,26 @@ const aboutText = [
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Real-time LED photobooth activation for Allianz event",
-    caption: "Allianz Event Photobooth",
+    image: "/works/realtime-photobooth/carousel-assets/journey-1.webp",
+    alt: "Event guests interacting with the Allianz real-time LED photobooth digital signage at ASN Kick Off Meeting 2026",
+    caption: "Digital Signage Photobooth Interaction",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Digital signage photo capture for event guests",
-    caption: "Digital Signage Capture",
+    image: "/works/realtime-photobooth/carousel-assets/journey-2.webp",
+    alt: "Three-panel real-time LED display showing football-themed photobooth results for Allianz ASN Kick Off Meeting 2026",
+    caption: "Sequential Three-LED Photo Display",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Automatic background removal for football-themed event visuals",
-    caption: "Background Removal Process",
+    image: "/works/realtime-photobooth/carousel-assets/journey-3.webp",
+    alt: "Participants viewing their Allianz football-themed photobooth result on the event LED display system",
+    caption: "Live Guest Photo Preview",
+  },
+  {
+    image: "/works/realtime-photobooth/carousel-assets/journey-4.webp",
+    alt: "Wide event view of Allianz real-time LED photobooth installation with three large display panels and digital signage booth",
+    caption: "Full Real-Time LED Photobooth Setup",
   },
 ];
-
 const relatedProjects = [
   {
     title: "Realtime Photobooth",

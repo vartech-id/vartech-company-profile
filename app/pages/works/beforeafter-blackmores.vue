@@ -5,7 +5,7 @@ const seoTitle =
 const seoDescription =
   "Beauty After Photobooth is an interactive AI photobooth project developed for the Blackmores product launch, transforming guest portraits into before and after visuals inspired by three skincare-focused product stories and designed for QR download and social sharing.";
 
-const seoImage = "/services/regist-example.jpg";
+const seoImage = "/works/beauty-photobooth-before-after/carousel-assets/journey-1.webp";
 
 useSeoMeta({
   title: seoTitle,
@@ -106,34 +106,22 @@ const aboutText = [
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Blackmores beauty activation photobooth at product launch event",
-    caption: "Blackmores Launch Activation",
+    image:
+      "/works/beauty-photobooth-before-after/carousel-assets/journey-1.webp",
+    alt: "Blackmores Beauty After Photobooth showing before and after AI beauty transformation result at product launch event",
+    caption: "AI Before After Beauty Result",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "AI before and after photobooth result for event guests",
-    caption: "Before After Result",
+    image:
+      "/works/beauty-photobooth-before-after/carousel-assets/journey-2.webp",
+    alt: "Blackmores AI beauty photobooth screen displaying a hijab guest portrait with before and after product-inspired transformation",
+    caption: "Product-Inspired Beauty Transformation",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Product selection flow inside beauty photobooth experience",
-    caption: "Product Selection Flow",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Beauty transformation concept inspired by Blackmores products",
-    caption: "Beauty Transformation",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "QR scan and download result from photobooth system",
-    caption: "QR Download Experience",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Shareable event photobooth output for brand campaign amplification",
-    caption: "Shareable Campaign Output",
+    image:
+      "/works/beauty-photobooth-before-after/carousel-assets/journey-3.webp",
+    alt: "Blackmores beauty photobooth interface showing product benefits and QR download experience for event guests",
+    caption: "Beauty Photobooth Result Preview",
   },
 ];
 

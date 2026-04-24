@@ -5,7 +5,7 @@ const seoTitle =
 const seoDescription =
   "Scrabble Game is an interactive event game developed for FIF Group at ICE BSD Serpong, combining word puzzle gameplay, countdown-based challenges, product knowledge testing, score-based evaluation, and prize claim flow to create a fun and engaging booth activity.";
 
-const seoImage = "/services/regist-example.jpg";
+const seoImage = "/works/scrabble-game/carousel-assets/journey-1.webp";
 
 useSeoMeta({
   title: seoTitle,

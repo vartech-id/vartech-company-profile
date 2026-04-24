@@ -5,7 +5,8 @@ const seoTitle =
 const seoDescription =
   "Qdenga Vaccine Awareness Photobooth is an interactive campaign activation developed for Takeda in Malang, combining registration flow, vaccination status selection, background removal, personalized vaccine awareness overlays, live TV carousel display, and data collection for post-event reporting.";
 
-const seoImage = "/services/regist-example.jpg";
+const seoImage =
+  "/works/photobooth-vaccine-label/carousel-assets/journey-1.webp";
 
 useSeoMeta({
   title: seoTitle,
@@ -106,34 +107,29 @@ const aboutText = [
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Qdenga vaccine awareness photobooth campaign event in Malang",
-    caption: "Takeda Campaign Activation",
+    image: "/works/photobooth-vaccine-label/carousel-assets/journey-1.webp",
+    alt: "Qdenga Vaccine Awareness Photobooth booth setup for Takeda campaign activation in Malang",
+    caption: "Takeda Qdenga Campaign Booth",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Participant registration and vaccine status selection flow",
-    caption: "Registration Flow",
+    image: "/works/photobooth-vaccine-label/carousel-assets/journey-2.webp",
+    alt: "Interactive Qdenga photobooth installation with registration and branded campaign display at the event booth",
+    caption: "Interactive Photobooth Installation",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Photobooth result with white background and branded vaccine awareness overlay",
-    caption: "Personalized Photo Result",
+    image: "/works/photobooth-vaccine-label/carousel-assets/journey-3.webp",
+    alt: "Qdenga vaccine awareness photobooth result showing participant portrait with personalized branded overlay",
+    caption: "Personalized Vaccine Awareness Result",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Vaccinated and not vaccinated overlay versions for Qdenga awareness campaign",
-    caption: "Status-Based Overlay",
+    image: "/works/photobooth-vaccine-label/carousel-assets/journey-4.webp",
+    alt: "Qdenga photobooth output for vaccinated participant with name and campaign awareness message",
+    caption: "Vaccinated Participant Output",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "New participant photo appearing in the center of the live TV carousel",
-    caption: "Live TV Carousel",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Campaign photobooth output used for brand awareness and post-event data reporting",
-    caption: "Awareness and Reporting",
+    image: "/works/photobooth-vaccine-label/carousel-assets/journey-5.webp",
+    alt: "Qdenga photobooth output for participant with star rating style campaign overlay and personalized name label",
+    caption: "Status-Based Campaign Overlay",
   },
 ];
 

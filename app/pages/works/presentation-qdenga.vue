@@ -5,7 +5,7 @@ const seoTitle =
 const seoDescription =
   "Interactive Presentation Hub is a touchscreen presentation system developed for Takeda's Qdenga campaign event in Malang, combining looping video playback, tap-to-start interaction, and seamless access to three preloaded presentations without switching tabs.";
 
-const seoImage = "/services/regist-example.jpg";
+const seoImage = "/works/presentation-app/carousel-assets/journey-1.webp";
 
 useSeoMeta({
   title: seoTitle,
@@ -106,34 +106,14 @@ const aboutText = [
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Touchscreen TV used as looping display and presentation system at event booth",
-    caption: "Touchscreen Event Display",
+    image: "/works/presentation-app/carousel-assets/journey-1.webp",
+    alt: "Takeda Qdenga campaign booth with interactive touchscreen presentation hub for event product communication in Malang",
+    caption: "Takeda Campaign Presentation Hub",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Looping video mode on interactive presentation screen",
-    caption: "Looping Video Mode",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Tap-to-start interaction on presentation hub interface",
-    caption: "Tap to Start",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Three presentation options shown on touchscreen menu",
-    caption: "Presentation Menu",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Seamless presentation access without switching tabs",
-    caption: "Seamless Access",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Interactive presentation system supporting event communication flow",
-    caption: "Event Presentation Utility",
+    image: "/works/presentation-app/carousel-assets/journey-2.webp",
+    alt: "Interactive touchscreen presentation system inside the Takeda Qdenga event booth with digital display and product information area",
+    caption: "Interactive Touchscreen Booth Display",
   },
 ];
 

@@ -5,7 +5,7 @@ const seoTitle =
 const seoDescription =
   "NHPV Journey is an interactive HPV education project developed for ngobrolinhpv.com, combining a web app, personalized couple flow, synchronized IoT lighting, dramatic countdown moments, and photobooth integration to create a memorable event experience.";
 
-const seoImage = "/services/regist-example.jpg";
+const seoImage = "/works/interactive-journey/carousel-assets/journey-1.webp";
 
 useSeoMeta({
   title: seoTitle,

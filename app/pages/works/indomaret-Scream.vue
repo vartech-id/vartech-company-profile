@@ -5,7 +5,7 @@ const seoTitle =
 const seoDescription =
   "Scream Game is an interactive event game developed for Festival Indomaret 2025 in Jogjakarta, where guests scream into a microphone to reveal a hidden logo, earn a score based on the reveal percentage, and use the result to claim prizes.";
 
-const seoImage = "/services/regist-example.jpg";
+const seoImage = "/works/scream-game/carousel-assets/journey-1.webp";
 
 useSeoMeta({
   title: seoTitle,
@@ -106,34 +106,9 @@ const aboutText = [
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Scream Game activation at Festival Indomaret 2025",
-    caption: "Festival Booth Activation",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Participants playing the microphone-based scream challenge",
-    caption: "Scream Challenge",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Countdown screen before the scream game begins",
-    caption: "Game Countdown",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Logo reveal mechanic driven by voice input",
-    caption: "Logo Reveal Interaction",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Score result screen after the scream timer ends",
-    caption: "Final Score Result",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Crowd gathering around the scream game booth at the festival",
-    caption: "Crowd Engagement",
+    image: "/works/scream-game/carousel-assets/journey-1.webp",
+    alt: "Participant playing the Scream Game interactive voice activation booth at Festival Indomaret 2025 in Jogjakarta",
+    caption: "Interactive Scream Game Booth",
   },
 ];
 

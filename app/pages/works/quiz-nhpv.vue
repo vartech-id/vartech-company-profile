@@ -5,7 +5,7 @@ const seoTitle =
 const seoDescription =
   "NHPV Quiz is an interactive couple quiz project developed for ngobrolinhpv.com, designed to test how well partners know each other through playful questions, individual turns, right and wrong answer scoring, and sensitivity-based results in a memorable event experience.";
 
-const seoImage = "/services/regist-example.jpg";
+const seoImage = "/works/educational-quiz/carousel-assets/quiz-1.webp";
 
 useSeoMeta({
   title: seoTitle,

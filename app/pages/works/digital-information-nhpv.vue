@@ -5,7 +5,7 @@ const seoTitle =
 const seoDescription =
   "HPV Awareness Video Experience is an interactive educational app developed for ngobrolinhpv.com, featuring a designed welcome page, tap-to-start flow, and shared headset video experience to help couples better understand HPV messages in a simple and engaging way.";
 
-const seoImage = "/services/regist-example.jpg";
+const seoImage = "/works/digital-information/carousel-assets/journey-1.webp";
 
 useSeoMeta({
   title: seoTitle,
@@ -106,34 +106,14 @@ const aboutText = [
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "HPV awareness digital experience for couples at event activation",
-    caption: "HPV Awareness Experience",
+    image: "/works/digital-information/carousel-assets/journey-1.webp",
+    alt: "HPV awareness video experience booth for ngobrolinhpv.com with visitors using a touchscreen display at an event activation",
+    caption: "HPV Awareness Video Booth",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Designed welcome page for educational event app",
-    caption: "Welcome Screen",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Tap to start flow inside educational awareness app",
-    caption: "Tap to Continue",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Couples listening to an educational video using a shared headset",
-    caption: "Shared Headset Video",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Interactive video-based HPV awareness activity for event visitors",
-    caption: "Video Awareness Flow",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Simple educational web app designed to improve awareness and understanding",
-    caption: "Awareness Outcome",
+    image: "/works/digital-information/carousel-assets/journey-2.webp",
+    alt: "Event visitor using a headset to watch the HPV awareness educational video experience on an interactive digital information display",
+    caption: "Shared Headset Video Experience",
   },
 ];
 
