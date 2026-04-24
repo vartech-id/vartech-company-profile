@@ -1,26 +1,23 @@
 <script setup>
-import { watch } from "vue";
+import { watch, computed } from "vue";
 import useEmblaCarousel from "embla-carousel-vue";
 import AutoScroll from "embla-carousel-auto-scroll";
 
 const props = defineProps({
-  slides: {
-    type: Array,
-    required: true,
-  },
+  slides: { type: Array, required: true },
+  threshold: { type: Number, default: 6 },
 });
+
+const isLoop = computed(() => props.slides.length >= props.threshold);
 
 const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
   AutoScroll({ speed: 1, stopOnInteraction: false }),
 ]);
 
-const scrollPrev = () => emblaApi.value?.scrollPrev();
-const scrollNext = () => emblaApi.value?.scrollNext();
-
 watch(
   emblaApi,
   (api) => {
-    if (!api) return;
+    if (!api || !isLoop.value) return;
     api.plugins().autoplay?.play();
   },
   { immediate: true },
@@ -28,7 +25,8 @@ watch(
 </script>
 
 <template>
-  <div class="embla">
+  <!-- Endless loop carousel -->
+  <div v-if="isLoop" class="embla">
     <div class="embla__viewport" ref="emblaRef">
       <div class="embla__container">
         <div
@@ -45,9 +43,22 @@ watch(
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- <button class="embla__prev" @click="scrollPrev">‹ Prev</button>
-    <button class="embla__next" @click="scrollNext">Next ›</button> -->
+  <!-- Static centered grid for fewer than threshold slides -->
+  <div v-else class="flex flex-wrap justify-center gap-4 px-4">
+    <div
+      v-for="(slide, index) in props.slides"
+      :key="index"
+      class="static-slide"
+    >
+      <img
+        class="object-cover w-full h-full"
+        :src="slide.image"
+        :alt="slide.alt"
+      />
+      <p v-if="slide.caption">{{ slide.caption }}</p>
+    </div>
   </div>
 </template>
 
@@ -60,8 +71,6 @@ watch(
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
-  /* height: 400px; */
-  /* border: 2px solid pink; */
 }
 
 .embla__slide {
@@ -69,14 +78,22 @@ watch(
   max-height: 300px;
   max-width: 300px;
   min-width: 0;
-  /* border: 2px solid orange; */
   margin: 1rem;
   border-radius: 10px;
   overflow: hidden;
 }
 
+.static-slide {
+  max-height: 300px;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 @media only screen and (min-width: 600px) {
-  .embla__slide {
+  .embla__slide,
+  .static-slide {
     max-height: 400px;
     max-width: 400px;
   }

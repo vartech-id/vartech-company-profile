@@ -62,7 +62,7 @@ const works = [
     href: "/works/scrabble-game-fif",
   },
   {
-    title: "Photobooth Vaccine Label",
+    title: "Vaccine Awareness Photobooth",
     company: "Qdenga",
     image: "/works/realtime-photobooth.png",
     href: "/works/vaccine-photobooth-qdenga",

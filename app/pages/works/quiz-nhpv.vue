@@ -106,34 +106,34 @@ const aboutText = [
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "NHPV Quiz couple game activation at the event venue",
-    caption: "NHPV Quiz Event Booth",
+    image: "/works/educational-quiz/carousel-assets/quiz-1.webp",
+    alt: "MSD HPV educational quiz event booth with large interactive digital screens and branded experiential setup for health awareness activation",
+    caption: "MSD HPV Educational Quiz Booth",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Interactive couple quiz web app for event guests",
-    caption: "Couple Quiz Experience",
+    image: "/works/educational-quiz/carousel-assets/quiz-2.webp",
+    alt: "Participant using a touchscreen educational quiz web app inside the MSD HPV event activation booth during an interactive health awareness experience",
+    caption: "Touchscreen Quiz Web App Interaction",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Relationship awareness quiz activity for couples",
-    caption: "Partner Awareness Game",
+    image: "/works/educational-quiz/carousel-assets/quiz-3.webp",
+    alt: "Close-up of a participant answering questions on the MSD HPV educational quiz screen as part of an interactive event gamification experience",
+    caption: "Interactive Health Quiz Experience",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Event gamification project with right and wrong answer scoring",
-    caption: "Scored Quiz Interaction",
+    image: "/works/educational-quiz/carousel-assets/quiz-4.webp",
+    alt: "Participant playing the MSD HPV touchscreen quiz game with multiple choice questions during a branded educational event activation",
+    caption: "Multiple Choice Quiz Interaction",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Male and female partner turns in the NHPV Quiz flow",
-    caption: "Individual Quiz Turns",
+    image: "/works/educational-quiz/carousel-assets/quiz-5.webp",
+    alt: "MSD HPV educational quiz installation with interactive screens, floral booth styling, and branded event technology setup for visitor engagement",
+    caption: "Educational Gamification Setup",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Interactive event game designed to help couples know each other better",
-    caption: "Closer Through Gameplay",
+    image: "/works/educational-quiz/carousel-assets/quiz-6.webp",
+    alt: "Full MSD HPV quiz activation area with touchscreen stations, ring light, laptop control desk, and immersive event booth design for audience participation",
+    caption: "Full Interactive Quiz Activation",
   },
 ];
 

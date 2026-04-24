@@ -120,21 +120,6 @@ const carouselAssets = [
     alt: "Automatic background removal for football-themed event visuals",
     caption: "Background Removal Process",
   },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Photo launched to large LED panels in real time",
-    caption: "Launch to LED Interaction",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Sequential photo rotation across three large LED screens",
-    caption: "3-LED Rotation System",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Guests viewing their photobooth image on the LED wall",
-    caption: "Real-Time LED Experience",
-  },
 ];
 
 const relatedProjects = [

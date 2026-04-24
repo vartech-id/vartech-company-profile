@@ -98,34 +98,34 @@ const aboutText = [
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "NHPV Journey event activation gallery image",
-    caption: "NHPV Journey Event Booth",
+    image: "/works/interactive-journey/carousel-assets/journey-1.webp",
+    alt: "MSD HPV interactive journey event booth with digital educational screen, branded floral installation, and immersive activation setup for health awareness campaign",
+    caption: "MSD HPV Interactive Journey Event Booth",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Interactive HPV education experience for couples",
-    caption: "Interactive Couple Experience",
+    image: "/works/interactive-journey/carousel-assets/journey-2.webp",
+    alt: "Participant using a touchscreen web app inside the MSD HPV interactive journey booth during an educational event activation experience",
+    caption: "Touchscreen Web App Interaction",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Web app powered HPV education activation",
-    caption: "Web App Experience",
+    image: "/works/interactive-journey/carousel-assets/journey-3.webp",
+    alt: "MSD HPV interactive event setup with ring light, laptop control station, digital screens, and immersive booth design for educational brand activation",
+    caption: "Interactive Event Technology Setup",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Synchronized IoT lighting inside event booth",
-    caption: "IoT Lighting Integration",
+    image: "/works/interactive-journey/carousel-assets/journey-4.webp",
+    alt: "Visitors posing inside a branded MSD HPV photo booth frame as part of an interactive health education event experience",
+    caption: "Branded Photo Booth Experience",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Couple journey and countdown activation moment",
-    caption: "Countdown Journey Flow",
+    image: "/works/interactive-journey/carousel-assets/journey-5.webp",
+    alt: "Group photo session inside the MSD HPV activation booth with camera setup capturing the live branded event experience",
+    caption: "Live Group Photo Capture",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Final photobooth moment after HPV education journey",
-    caption: "Photobooth Finale",
+    image: "/works/interactive-journey/carousel-assets/journey-6.webp",
+    alt: "Empty MSD HPV branded photo frame installation with floral decorations prepared for participant photo sessions at the event booth",
+    caption: "MSD HPV Photo Frame Installation",
   },
 ];
 
