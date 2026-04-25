@@ -47,11 +47,11 @@ useHead({
 
 const showcaseImages = [
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/interactive-journey/display-mockup.webp",
     alt: "NHPV Journey interactive HPV education booth experience for couples at an event activation",
   },
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/interactive-journey/carousel-assets/journey-3.webp",
     alt: "Web app and IoT lighting experience inside the NHPV Journey couple education booth",
   },
 ];

@@ -1,5 +1,5 @@
 <script setup>
-const logoOnlySrc = "/images/vartech-logo-only.png";
+const logoOnlySrc = "/images/vartech-logo.svg";
 const siteUrl = "https://vartech.id";
 const homepageUrl = `${siteUrl}/`;
 const ogImageUrl = `${siteUrl}/images/logo.png`;

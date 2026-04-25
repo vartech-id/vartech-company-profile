@@ -1,8 +1,16 @@
 <script setup>
 import { VueCompareImage } from 'vue3-compare-image'
 
-import afterImage from '/services/regist-example.jpg'
-import beforeImage from '/services/varbel-regist.webp'
+const props = defineProps({
+  beforeImage: {
+    type: String,
+    required: true,
+  },
+  afterImage: {
+    type: String,
+    required: true,
+  },
+});
 </script>
 
 <template>

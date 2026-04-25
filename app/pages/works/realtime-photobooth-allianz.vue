@@ -55,11 +55,11 @@ useHead({
 
 const showcaseImages = [
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/realtime-photobooth/display-mockup.webp",
     alt: "Real-time LED photobooth experience for Allianz ASN Kick Off Meeting 2026",
   },
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/realtime-photobooth/carousel-assets/journey-3.webp",
     alt: "Football-themed photobooth with background removal and three-LED real-time display output",
   },
 ];

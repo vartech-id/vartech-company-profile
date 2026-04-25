@@ -55,11 +55,11 @@ useHead({
 
 const showcaseImages = [
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/scream-game/display-mockup.webp",
     alt: "Scream Game booth activation at Festival Indomaret 2025 in Jogjakarta",
   },
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/scream-game/carousel-assets/journey-1.webp",
     alt: "Participants shouting into a microphone during the Scream Game event activity",
   },
 ];

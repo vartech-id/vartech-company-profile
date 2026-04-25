@@ -55,11 +55,11 @@ useHead({
 
 const showcaseImages = [
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/presentation-app/display-mockup.webp",
     alt: "Interactive touchscreen presentation system for Takeda event activation",
   },
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/presentation-app/carousel-assets/journey-2.webp",
     alt: "Touchscreen TV presentation interface with looping video and presentation menu",
   },
 ];

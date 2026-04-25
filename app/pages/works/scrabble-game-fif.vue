@@ -55,11 +55,11 @@ useHead({
 
 const showcaseImages = [
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/scrabble-game/display-mockup.webp",
     alt: "Scrabble Game booth activation for FIF Group at ICE BSD Serpong",
   },
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/scrabble-game/carousel-assets/journey-1.webp",
     alt: "Interactive word puzzle game used for product knowledge and prize claim at FIF Group event booth",
   },
 ];
@@ -106,34 +106,9 @@ const aboutText = [
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
+    image: "/works/scrabble-game/carousel-assets/journey-1.webp",
     alt: "Scrabble Game activation at FIF Group event booth",
     caption: "FIF Group Booth Activation",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Interactive word puzzle gameplay for booth visitors",
-    caption: "Interactive Scrabble Experience",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Product knowledge game designed for event engagement",
-    caption: "Product Knowledge Challenge",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Countdown-based question flow inside the scrabble game",
-    caption: "Timed Question Flow",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Score result screen after completing the scrabble game",
-    caption: "Final Score Result",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "Prize claim activity based on game performance at the booth",
-    caption: "Score-Based Prize Claim",
   },
 ];
 

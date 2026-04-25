@@ -55,11 +55,11 @@ useHead({
 
 const showcaseImages = [
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/educational-quiz/display-mockup.webp",
     alt: "NHPV Quiz interactive couple quiz booth at ngobrolinhpv.com event activation",
   },
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/educational-quiz/carousel-assets/quiz-3.webp",
     alt: "Couples playing the NHPV Quiz web app experience at the event venue",
   },
 ];

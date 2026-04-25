@@ -55,11 +55,11 @@ useHead({
 
 const showcaseImages = [
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/beauty-photobooth-before-after/display-mockup.webp",
     alt: "Beauty After Photobooth AI activation for Blackmores product launch event",
   },
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/beauty-photobooth-before-after/carousel-assets/journey-3.webp",
     alt: "Before and after photobooth result inspired by Blackmores beauty product selection",
   },
 ];

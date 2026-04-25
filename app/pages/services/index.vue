@@ -77,7 +77,7 @@ const relatedProjects = [
       <div class="flex-1 md:max-w-xl">
         <NuxtImg
           class="object-cover aspect-3/2 w-full h-full"
-          src="/services/regist-example.jpg"
+          src="/services/registration-system/card-cover.webp"
         />
       </div>
     </article>
@@ -147,7 +147,7 @@ const relatedProjects = [
       <div class="flex-1 md:max-w-xl">
         <NuxtImg
           class="object-cover aspect-3/2 w-full h-full"
-          src="/services/regist-example.jpg"
+          src="/services/interactive-live-experience/card-cover.webp"
         />
       </div>
     </article>
@@ -170,7 +170,7 @@ const relatedProjects = [
       <div class="flex-1 md:max-w-xl">
         <NuxtImg
           class="object-cover aspect-3/2 w-full h-full"
-          src="/services/regist-example.jpg"
+          src="/services/interactive-live-experience/card-cover.webp"
         />
       </div>
     </article>

@@ -85,7 +85,7 @@ const carouselAssets = [
           >
             <NuxtImg
               class="h-full w-full object-cover"
-              src="/services/regist-example.jpg"
+          src="/services/interactive-live-experience/card-cover.webp"
               alt="People playing scream game at an event booth"
             />
           </div>
@@ -168,7 +168,7 @@ const carouselAssets = [
           >
             <NuxtImg
               class="h-full w-full object-cover"
-              src="/services/regist-example.jpg"
+          src="/services/interactive-live-experience/wishing-wall-card-cover.webp"
               alt="People playing scream game at an event booth"
             />
           </div>

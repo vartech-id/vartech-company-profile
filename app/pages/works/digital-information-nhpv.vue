@@ -55,11 +55,11 @@ useHead({
 
 const showcaseImages = [
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/digital-information/display-mockup.webp",
     alt: "HPV Awareness Video Experience welcome screen for couple education event activation",
   },
   {
-    src: "/services/regist-example.jpg",
+    src: "/works/digital-information/carousel-assets/journey-2.webp",
     alt: "Couples watching HPV awareness video with shared headset at ngobrolinhpv.com event",
   },
 ];
