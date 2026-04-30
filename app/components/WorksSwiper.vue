@@ -1,92 +1,118 @@
 <script setup>
+import { onUnmounted, ref, watch } from "vue";
 import useEmblaCarousel from "embla-carousel-vue";
 
-const works = [
-  {
-    name: "Journey NHPV",
-    src: "/works/journey-nhpv.png",
-    alt: "Journey NHPV preview",
-  },
-  {
-    name: "Quiz NHPV",
-    src: "/works/quiz-nhpv.png",
-    alt: "Quiz NHPV preview",
-  },
-  {
-    name: "Realtime Photobooth",
-    src: "/works/realtime-photobooth.png",
-    alt: "Realtime Photobooth preview",
-  },
-  {
-    name: "Realtime Photobooth",
-    src: "/works/realtime-photobooth.png",
-    alt: "Realtime Photobooth preview",
-  },
-  {
-    name: "Realtime Photobooth",
-    src: "/works/realtime-photobooth.png",
-    alt: "Realtime Photobooth preview",
-  },
-];
-
-const startIndex = Math.floor((works.length - 1) / 2);
-const [emblaRef, emblaApi] = useEmblaCarousel({
-  loop: false,
-  startIndex,
+const props = defineProps({
+  items: { type: Array, required: true },
+  ariaLabel: { type: String, default: "Featured work carousel" },
 });
+
+const [emblaRef, emblaApi] = useEmblaCarousel({
+  align: "start",
+  containScroll: "trimSnaps",
+  loop: false,
+});
+
+const canScrollPrev = ref(false);
+const canScrollNext = ref(false);
+
+const updateControls = (api = emblaApi.value) => {
+  if (!api) return;
+
+  canScrollPrev.value = api.canScrollPrev();
+  canScrollNext.value = api.canScrollNext();
+};
 
 const scrollPrev = () => emblaApi.value?.scrollPrev();
 const scrollNext = () => emblaApi.value?.scrollNext();
 
+watch(
+  emblaApi,
+  (api, previousApi) => {
+    if (previousApi) {
+      previousApi.off("select", updateControls);
+      previousApi.off("reInit", updateControls);
+    }
+
+    if (!api) return;
+
+    updateControls(api);
+    api.on("select", updateControls);
+    api.on("reInit", updateControls);
+  },
+  { immediate: true },
+);
+
+onUnmounted(() => {
+  const api = emblaApi.value;
+
+  if (!api) return;
+
+  api.off("select", updateControls);
+  api.off("reInit", updateControls);
+});
 </script>
 
 <template>
   <div
-    class="embla flex w-full flex-col gap-5 max-w-70 lg:max-w-80"
-    aria-label="Featured work carousel"
+    class="w-full"
+    :aria-label="props.ariaLabel"
     aria-roledescription="carousel"
   >
-    <div class="embla__viewport" ref="emblaRef">
-      <div class="embla__container gap-2 ">
-        <div
-          v-for="(work, index) in works"
-          :key="`${work.src}-${index}`"
-          class="embla__slide"
-        >
-          <img class="block w-full" :src="work.src" :alt="work.alt" />
-        </div>
-      </div>
-    </div>
-    <div class="flex gap-5 justify-center">
+    <div
+      class="grid w-full grid-cols-[2.5rem_minmax(0,1fr)_2.5rem] justify-center items-center gap-2 sm:grid-cols-[3rem_minmax(0,1fr)_3rem] sm:gap-4"
+    >
       <button
         type="button"
-        class="embla__prev"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-zinc-600 text-white transition-colors duration-200 hover:border-white hover:bg-white hover:text-black disabled:pointer-events-none disabled:opacity-30 sm:h-12 sm:w-12"
+        :disabled="!canScrollPrev"
         aria-label="Previous work"
         @click="scrollPrev"
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
+          aria-hidden="true"
+          class="h-5 w-5"
           fill="none"
           stroke="currentColor"
           stroke-width="2"
-          class="w-10 border-2"
+          viewBox="0 0 24 24"
         >
           <path d="M15 18l-6-6 6-6" />
         </svg>
       </button>
+
+      <div class="min-w-0 overflow-hidden" ref="emblaRef">
+        <div class="embla__container">
+          <div
+            v-for="(work, index) in props.items"
+            :key="`${work.href}-${index}`"
+            class="embla__slide"
+          >
+            <CardItem
+              :title="work.title"
+              :subtitle="work.company"
+              :image="work.image"
+              :image-alt="work.imageAlt"
+              :href="work.href"
+            />
+          </div>
+        </div>
+      </div>
+
       <button
         type="button"
-        class="embla__next"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-zinc-600 text-white transition-colors duration-200 hover:border-white hover:bg-white hover:text-black disabled:pointer-events-none disabled:opacity-30 sm:h-12 sm:w-12"
+        :disabled="!canScrollNext"
         aria-label="Next work"
         @click="scrollNext"
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
+          aria-hidden="true"
+          class="h-5 w-5"
           fill="none"
           stroke="currentColor"
-          class="w-10 border-2"
+          stroke-width="2"
+          viewBox="0 0 24 24"
         >
           <path d="M9 18l6-6-6-6" />
         </svg>
@@ -95,21 +121,27 @@ const scrollNext = () => emblaApi.value?.scrollNext();
   </div>
 </template>
 <style scoped>
-.embla {
-  --slide-size: 100%;
-}
-
 .embla__container {
   display: flex;
+  gap: 1rem;
   touch-action: pan-y pinch-zoom;
 }
 
-.embla__viewport {
-  overflow: visible;
+.embla__slide {
+  display: flex;
+  flex: 0 0 100%;
+  min-width: 0;
 }
 
-.embla__slide {
-  flex: 0 0 var(--slide-size);
-  min-width: 0;
+@media (min-width: 640px) {
+  .embla__slide {
+    flex-basis: calc((100% - 1rem) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .embla__slide {
+    flex-basis: calc((100% - 2rem) / 3);
+  }
 }
 </style>

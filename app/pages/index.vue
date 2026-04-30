@@ -1,4 +1,6 @@
 <script setup>
+import { works } from "~/data/works";
+
 const logoOnlySrc = "/images/vartech-logo.svg";
 const siteUrl = "https://vartech.id";
 const homepageUrl = `${siteUrl}/`;
@@ -307,12 +309,12 @@ useHead({
         Works
       </h2>
       <div
-        class="border relative w-full flex flex-col gap-10 items-center py-8"
+        class="relative w-full flex flex-col gap-10 items-center py-8"
       >
         <article
           class="flex flex-col gap-5 w-full items-center overflow-hidden"
         >
-        
+          <WorksSwiper :items="works" />
         </article>
         <NuxtLink
           to="/works"
