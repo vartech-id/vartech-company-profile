@@ -14,7 +14,7 @@ usePageSeo({
   title: seoTitle,
   description: seoDescription,
   path: "/services/gamification",
-  image: "/services/regist-example.jpg",
+  image: "/services/gamification-interactive-games/card-cover.webp",
   scripts: [
     jsonLdScript(
       "schema-breadcrumb-gamification",
@@ -32,34 +32,24 @@ usePageSeo({
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/gamification-interactive-games/card-cover.webp",
+    alt: "Gamification Event",
+    caption: "Gamification Event",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/gamification-interactive-games/scream-game-cover.webp",
+    alt: "Scream Game",
+    caption: "Scream Game",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/gamification-interactive-games/quiz-game-cover.webp",
+    alt: "Quiz Game",
+    caption: "Quiz Game",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/gamification-interactive-games/scrabble-words-cover.webp",
+    alt: "Scrabble Words",
+    caption: "Scrabble Words",
   },
 ];
 </script>
@@ -85,7 +75,7 @@ const carouselAssets = [
           >
             <NuxtImg
               class="h-full w-full object-cover"
-              src="/services/regist-example.jpg"
+              src="/services/gamification-interactive-games/scream-game-cover.webp"
               alt="People playing scream game at an event booth"
             />
           </div>
@@ -151,8 +141,8 @@ const carouselAssets = [
           >
             <NuxtImg
               class="h-full w-full object-cover"
-              src="/services/regist-example.jpg"
-              alt="People playing scream game at an event booth"
+              src="/services/gamification-interactive-games/scrabble-words-cover.webp"
+              alt="People playing scrabble game at an event booth"
             />
           </div>
 
@@ -218,8 +208,8 @@ const carouselAssets = [
           >
             <NuxtImg
               class="h-full w-full object-cover"
-              src="/services/regist-example.jpg"
-              alt="People playing scream game at an event booth"
+              src="/services/gamification-interactive-games/quiz-game-cover.webp"
+              alt="People playing quiz game at an event booth"
             />
           </div>
 
@@ -284,8 +274,8 @@ const carouselAssets = [
           >
             <NuxtImg
               class="h-full w-full object-cover"
-              src="/services/regist-example.jpg"
-              alt="People playing scream game at an event booth"
+              src="/services/gamification-interactive-games/catch-items-cover.webp"
+              alt="People playing catch the falling items game at an event booth"
             />
           </div>
 

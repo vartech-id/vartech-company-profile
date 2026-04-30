@@ -79,6 +79,24 @@ const works = [
     image: "/works/digital-information/display-mockup.webp",
     href: "/works/digital-information-nhpv",
   },
+  {
+    title: "Interactive Promo Awareness Photobooth",
+    company: "CIMB Niaga Syariah",
+    image: "/works/promo-photobooth-cimb-niaga/display-mockup.webp",
+    href: "/works/promo-photobooth-cimb-niaga",
+  },
+  {
+    title: "Poppy Gunadi 80th Birthday Guest Registration System",
+    company: "Poppy Gunadi",
+    image: "/works/registration-system-poppy-gunadi/display-mockup.webp",
+    href: "/works/registration-system-poppy-gunadi",
+  },
+  {
+    title: "QR-Based Registration & Souvenir Validation System",
+    company: "Pertamina",
+    image: "/works/registration-system-srm-pertamina/display-mockup.webp",
+    href: "/works/registration-system-srm-pertamina",
+  },
 ];
 </script>
 

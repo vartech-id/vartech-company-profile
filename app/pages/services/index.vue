@@ -100,7 +100,7 @@ const relatedProjects = [
       <div class="flex-1 md:max-w-xl">
         <NuxtImg
           class="object-cover aspect-3/2 w-full h-full"
-          src="/services/regist-example.jpg"
+          src="/services/custom-photobooth-development/card-cover.webp"
         />
       </div>
     </article>
@@ -123,7 +123,7 @@ const relatedProjects = [
       <div class="flex-1 md:max-w-xl">
         <NuxtImg
           class="object-cover aspect-3/2 w-full h-full"
-          src="/services/regist-example.jpg"
+          src="/services/ai-photobooth/card-cover.webp"
         />
       </div>
     </article>
@@ -147,7 +147,7 @@ const relatedProjects = [
       <div class="flex-1 md:max-w-xl">
         <NuxtImg
           class="object-cover aspect-3/2 w-full h-full"
-          src="/services/interactive-live-experience/card-cover.webp"
+          src="/services/gamification-interactive-games/card-cover.webp"
         />
       </div>
     </article>

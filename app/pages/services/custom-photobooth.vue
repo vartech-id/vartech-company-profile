@@ -15,7 +15,7 @@ usePageSeo({
   title: seoTitle,
   description: seoDescription,
   path: "/services/custom-photobooth",
-  image: "/photobooth-ui/blackmores-1.webp",
+  image: "/services/custom-photobooth-development/card-cover.webp",
   scripts: [
     jsonLdScript(
       "schema-breadcrumb-custom-photobooth",
@@ -33,47 +33,27 @@ usePageSeo({
 
 const imagesAsset = [
   {
-    name: "Blackmores",
-    src: "/photobooth-ui/blackmores-1.webp",
-    alt: "Journey NHPV preview",
-  },
-  {
-    name: "Journey NHPV",
-    src: "/photobooth-ui/blackmores-2.webp",
-    alt: "Journey NHPV preview",
+    name: "Custom UI",
+    src: "/services/custom-photobooth-development/key-features/ui-1.webp",
+    alt: "Custom Photobooth Interface",
   },
 ];
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/custom-photobooth-development/card-cover.webp",
+    alt: "Custom Photobooth",
+    caption: "Custom Photobooth",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/custom-photobooth-development/carousel-assets/label-photobooth.webp",
+    alt: "Label Photobooth",
+    caption: "Label Photobooth",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/custom-photobooth-development/carousel-assets/result-pb.webp",
+    alt: "Photobooth Result",
+    caption: "Photobooth Result",
   },
 ];
 </script>
@@ -98,7 +78,7 @@ const carouselAssets = [
       >
         <div class="flex h-full w-full flex-1 overflow-hidden border border-zinc-800 bg-zinc-900">
           <NuxtImg
-            src="/services/regist-example.jpg"
+            src="/services/custom-photobooth-development/card-cover.webp"
             alt="Guests using a QR-based registration system during an event check-in"
             class="w-full object-cover"
           />

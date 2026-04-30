@@ -1,7 +1,7 @@
 ---
 title: "When Google Forms Is Not Enough for Event Registration"
 subtitle: "Registration System"
-image: "/services/varbel-regist.webp"
+image: "/images/blog/event-registration.webp"
 date: "2025-06-01"
 excerpt: "Google Forms can work for simple RSVP flows, but many events need more control, branding, and faster check-in. Here is when a custom event registration system becomes the better choice."
 tags: ["Event Registration", "Google Forms", "QR Code Check-in", "Registration System"]

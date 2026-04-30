@@ -16,22 +16,22 @@ const team = [
   {
     name: "Rudy T.",
     role: "Founder & CEO",
-    photo: "/services/regist-example.jpg",
+    photo: "/images/vartech-team/founder.webp",
   },
   {
     name: "Ilham D.",
     role: "Co-Founder & Developer",
-    photo: "/services/regist-example.jpg",
+    photo: "/images/vartech-team/co-founder.webp",
   },
   {
     name: "Jonathan T.",
     role: "Head of Operation",
-    photo: "/services/regist-example.jpg",
+    photo: "/images/vartech-team/head-operation.webp",
   },
   {
     name: "Hafiz B.",
     role: "Warehouse Manager",
-    photo: "/services/regist-example.jpg",
+    photo: "/images/vartech-team/warehouse-manager.webp",
   },
 ];
 
@@ -94,7 +94,7 @@ usePageSeo({
       <div class="my-2 rounded-2xl overflow-hidden border border-zinc-800/80">
         <NuxtImg
           class="object-cover w-full max-h-120 aspect-video"
-          src="/services/regist-example.jpg"
+          src="/images/vartech-team/team.webp"
           alt="Vartech.id team working on custom event technology"
         />
       </div>
@@ -122,7 +122,7 @@ usePageSeo({
       <div class="flex-1">
         <NuxtImg
           class="object-cover h-full w-full"
-          src="/services/regist-example.jpg"
+          src="/images/vartech-team/founder.webp"
           alt="Vartech.id founder vision"
         />
       </div>

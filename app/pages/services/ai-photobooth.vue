@@ -14,7 +14,7 @@ usePageSeo({
   title: seoTitle,
   description: seoDescription,
   path: "/services/ai-photobooth",
-  image: "/photobooth-ui/blackmores-1.webp",
+  image: "/services/ai-photobooth/card-cover.webp",
   scripts: [
     jsonLdScript(
       "schema-breadcrumb-ai-photobooth",
@@ -58,34 +58,19 @@ const imagesAsset = [
 
 const carouselAssets = [
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/ai-photobooth/card-cover.webp",
+    alt: "AI Photobooth Event",
+    caption: "AI Photobooth Event",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/ai-photobooth/after-ai.webp",
+    alt: "AI Generation Result",
+    caption: "AI Generation Result",
   },
   {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
+    image: "/services/ai-photobooth/before-ai.webp",
+    alt: "Original Capture",
+    caption: "Original Capture",
   },
 ];
 </script>
@@ -113,7 +98,7 @@ const carouselAssets = [
         class="flex h-full w-full flex-1 overflow-hidden border border-zinc-800 bg-zinc-900"
       >
         <NuxtImg
-          src="/services/regist-example.jpg"
+          src="/services/ai-photobooth/card-cover.webp"
           alt="Guests using a QR-based registration system during an event check-in"
           class="h-full w-full object-cover"
         />
@@ -595,7 +580,7 @@ const carouselAssets = [
         <div class="max-w-sm flex-1 border border-zinc-800 bg-zinc-900/70 p-4">
           <div class="overflow-hidden border border-zinc-800">
             <NuxtImg
-              src="/services/regist-example.jpg"
+              src="/services/ai-photobooth/how-it-works/step-1.webp"
               alt="Guests using a QR-based registration system during an event check-in"
               class="w-full object-cover"
             />
@@ -613,8 +598,8 @@ const carouselAssets = [
         <div class="max-w-sm flex-1 border border-zinc-800 bg-zinc-900/70 p-4">
           <div class="overflow-hidden border border-zinc-800">
             <NuxtImg
-              src="/services/regist-example.jpg"
-              alt="Guests using a QR-based registration system during an event check-in"
+              src="/services/ai-photobooth/how-it-works/step-2.webp"
+              alt="AI Enhanced Result"
               class="w-full object-cover"
             />
           </div>
@@ -632,7 +617,7 @@ const carouselAssets = [
         <div class="max-w-sm flex-1 border border-zinc-800 bg-zinc-900/70 p-4">
           <div class="overflow-hidden border border-zinc-800">
             <NuxtImg
-              src="/services/regist-example.jpg"
+              src="/services/ai-photobooth/how-it-works/step-3.webp"
               alt="Guests using a QR-based registration system during an event check-in"
               class="w-full object-cover"
             />

@@ -14,7 +14,7 @@ usePageSeo({
   title: seoTitle,
   description: seoDescription,
   path: "/services/interactive-experience",
-  image: "/services/regist-example.jpg",
+  image: "/services/interactive-live-experience/card-cover.webp",
   scripts: [
     jsonLdScript(
       "schema-breadcrumb-interactive-experience",

@@ -115,33 +115,6 @@ useHead({
   ],
 });
 
-const worksAsset = [
-  {
-    name: "Journey NHPV",
-    src: "/works/journey-nhpv.png",
-    alt: "Journey NHPV preview",
-  },
-  {
-    name: "Quiz NHPV",
-    src: "/works/quiz-nhpv.png",
-    alt: "Quiz NHPV preview",
-  },
-  {
-    name: "Realtime Photobooth",
-    src: "/works/realtime-photobooth.png",
-    alt: "Realtime Photobooth preview",
-  },
-  {
-    name: "Realtime Photobooth",
-    src: "/works/realtime-photobooth.png",
-    alt: "Realtime Photobooth preview",
-  },
-  {
-    name: "Realtime Photobooth",
-    src: "/works/realtime-photobooth.png",
-    alt: "Realtime Photobooth preview",
-  },
-];
 </script>
 <template>
   <div
@@ -339,9 +312,7 @@ const worksAsset = [
         <article
           class="flex flex-col gap-5 w-full items-center overflow-hidden"
         >
-          <ClientOnly>
-            <WorksSwiper />
-          </ClientOnly>
+        
         </article>
         <NuxtLink
           to="/works"

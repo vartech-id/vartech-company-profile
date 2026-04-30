@@ -15,7 +15,7 @@ usePageSeo({
   title: seoTitle,
   description: seoDescription,
   path: "/services/registration-system",
-  image: "/services/regist-example.jpg",
+  image: "/services/registration-system/card-cover.webp",
   scripts: [
     jsonLdScript(
       "schema-breadcrumb-registration-system",
