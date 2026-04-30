@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "Beauty After Photobooth";
 const seoTitle =
   "Beauty After Photobooth Project - AI Before After Photobooth for Blackmores Product Launch";
@@ -125,32 +127,7 @@ const carouselAssets = [
   },
 ];
 
-const relatedProjects = [
-  {
-    title: "AI Face Swap Photobooth",
-    category: "AI Photobooth",
-    image: "/services/varbel-regist.webp",
-    alt: "AI photobooth experience for branded event engagement",
-    href: "/work-pages/ai-face-swap-photobooth",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "Branded Event Photobooth",
-    category: "Custom Photobooth",
-    image: "/services/varbel-regist.webp",
-    alt: "Custom branded photobooth for product launch and event activation",
-    href: "/custom-photobooth",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "Realtime Photobooth",
-    category: "Event Technology",
-    image: "/services/varbel-regist.webp",
-    alt: "Realtime event photobooth system with live visual output",
-    href: "/work-pages/realtime-photobooth",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/beforeafter-blackmores");
 </script>
 
 <template>

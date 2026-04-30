@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "NHPV Journey";
 const seoTitle =
   "NHPV Journey Project - Interactive HPV Education Web App, IoT Lighting, and Photobooth Experience";
@@ -129,32 +131,7 @@ const carouselAssets = [
   },
 ];
 
-const relatedProjects = [
-  {
-    title: "AI Face Swap Photobooth",
-    category: "Custom Photobooth",
-    image: "/services/varbel-regist.webp",
-    alt: "AI face swap photobooth for branded event activation",
-    href: "/about",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "Branded Event Photobooth",
-    category: "Custom Photobooth",
-    image: "/services/varbel-regist.webp",
-    alt: "Branded event photobooth system for on-site guest engagement",
-    href: "/about",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "Instant Print Booth System",
-    category: "Custom Photobooth",
-    image: "/services/varbel-regist.webp",
-    alt: "Instant print photobooth system for event experience and guest interaction",
-    href: "/about",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/nhpv-journey");
 </script>
 
 <template>

@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "Qdenga Vaccine Awareness Photobooth";
 const seoTitle =
   "Qdenga Vaccine Awareness Photobooth Project - Interactive Campaign Activation for Takeda in Malang";
@@ -133,32 +135,7 @@ const carouselAssets = [
   },
 ];
 
-const relatedProjects = [
-  {
-    title: "Beauty After Photobooth",
-    category: "AI Photobooth",
-    image: "/services/varbel-regist.webp",
-    alt: "AI beauty transformation photobooth for brand campaign activation",
-    href: "/work-pages/beauty-after-photobooth",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "Realtime Photobooth",
-    category: "Event Technology",
-    image: "/services/varbel-regist.webp",
-    alt: "Realtime photobooth system with live screen integration for event engagement",
-    href: "/work-pages/realtime-photobooth",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "Registration System",
-    category: "Web App",
-    image: "/services/varbel-regist.webp",
-    alt: "Event registration system used for guest data collection and activity flow",
-    href: "/registration-system",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/vaccine-photobooth-qdenga");
 </script>
 
 <template>

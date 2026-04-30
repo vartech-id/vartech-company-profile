@@ -197,19 +197,16 @@ ul {
 .menu-roll-enter-active,
 .menu-roll-leave-active {
   transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
+    transform 0.6s ease,
 }
 
 .menu-roll-enter-from,
 .menu-roll-leave-to {
   transform: translateY(-100%);
-  opacity: 0;
 }
 
 .menu-roll-enter-to,
 .menu-roll-leave-from {
   transform: translateY(0);
-  opacity: 1;
 }
 </style>

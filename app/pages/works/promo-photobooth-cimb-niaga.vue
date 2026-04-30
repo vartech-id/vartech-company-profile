@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "Interactive Promo Awareness Photobooth Experience";
 const seoTitle =
   "Interactive Promo Awareness Photobooth for Hayafest CIMB Niaga Syariah";
@@ -158,32 +160,7 @@ const carouselAssets = [
   },
 ];
 
-const relatedProjects = [
-  {
-    title: "Digital Signage Experience",
-    category: "Interactive Event Technology",
-    image: "/services/varbel-regist.webp",
-    alt: "Digital signage experience for interactive brand activation and event engagement",
-    href: "/digital-signage",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "Custom Photobooth",
-    category: "Photobooth Experience",
-    image: "/services/varbel-regist.webp",
-    alt: "Custom photobooth system for branded event activation and visitor engagement",
-    href: "/custom-photobooth",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "Interactive Brand Activation",
-    category: "Event Activation",
-    image: "/services/varbel-regist.webp",
-    alt: "Interactive brand activation using touchscreen flow digital signage and photobooth experience",
-    href: "/interactive-brand-activation",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/promo-photobooth-cimb-niaga");
 </script>
 
 <template>

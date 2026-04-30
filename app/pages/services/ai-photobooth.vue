@@ -5,6 +5,7 @@ import {
   jsonLdScript,
   usePageSeo,
 } from "~/composables/useSiteSeo";
+import { getRelatedProjects } from "~/data/related-projects";
 
 const seoTitle = "AI Photobooth | Vartech.id - AI Image Automation for Events";
 const seoDescription =
@@ -73,6 +74,8 @@ const carouselAssets = [
     caption: "Original Capture",
   },
 ];
+
+const relatedProjects = getRelatedProjects("/services/ai-photobooth");
 </script>
 
 <template>
@@ -638,6 +641,7 @@ const carouselAssets = [
     </section>
 
     <RelatedProjects
+      :projects="relatedProjects"
       section-class="mx-auto flex max-w-[100rem] flex-col items-center justify-center gap-6 border border-zinc-800 bg-zinc-950/80 p-6 md:p-8"
     />
   </article>

@@ -4,6 +4,7 @@ import {
   jsonLdScript,
   usePageSeo,
 } from "~/composables/useSiteSeo";
+import { getRelatedProjects } from "~/data/related-projects";
 
 const seoTitle =
   "Gamification and Interactive Games | Vartech.id - Event Engagement Systems";
@@ -52,6 +53,8 @@ const carouselAssets = [
     caption: "Scrabble Words",
   },
 ];
+
+const relatedProjects = getRelatedProjects("/services/gamification");
 </script>
 
 <template>
@@ -340,6 +343,6 @@ const carouselAssets = [
         <EndlessLoop :slides="carouselAssets" />
       </section>
 
-      <RelatedProjects />
+      <RelatedProjects :projects="relatedProjects" />
   </article>
 </template>

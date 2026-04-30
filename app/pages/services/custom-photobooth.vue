@@ -5,6 +5,7 @@ import {
   jsonLdScript,
   usePageSeo,
 } from "~/composables/useSiteSeo";
+import { getRelatedProjects } from "~/data/related-projects";
 
 const seoTitle =
   "Custom Photobooth Development | Vartech.id - Branded Event Photo Systems";
@@ -56,6 +57,8 @@ const carouselAssets = [
     caption: "Photobooth Result",
   },
 ];
+
+const relatedProjects = getRelatedProjects("/services/custom-photobooth");
 </script>
 
 <template>
@@ -535,6 +538,6 @@ const carouselAssets = [
         <EndlessLoop :slides="carouselAssets" />
       </section>
 
-      <RelatedProjects />
+      <RelatedProjects :projects="relatedProjects" />
   </article>
 </template>

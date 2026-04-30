@@ -10,32 +10,7 @@ defineProps({
   },
   projects: {
     type: Array,
-    default: () => [
-      {
-        title: "AI Face Swap Photobooth",
-        category: "Custom Photobooth",
-        image: "/services/varbel-regist.webp",
-        alt: "QR registration system used in a corporate event",
-        href: "/about",
-        listClass: "md:col-start-1 md:col-end-3",
-      },
-      {
-        title: "Branded Event Photobooth",
-        category: "Custom Photobooth",
-        image: "/services/varbel-regist.webp",
-        alt: "On-site guest registration system at an exhibition",
-        href: "/about",
-        listClass: "md:col-start-3 md:col-end-5",
-      },
-      {
-        title: "Instant Print Booth System",
-        category: "Custom Photobooth",
-        image: "/services/varbel-regist.webp",
-        alt: "On-site guest registration system at an exhibition",
-        href: "/about",
-        listClass: "md:col-start-2 md:col-end-4",
-      },
-    ],
+    default: () => [],
   },
   sectionClass: {
     type: String,
@@ -49,7 +24,7 @@ defineProps({
   },
   listClass: {
     type: String,
-    default: "grid gap-4 md:grid-cols-4 lg:flex",
+    default: "grid w-full gap-4 md:grid-cols-2 lg:grid-cols-3",
   },
 });
 </script>
@@ -76,13 +51,14 @@ defineProps({
         >
           <NuxtLink
             :to="project.href || project.to"
-            class="block min-w-70 border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            class="block h-full border border-zinc-800 bg-zinc-900/70 p-3 transition duration-150 ease-in-out hover:border-zinc-600 hover:bg-zinc-900 hover:shadow-lg hover:shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-200 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
-            <article>
-              <figure>
+            <article class="flex h-full flex-col">
+              <figure class="aspect-16/10 overflow-hidden bg-zinc-950">
                 <NuxtImg
                   :src="project.image || project.src"
                   :alt="project.alt || `Preview image for ${project.title}`"
+                  class="h-full w-full object-cover"
                 />
               </figure>
               <h3

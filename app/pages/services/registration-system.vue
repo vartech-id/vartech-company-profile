@@ -5,6 +5,7 @@ import {
   jsonLdScript,
   usePageSeo,
 } from "~/composables/useSiteSeo";
+import { getRelatedProjects } from "~/data/related-projects";
 
 const seoTitle =
   "Registration System | Vartech.id - QR Check-in and Event Attendance";
@@ -70,33 +71,7 @@ const carouselAssets = [
   },
 ];
 
-
-const relatedProjects = [
-  {
-    title: "BNI Banking Journey",
-    category: "Registration System",
-    image: "/services/varbel-regist.webp",
-    alt: "QR registration system used in a corporate event",
-    href: "/about",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "SRI Summit Indonesia 2025",
-    category: "Registration System",
-    image: "/services/varbel-regist.webp",
-    alt: "On-site guest registration system at an exhibition",
-    href: "/about",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "SRI Summit Indonesia 2025",
-    category: "Registration System",
-    image: "/services/varbel-regist.webp",
-    alt: "On-site guest registration system at an exhibition",
-    href: "/about",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/services/registration-system");
 </script>
 
 <template>

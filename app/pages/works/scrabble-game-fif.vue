@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "Scrabble Game";
 const seoTitle =
   "Scrabble Game Project - Interactive Product Knowledge Game for FIF Group Event Booth";
@@ -112,32 +114,7 @@ const carouselAssets = [
   },
 ];
 
-const relatedProjects = [
-  {
-    title: "Scream Game",
-    category: "Event Gamification",
-    image: "/services/varbel-regist.webp",
-    alt: "Interactive scream game for booth crowd engagement",
-    href: "/work-pages/scream-game",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "Registration System",
-    category: "Web App",
-    image: "/services/varbel-regist.webp",
-    alt: "Event registration system for guest management and activity flow",
-    href: "/registration-system",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "NHPV Quiz",
-    category: "Interactive Experience",
-    image: "/services/varbel-regist.webp",
-    alt: "Interactive quiz web app for event engagement",
-    href: "/work-pages/nhpv-quiz",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/scrabble-game-fif");
 </script>
 
 <template>

@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "Scream Game";
 const seoTitle =
   "Scream Game Project - Interactive Voice Activation Game for Festival Indomaret 2025 Jogjakarta";
@@ -112,32 +114,7 @@ const carouselAssets = [
   },
 ];
 
-const relatedProjects = [
-  {
-    title: "NHPV Quiz",
-    category: "Interactive Experience",
-    image: "/services/varbel-regist.webp",
-    alt: "Interactive couple quiz web app for event activation",
-    href: "/work-pages/nhpv-quiz",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "NHPV Journey",
-    category: "Interactive Experience",
-    image: "/services/varbel-regist.webp",
-    alt: "Interactive educational journey web app for couples",
-    href: "/work-pages/nhpv-journey",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "Realtime Photobooth",
-    category: "Event Technology",
-    image: "/services/varbel-regist.webp",
-    alt: "Realtime event photobooth with live display integration",
-    href: "/work-pages/realtime-photobooth",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/indomaret-Scream");
 </script>
 
 <template>

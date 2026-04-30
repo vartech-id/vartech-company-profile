@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "NHPV Quiz";
 const seoTitle =
   "NHPV Quiz Project - Interactive Couple Quiz Web App for Event Engagement and Partner Awareness";
@@ -137,32 +139,7 @@ const carouselAssets = [
   },
 ];
 
-const relatedProjects = [
-  {
-    title: "NHPV Journey",
-    category: "Interactive Experience",
-    image: "/services/varbel-regist.webp",
-    alt: "NHPV Journey interactive educational experience for couples",
-    href: "/work-pages/nhpv-journey",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "Realtime Photobooth",
-    category: "Event Technology",
-    image: "/services/varbel-regist.webp",
-    alt: "Realtime photobooth activation for event engagement",
-    href: "/work-pages/realtime-photobooth",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "Registration System",
-    category: "Web App",
-    image: "/services/varbel-regist.webp",
-    alt: "Registration system web app for event guest management",
-    href: "/registration-system",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/quiz-nhpv");
 </script>
 
 <template>

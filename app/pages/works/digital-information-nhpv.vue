@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "HPV Awareness Video Experience";
 const seoTitle =
   "HPV Awareness Video Experience Project - Interactive Couple Education App for ngobrolinhpv.com";
@@ -117,32 +119,7 @@ const carouselAssets = [
   },
 ];
 
-const relatedProjects = [
-  {
-    title: "NHPV Journey",
-    category: "Interactive Experience",
-    image: "/services/varbel-regist.webp",
-    alt: "Interactive HPV educational journey for couples",
-    href: "/work-pages/nhpv-journey",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "NHPV Quiz",
-    category: "Interactive Experience",
-    image: "/services/varbel-regist.webp",
-    alt: "Interactive couple quiz for partner awareness and event engagement",
-    href: "/work-pages/nhpv-quiz",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "Interactive Presentation Hub",
-    category: "Touchscreen Experience",
-    image: "/services/varbel-regist.webp",
-    alt: "Touchscreen presentation system for seamless event communication",
-    href: "/work-pages/interactive-presentation-hub",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/digital-information-nhpv");
 </script>
 
 <template>

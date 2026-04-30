@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "QR-Based Registration & Souvenir Validation System";
 const seoTitle =
   "QR-Based Registration & Souvenir Validation System for SRM Summit Pertamina 2025";
@@ -184,32 +186,7 @@ const carouselAssets = [
   },
 ];
 
-const relatedProjects = [
-  {
-    title: "Event Registration System",
-    category: "Event Technology",
-    image: "/services/varbel-regist.webp",
-    alt: "Custom event registration system with QR code check-in and guest validation",
-    href: "/registration-system",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "QR Check-In System",
-    category: "Registration & Validation",
-    image: "/services/varbel-regist.webp",
-    alt: "QR code check-in system for corporate events and guest attendance validation",
-    href: "/qr-check-in-system",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "Digital Signage Display",
-    category: "Real-Time Event Display",
-    image: "/services/varbel-regist.webp",
-    alt: "Digital signage display for real-time event registration and attendance monitoring",
-    href: "/digital-signage",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/registration-system-srm-pertamina");
 </script>
 
 <template>

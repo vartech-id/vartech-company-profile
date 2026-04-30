@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "Real-Time LED Photobooth Experience";
 const seoTitle =
   "Real-Time LED Photobooth Experience for Allianz ASN Kick Off Meeting 2026";
@@ -126,32 +128,7 @@ const carouselAssets = [
     caption: "Full Real-Time LED Photobooth Setup",
   },
 ];
-const relatedProjects = [
-  {
-    title: "Realtime Photobooth",
-    category: "Event Technology",
-    image: "/services/varbel-regist.webp",
-    alt: "Realtime photobooth activation with live event display",
-    href: "/work-pages/realtime-photobooth",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "Branded Event Photobooth",
-    category: "Custom Photobooth",
-    image: "/services/varbel-regist.webp",
-    alt: "Branded photobooth system for guest engagement",
-    href: "/custom-photobooth",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "AI Photobooth",
-    category: "Interactive Experience",
-    image: "/services/varbel-regist.webp",
-    alt: "Interactive AI photobooth for event activation",
-    href: "/ai-photobooth-v2",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/realtime-photobooth-allianz");
 </script>
 
 <template>

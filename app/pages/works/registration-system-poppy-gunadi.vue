@@ -1,4 +1,6 @@
 <script setup>
+import { getRelatedProjects } from "~/data/related-projects";
+
 const pageTitle = "Poppy Gunadi 80th Birthday Guest Registration System";
 
 const seoTitle =
@@ -227,32 +229,7 @@ const carouselAssets = [
   },
 ];
 
-const relatedProjects = [
-  {
-    title: "Event Registration System",
-    category: "Event Technology",
-    image: "/services/varbel-regist.webp",
-    alt: "Custom event registration system with QR code check-in and guest attendance dashboard",
-    href: "/registration-system",
-    listClass: "md:col-start-1 md:col-end-3",
-  },
-  {
-    title: "QR Check-In System",
-    category: "Guest Management",
-    image: "/services/varbel-regist.webp",
-    alt: "QR code check-in system for fast guest validation at private and corporate events",
-    href: "/qr-check-in-system",
-    listClass: "md:col-start-3 md:col-end-5",
-  },
-  {
-    title: "Event Web Apps & Dashboards",
-    category: "Custom Web Application",
-    image: "/services/varbel-regist.webp",
-    alt: "Custom event web application and dashboard for registration, reporting, and attendance tracking",
-    href: "/event-web-apps",
-    listClass: "md:col-start-2 md:col-end-4",
-  },
-];
+const relatedProjects = getRelatedProjects("/works/registration-system-poppy-gunadi");
 </script>
 
 <template>
