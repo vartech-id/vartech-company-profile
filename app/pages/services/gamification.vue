@@ -343,6 +343,7 @@ const relatedProjects = getRelatedProjects("/services/gamification");
         <EndlessLoop :slides="carouselAssets" />
       </section>
 
+      <Cta />
       <RelatedProjects :projects="relatedProjects" />
   </article>
 </template>

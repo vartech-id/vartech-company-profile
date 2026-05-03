@@ -62,8 +62,8 @@ const showcaseImages = [
     alt: "Qdenga Vaccine Awareness Photobooth activation for Takeda campaign event in Malang",
   },
   {
-    src: "/works/photobooth-vaccine-label/carousel-assets/journey-3.webp",
-    alt: "Personalized vaccine awareness photobooth result with live TV carousel display",
+    src: "/works/photobooth-vaccine-label/carousel-assets/journey-1.webp",
+    alt: "Personalized vaccine awareness photobooth Installations for Takeda campaign event in Malang with live TV carousel display",
   },
 ];
 

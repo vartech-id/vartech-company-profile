@@ -34,10 +34,14 @@ watch(
           v-for="(slide, index) in props.slides"
           :key="index"
         >
-          <img
+          <NuxtImg
             class="object-cover w-full h-full"
             :src="slide.image"
             :alt="slide.alt"
+            width="400"
+            height="400"
+            format="webp"
+            loading="lazy"
           />
           <p v-if="slide.caption">{{ slide.caption }}</p>
         </div>
@@ -52,10 +56,14 @@ watch(
       :key="index"
       class="static-slide"
     >
-      <img
+      <NuxtImg
         class="object-cover w-full h-full"
         :src="slide.image"
         :alt="slide.alt"
+        width="400"
+        height="400"
+        format="webp"
+        loading="lazy"
       />
       <p v-if="slide.caption">{{ slide.caption }}</p>
     </div>

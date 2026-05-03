@@ -44,34 +44,36 @@ const beforeAfterImages = [
   },
 ];
 
-const imagesAsset = [
-  {
-    name: "Blackmores",
-    src: "/photobooth-ui/blackmores-1.webp",
-    alt: "Journey NHPV preview",
-  },
-  {
-    name: "Journey NHPV",
-    src: "/photobooth-ui/blackmores-2.webp",
-    alt: "Journey NHPV preview",
-  },
-];
-
 const carouselAssets = [
   {
-    image: "/services/ai-photobooth/card-cover.webp",
-    alt: "AI Photobooth Event",
-    caption: "AI Photobooth Event",
+    image: "/services/ai-photobooth/carousel-assets/journey-1.webp",
+    alt: "AI photobooth result showing two guests transformed into a futuristic cyber city theme with branded event overlay",
+    caption: "Futuristic AI Photobooth Result",
   },
   {
-    image: "/services/ai-photobooth/after-ai.webp",
-    alt: "AI Generation Result",
-    caption: "AI Generation Result",
+    image: "/services/ai-photobooth/carousel-assets/journey-2.webp",
+    alt: "Guest holding an AI-generated photobooth print with custom event branding and themed visual design",
+    caption: "Custom AI Photo Print",
   },
   {
-    image: "/services/ai-photobooth/before-ai.webp",
-    alt: "Original Capture",
-    caption: "Original Capture",
+    image: "/services/ai-photobooth/carousel-assets/journey-3.webp",
+    alt: "AI-generated tech enthusiast portrait with futuristic server room background and cinematic digital styling",
+    caption: "Themed AI Portrait Generation",
+  },
+  {
+    image: "/services/ai-photobooth/carousel-assets/journey-4.webp",
+    alt: "Branded event photobooth output card displayed at a corporate activation booth with custom campaign visuals",
+    caption: "Branded Event Photo Output",
+  },
+  {
+    image: "/services/ai-photobooth/carousel-assets/journey-5.webp",
+    alt: "Original guest photo captured before AI transformation for a personalized photobooth experience",
+    caption: "Original Guest Capture",
+  },
+  {
+    image: "/services/ai-photobooth/carousel-assets/journey-6.webp",
+    alt: "Transparent AI photobooth photo card with Ramadan-themed event branding and decorative light display",
+    caption: "Themed Photo Card Display",
   },
 ];
 
@@ -640,6 +642,7 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
       <EndlessLoop :slides="carouselAssets" />
     </section>
 
+    <Cta />
     <RelatedProjects
       :projects="relatedProjects"
       section-class="mx-auto flex max-w-[100rem] flex-col items-center justify-center gap-6 border border-zinc-800 bg-zinc-950/80 p-6 md:p-8"

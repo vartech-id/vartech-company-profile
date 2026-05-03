@@ -170,19 +170,19 @@ const carouselAssets = [
   {
     image:
       "/works/registration-system-srm-pertamina/carousel-assets/journey-1.webp",
-    alt: "SRM Summit Pertamina 2025 QR-based registration system setup for internal Pertamina event at DoubleTree by Hilton Jakarta Kemayoran",
-    caption: "QR-Based Registration System Setup",
+    alt: "SRM Summit Pertamina 2025 registration booth with digital signage, QR scanner, and on-site check-in desk for internal Pertamina event guests",
+    caption: "On-Site Registration Booth Setup",
   },
   {
     image:
       "/works/registration-system-srm-pertamina/carousel-assets/journey-2.webp",
-    alt: "QR code scanner used for guest check-in validation and souvenir redemption validation at SRM Summit Pertamina 2025",
-    caption: "QR Code Scanner Operation",
+    alt: "Digital registration system setup for SRM Summit Pertamina 2025 with QR code scan instruction, scanner device, and operator dashboard at the check-in desk",
+    caption: "QR Check-In Validation System",
   },
   {
     image: "/works/registration-system-srm-pertamina/hero-display.png",
-    alt: "Real-time digital signage display showing guest name company and check-in time during SRM Summit Pertamina 2025 registration",
-    caption: "Real-Time Registration Display",
+    alt: "SRM Summit Pertamina 2025 registration area featuring branded digital signage, QR code scanner, and operator desk for guest check-in and souvenir validation",
+    caption: "Integrated Registration and Souvenir Validation",
   },
 ];
 

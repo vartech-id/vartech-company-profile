@@ -58,7 +58,7 @@ useHead({
 const showcaseImages = [
   {
     src: "/works/scrabble-game/display-mockup.webp",
-    alt: "Scrabble Game booth activation for FIF Group at ICE BSD Serpong",
+    alt: "Scrabble Game booth activation Web Application Preview for FIF Group at ICE BSD Serpong",
   },
   {
     src: "/works/scrabble-game/carousel-assets/journey-1.webp",

@@ -194,38 +194,38 @@ const aboutText = [
 const carouselAssets = [
   {
     image: "/works/registration-system-poppy-gunadi/carousel-assets/journey-1.webp",
-    alt: "Digital invitation registration flow for 80th of Poppy Gunadi birthday event with online RSVP and guest database management",
-    caption: "Online Guest Registration Flow",
+    alt: "Event crew assisting a guest during the on-site digital registration process for Poppy Gunadi 80th birthday celebration",
+    caption: "Guest Assisted Registration",
   },
   {
     image: "/works/registration-system-poppy-gunadi/carousel-assets/journey-2.webp",
-    alt: "WhatsApp and email invitation blast system with unique QR code for private birthday event guest check-in",
-    caption: "WhatsApp & Email Invitation Blast",
+    alt: "Invited guest validating registration details with event staff using the digital guest check-in system at Poppy Gunadi birthday event",
+    caption: "Digital Guest Validation",
   },
   {
     image: "/works/registration-system-poppy-gunadi/carousel-assets/journey-3.webp",
-    alt: "QR code check-in validation process for invited guests at 80th of Poppy Gunadi birthday celebration",
-    caption: "QR Code Check-In Validation",
+    alt: "Event reception team presenting printed guest information and registration materials for the private Poppy Gunadi birthday celebration",
+    caption: "Reception Team and Guest Materials",
   },
   {
     image: "/works/registration-system-poppy-gunadi/carousel-assets/journey-4.webp",
-    alt: "On-site help desk support for manual guest registration and validation during private invitation-only birthday event",
-    caption: "Manual Help Desk Support",
+    alt: "Guests completing the registration and validation process at the check-in desk for Poppy Gunadi 80th birthday event",
+    caption: "On-Site Check-In Desk",
   },
-    {
+  {
     image: "/works/registration-system-poppy-gunadi/carousel-assets/journey-5.webp",
-    alt: "On-site help desk support for manual guest registration and validation during private invitation-only birthday event",
-    caption: "Manual Help Desk Support",
+    alt: "Event staff helping an invited guest verify attendance through the digital registration system at the private birthday celebration",
+    caption: "Personalized Guest Assistance",
   },
-    {
+  {
     image: "/works/registration-system-poppy-gunadi/carousel-assets/journey-6.webp",
-    alt: "On-site help desk support for manual guest registration and validation during private invitation-only birthday event",
-    caption: "Manual Help Desk Support",
+    alt: "Guest receiving help from the reception crew during the invitation validation and event check-in process",
+    caption: "Invitation Validation Support",
   },
-    {
+  {
     image: "/works/registration-system-poppy-gunadi/carousel-assets/journey-7.webp",
-    alt: "On-site help desk support for manual guest registration and validation during private invitation-only birthday event",
-    caption: "Manual Help Desk Support",
+    alt: "Multiple guests checking in through the event registration desk with digital validation devices for a private invitation-only birthday event",
+    caption: "Multi-Guest Registration Flow",
   },
 ];
 

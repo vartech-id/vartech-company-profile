@@ -174,10 +174,13 @@ useHead({
       <div
         class="lg:w-full flex flex-col items-center gap-10 xl:gap-20 lg:flex-row"
       >
-        <img
-          class="h-24 sm:h-30 md:h-38 lg:h-74 xl:h-90"
+        <NuxtImg
+          class="h-24 sm:h-30 md:h-38 lg:h-74 xl:h-90 w-auto"
           :src="logoOnlySrc"
-          alt="vartech logo only"
+          width="253"
+          height="232"
+          alt="Vartech logo only"
+          preload
         />
         <div
           class="text-[0.9rem] sm:text-base flex flex-col gap-4 lg:gap-6 border-blue-600 md:text-lg xl:text-xl"
@@ -347,10 +350,10 @@ useHead({
     <Form
       :heading="['Share your ideas', 'Let\'s make them real !']" 
       address="Jl. Kepa Duri Mas, Duri Kepa, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11510"
-      :emails="['example@vartech.com', 'example@gmail.com']"
+      :emails="['vartech.idn@gmail.com', 'vartech2025.id@gmail.com']"
       :phones="[
-        { number: '+62817711008', label: '(+62) 81-7711-008 (Heri)' },
-        { number: '+62817711008', label: '(+62) 81-7711-008 (Heri)' },
+        { number: '+6285792190233', label: '(+62) 85792190233 (Ilham)' },
+        { number: '+6281288859869', label: '(+62) 81288859869 (Rudy)' },
       ]"
       :socials="[
         {

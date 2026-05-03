@@ -621,6 +621,7 @@ const relatedProjects = getRelatedProjects("/services/registration-system");
         <EndlessLoop :slides="carouselAssets" />
       </section>
 
+      <Cta />
       <RelatedProjects :projects="relatedProjects" />
   </article>
 </template>

@@ -538,6 +538,7 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
         <EndlessLoop :slides="carouselAssets" />
       </section>
 
+      <Cta />
       <RelatedProjects :projects="relatedProjects" />
   </article>
 </template>

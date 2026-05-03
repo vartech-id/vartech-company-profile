@@ -16,6 +16,7 @@ const contactForm = reactive({ name: "", email: "", subject: "", message: "" });
 const contactErrors = reactive({ name: "", email: "", subject: "", message: "" });
 const contactFeedback = ref("");
 const hasSubmittedContactForm = ref(false);
+const isContactSubmitting = ref(false);
 
 const clearContactFeedback = () => { contactFeedback.value = ""; };
 
@@ -53,12 +54,42 @@ const handleContactInput = (field) => {
   validateContactField(field);
 };
 
-const handleContactSubmit = () => {
+const handleContactSubmit = async () => {
   hasSubmittedContactForm.value = true;
   clearContactFeedback();
-  contactFeedback.value = validateContactForm()
-    ? "Form validation passed. Connect this form to your backend or email service to receive submissions."
-    : "Please complete the required fields before submitting.";
+
+  if (!validateContactForm()) {
+    contactFeedback.value = "Please complete the required fields before submitting.";
+    return;
+  }
+
+  isContactSubmitting.value = true;
+
+  try {
+    await $fetch("/api/contact", {
+      method: "POST",
+      body: {
+        name: contactForm.name,
+        email: contactForm.email,
+        subject: contactForm.subject,
+        message: contactForm.message,
+      },
+    });
+
+    contactFeedback.value = "Thank you. Your message has been sent successfully.";
+
+    contactForm.name = "";
+    contactForm.email = "";
+    contactForm.subject = "";
+    contactForm.message = "";
+
+    hasSubmittedContactForm.value = false;
+  } catch (error) {
+    contactFeedback.value = "Sorry, your message could not be sent. Please try again.";
+    console.error(error);
+  } finally {
+    isContactSubmitting.value = false;
+  }
 };
 </script>
 
@@ -162,9 +193,13 @@ const handleContactSubmit = () => {
         <p v-if="contactErrors.message" id="contact-message-error" class="text-sm text-red-300">{{ contactErrors.message }}</p>
       </div>
       <p v-if="contactFeedback" class="col-span-2 text-sm" aria-live="polite">{{ contactFeedback }}</p>
-      <button type="submit" class="place-self-end w-30 col-start-2 inline-flex h-12 items-center justify-center border-2 border-white font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black">
-        Reach Us
-      </button>
+    <button
+      type="submit"
+      :disabled="isContactSubmitting"
+      class="place-self-end w-30 col-start-2 inline-flex h-12 items-center justify-center border-2 border-white font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:opacity-50"
+    >
+      {{ isContactSubmitting ? "Sending..." : "Reach Us" }}
+    </button>
     </form>
   </section>
 </template>

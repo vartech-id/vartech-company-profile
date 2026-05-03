@@ -120,10 +120,13 @@ onBeforeUnmount(() => {
   >
     <div class="flex justify-between w-11/12">
       <NuxtLink to="/">
-        <img
+        <NuxtImg
           class="h-auto w-38 shrink-0 lg:w-42 xl:w-44"
           :src="logoSrc"
-          alt="vartech logo"
+          width="2243"
+          height="525"
+          alt="Vartech logo"
+          preload
           @click="closeMenuLogo"
       /></NuxtLink>
 

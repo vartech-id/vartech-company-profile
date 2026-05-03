@@ -236,6 +236,7 @@ const relatedProjects = getRelatedProjects("/services/interactive-experience");
         <EndlessLoop :slides="carouselAssets" />
       </section>
 
+      <Cta />
       <RelatedProjects :projects="relatedProjects" />
   </article>
 </template>

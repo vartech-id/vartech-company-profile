@@ -9,6 +9,11 @@ useHead(() => ({
   },
   link: [
     {
+      rel: "icon",
+      type: "image/x-icon",
+      href: "/favicon.ico",
+    },
+    {
       key: "canonical",
       rel: "canonical",
       href: withSiteUrl(route.path),

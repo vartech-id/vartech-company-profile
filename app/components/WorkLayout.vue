@@ -183,6 +183,8 @@ defineProps({
       </slot>
     </div>
 
+    <Cta />
+
     <RelatedProjects
       v-if="$slots.related"
       :title="relatedTitle"

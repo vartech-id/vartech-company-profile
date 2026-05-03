@@ -28,12 +28,12 @@ usePageSeo({
 <template>
   <article class="flex items-center justify-center w-11/12 xl:max-w-350 mx-auto">
     <Form
-      :heading="['Share your ideas', 'Let\'s make them real !']"
+      :heading="['Share your ideas', 'Let\'s make them real !']" 
       address="Jl. Kepa Duri Mas, Duri Kepa, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11510"
-      :emails="['example@vartech.com', 'example@gmail.com']"
+      :emails="['vartech.idn@gmail.com', 'vartech2025.id@gmail.com']"
       :phones="[
-        { number: '+62817711008', label: '(+62) 81-7711-008 (Heri)' },
-        { number: '+62817711008', label: '(+62) 81-7711-008 (Heri)' },
+        { number: '+6285792190233', label: '(+62) 85792190233 (Ilham)' },
+        { number: '+6281288859869', label: '(+62) 81288859869 (Rudy)' },
       ]"
       :socials="[
         {

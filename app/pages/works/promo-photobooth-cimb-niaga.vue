@@ -137,26 +137,26 @@ const carouselAssets = [
   {
     image:
       "/works/promo-photobooth-cimb-niaga/carousel-assets/journey-1.webp",
-    alt: "Visitors interacting with digital signage promo awareness content for Hayafest CIMB Niaga Syariah event activation",
-    caption: "Interactive Promo Awareness Display",
+    alt: "Visitors using an interactive CIMB Niaga Syariah digital signage photobooth at Hayafest, combining promo awareness content with an on-site photo experience",
+    caption: "Interactive Digital Signage Photobooth Setup",
   },
   {
     image:
       "/works/promo-photobooth-cimb-niaga/carousel-assets/journey-2.webp",
-    alt: "Swipeable promo content on digital signage used to introduce CIMB Niaga Syariah campaign before photobooth session",
-    caption: "Swipeable Promo Content",
+    alt: "Participants posing in front of the Hayafest CIMB Niaga Syariah branded photobooth after exploring promo awareness content on the interactive display",
+    caption: "Branded Participant Photo Experience",
   },
   {
     image:
       "/works/promo-photobooth-cimb-niaga/carousel-assets/journey-3.webp",
-    alt: "Touchscreen photobooth interaction with confirmation modal before entering the photo session menu",
-    caption: "Touchscreen Photo Confirmation Flow",
+    alt: "CIMB Niaga Syariah interactive photobooth screen showing the captured photo result and QR code download flow for Hayafest visitors",
+    caption: "Instant Photo Result and QR Download Flow",
   },
   {
     image:
       "/works/promo-photobooth-cimb-niaga/carousel-assets/journey-4.webp",
-    alt: "Interactive promo awareness and photobooth experience combining brand education and visitor engagement for Hayafest CIMB Niaga Syariah",
-    caption: "Promo Awareness to Photobooth Journey",
+    alt: "Group of Hayafest visitors taking a branded photo with the CIMB Niaga Syariah interactive photobooth activation",
+    caption: "Group Photo with Branded Event Activation",
   },
 ];
 
