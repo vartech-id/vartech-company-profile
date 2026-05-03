@@ -3,7 +3,7 @@ import {
   breadcrumbSchema,
   jsonLdScript,
   usePageSeo,
-  SITE_URL,
+  getFullUrl,
   SITE_NAME,
   SITE_LOGO,
 } from "~/composables/useSiteSeo";
@@ -52,19 +52,19 @@ usePageSeo({
       "@type": "AboutPage",
       name: seoTitle,
       description: seoDescription,
-      url: `${SITE_URL}/about-us`,
+      url: getFullUrl("/about-us"),
       publisher: {
         "@type": "Organization",
         name: SITE_NAME,
-        url: SITE_URL,
+        url: getFullUrl("/"),
         logo: SITE_LOGO,
       },
     }),
     jsonLdScript("schema-organization", {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       name: SITE_NAME,
-      url: SITE_URL,
+      url: getFullUrl("/"),
       logo: SITE_LOGO,
       description: seoDescription,
       member: team.map((m) => ({

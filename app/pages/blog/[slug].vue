@@ -2,11 +2,10 @@
 import {
   SITE_LOGO,
   SITE_NAME,
-  SITE_URL,
   breadcrumbSchema,
   jsonLdScript,
   usePageSeo,
-  withSiteUrl,
+  getFullUrl,
 } from "~/composables/useSiteSeo";
 
 const route = useRoute();
@@ -23,8 +22,8 @@ if (!post.value) {
 }
 
 const postPath = post.value.path || `/blog/${slug}`;
-const postUrl = withSiteUrl(postPath);
-const postImage = withSiteUrl(post.value.image);
+const postUrl = getFullUrl(postPath);
+const postImage = getFullUrl(post.value.image);
 const postTitle = `${post.value.title} | ${SITE_NAME}`;
 const datePublished = post.value.date;
 const dateModified = post.value.updated || post.value.date;
@@ -53,7 +52,7 @@ const structuredDataScripts = [
     author: {
       "@type": "Organization",
       name: SITE_NAME,
-      url: SITE_URL,
+      url: getFullUrl("/"),
     },
     publisher: {
       "@type": "Organization",

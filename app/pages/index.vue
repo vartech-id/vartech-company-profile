@@ -1,5 +1,6 @@
 <script setup>
 import { works } from "~/data/works";
+import { companyData } from "~/data/company";
 
 const logoOnlySrc = "/images/vartech-logo.svg";
 const siteUrl = "https://vartech.id";
@@ -8,40 +9,39 @@ const ogImageUrl = `${siteUrl}/images/logo.png`;
 
 const faqItems = [
   {
-    question:
-      "Do you build custom event software, web apps, and digital solutions for events, brand activations, and businesses in Jakarta and beyond?",
+    question: "What does Vartech do?",
     answer:
-      "Yes. Vartech builds custom event software, web apps, and digital solutions for events, brand activations, and businesses in Jakarta, across Indonesia, and for international projects. Our services can include custom microsites, admin dashboards, guest engagement systems, real-time display integrations, and tailored digital workflows designed around the needs of each event or campaign.",
+      "Vartech builds custom digital solutions for events, brand activations, corporate campaigns, exhibitions, and business needs. We help brands, agencies, and event organizers turn ideas into practical digital experiences through web applications, event technology, interactive systems, AI-powered experiences, and custom digital workflows.",
   },
   {
-    question:
-      "Can you create a custom event registration system with online registration, QR code check-in, attendance tracking, and reporting dashboards?",
+    question: "What kind of services does Vartech support?",
     answer:
-      "Yes. We develop custom event registration systems with online sign-up forms, QR code generation, on-site check-in, attendance tracking, admin management, and reporting dashboards. These systems are designed to help brands, agencies, and event organizers manage registration flows more efficiently and create a smoother guest experience from pre-event to on-site operations",
+      "Vartech supports custom event software, web application development, digital registration systems, interactive audience experiences, AI-powered activations, real-time display integrations, and other tailored digital solutions. If your project requires a custom technical approach, we can help explore the most practical solution based on your event goal, audience journey, and production setup.",
   },
   {
-    question:
-      "Do you develop custom photobooth software for events, exhibitions, corporate activations, and branded customer experiences?",
+    question: "How much does it cost to hire Vartech?",
     answer:
-      "Yes. We build custom photobooth software for events, exhibitions, and brand activations, including camera capture workflows, branded overlays, instant sharing, QR-based delivery, printing systems, and interactive on-site features. Each photobooth experience can be tailored to match the campaign theme, technical setup, and customer journey required for the event",
+      "The cost to hire Vartech depends on the project scope, required features, timeline, technical complexity, hardware needs, and on-site requirements. A simple digital system will have a different budget from a fully custom interactive experience or AI-powered activation. You can discuss your requirements with us first so we can recommend the most suitable solution and estimate.",
   },
   {
-    question:
-      "Can you build AI-powered event experiences such as AI photobooths, face swap, image enhancement, and automated photo processing?",
+    question: "Can Vartech help if my idea is not listed as a service?",
     answer:
-      "Yes. We can integrate AI-powered features such as AI photobooths, face swap, automated image enhancement, themed image generation, and custom photo processing workflows. These solutions are ideal for brands and event organizers who want more engaging visual experiences, higher shareability, and a more memorable digital activation for their audience.",
+      "Yes. Even if your idea or technical requirement is not listed as one of our main services, Vartech is happy to help understand your needs, explore possible solutions, and recommend a practical digital approach. We focus on helping you find the right solution, not only offering fixed service packages.",
   },
   {
-    question:
-      "Do you create interactive games, custom event apps, and audience engagement tools for exhibitions, launches, and brand campaigns?",
+    question: "Can I consult with Vartech before choosing the right digital solution?",
     answer:
-      "Yes. We create interactive games, custom event apps, and audience engagement tools for exhibitions, product launches, roadshows, and brand campaigns. Our solutions can include quizzes, gamification systems, leaderboards, interactive touch experiences, and other participation-driven mechanics that help increase engagement, booth traffic, and memorable brand interaction during events.",
+      "Yes. You can discuss your event idea, campaign goal, booth flow, technical setup, and expected audience experience with Vartech before deciding the right solution. We can help translate your idea into a practical digital experience that fits your objective, timeline, budget, and production needs.",
   },
   {
-    question:
-      "Can Vartech handle urgent timelines and fast-turnaround custom app development for events with tight technical and production deadlines?",
+    question: "Does Vartech only work on events?",
     answer:
-      "Yes. We understand that event production often moves fast. If your project has a tight deadline, we can review the scope, timeline, technical requirements, and on-site needs, then recommend the most realistic solution to deliver within the available time. The goal is to help you launch a stable and effective custom event system without overcomplicating the production process.",
+      "No. While Vartech often works on events, brand activations, exhibitions, and corporate campaigns, we can also support business needs that require custom web applications, digital workflows, dashboards, automation, or interactive digital tools. The solution can be adjusted based on the problem you want to solve.",
+  },
+  {
+    question: "Can Vartech support projects in Jakarta and across Indonesia?",
+    answer:
+      "Yes. Vartech can support projects in Jakarta, across Indonesia, and selected international projects depending on the scope and technical requirements. Some solutions can be prepared remotely, while event-based systems may include on-site setup, testing, and technical support when needed.",
   },
 ];
 
@@ -72,6 +72,20 @@ useHead({
       rel: "canonical",
       href: homepageUrl,
     },
+    {
+      rel: "preload",
+      href: "/fonts/roboto-latin-400-normal.woff2",
+      as: "font",
+      type: "font/woff2",
+      crossorigin: "anonymous",
+    },
+    {
+      rel: "preload",
+      href: "/fonts/roboto-latin-900-normal.woff2",
+      as: "font",
+      type: "font/woff2",
+      crossorigin: "anonymous",
+    },
   ],
   script: [
     {
@@ -79,12 +93,21 @@ useHead({
       type: "application/ld+json",
       textContent: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "ProfessionalService",
         name: "Vartech.id",
         url: homepageUrl,
         logo: ogImageUrl,
         description:
           "Vartech.id builds custom event technology, AI photobooths, registration systems, interactive games, and live brand activation experiences.",
+        telephone: "+6285792190233",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Jl. Kepa Duri Mas, Duri Kepa",
+          addressLocality: "Kec. Kb. Jeruk, Kota Jakarta Barat",
+          addressRegion: "Daerah Khusus Ibukota Jakarta",
+          postalCode: "11510",
+          addressCountry: "ID",
+        },
         sameAs: ["https://www.instagram.com/vartech_idn"],
       }),
     },
@@ -174,35 +197,39 @@ useHead({
       <div
         class="lg:w-full flex flex-col items-center gap-10 xl:gap-20 lg:flex-row"
       >
-        <NuxtImg
+        <img
           class="h-24 sm:h-30 md:h-38 lg:h-74 xl:h-90 w-auto"
           :src="logoOnlySrc"
           width="253"
           height="232"
           alt="Vartech logo only"
-          preload
         />
         <div
           class="text-[0.9rem] sm:text-base flex flex-col gap-4 lg:gap-6 border-blue-600 md:text-lg xl:text-xl"
         >
           <p>
-            Vartech.id was founded with a passion for building technology that
-            solves real problems in live events and brand activations.
+            Vartech.id is a digital event technology company that builds custom software,
+            interactive systems, and automation for live events, brand activations,
+            corporate campaigns, and business needs.
           </p>
+
           <p>
-            We saw how many creative ideas in the event industry were limited by
-            generic tools and rigid systems. From that gap, Vartech was created
-            to design tailored digital experiences that combine
-            software,interactive systems, and automation.
+            We started Vartech after seeing how many creative event ideas were limited by
+            generic tools, manual workflows, and rigid systems. Our goal is to help brands,
+            agencies, and event organizers turn those ideas into practical digital
+            experiences that are reliable, engaging, and easy to operate on-site.
           </p>
+
           <p>
-            We develop custom solutions such as AI photobooths, event
-            registration platforms, interactive displays, and gamified
-            experiences for brands, agencies, and event organizers.
+            Instead of offering only fixed service packages, we focus on understanding the
+            problem behind each project. From registration flows and audience interaction
+            to AI-powered experiences and real-time displays, every solution is designed
+            around the event goal, user journey, technical setup, and production needs.
           </p>
+
           <p>
-            Our mission is simple: transform complex technical ideas into
-            seamless experiences that audiences can instantly enjoy.
+            Our mission is simple: transform complex technical ideas into seamless digital
+            experiences that audiences can instantly understand, enjoy, and remember.
           </p>
         </div>
       </div>
@@ -227,6 +254,7 @@ useHead({
           and reporting so your crowd flow stays organized and effortless.
         </p>
         <NuxtLink
+          aria-label="Learn more about Registration System"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/registration-system"
           >Learn more →</NuxtLink
@@ -242,6 +270,7 @@ useHead({
           for speed on-site and a smooth guest experience.
         </p>
         <NuxtLink
+          aria-label="Learn more about Custom Photobooth Development"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/custom-photobooth"
           >Learn more →</NuxtLink
@@ -257,6 +286,7 @@ useHead({
           fast turnaround, and scalable output.
         </p>
         <NuxtLink
+          aria-label="Learn more about Ai Photobooth and Image Automation"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/ai-photobooth"
           >Learn more →</NuxtLink
@@ -273,6 +303,7 @@ useHead({
           rewards.
         </p>
         <NuxtLink
+          aria-label="Learn more about Gamification and Interactive Games"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/gamification"
           >Learn more →</NuxtLink
@@ -288,12 +319,14 @@ useHead({
           participation into a shared experience with moderation and control.
         </p>
         <NuxtLink
+          aria-label="Learn more about Interactive Live Experiences"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/interactive-experience"
           >Learn more →</NuxtLink
         >
       </article>
       <NuxtLink
+        aria-label="View all services"
         to="/services"
         class="inline-flex h-12 items-center justify-center border-2 border-white px-4 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black"
       >
@@ -320,6 +353,7 @@ useHead({
           <WorksSwiper :items="works" />
         </article>
         <NuxtLink
+          aria-label="View all works"
           to="/works"
           class="inline-flex h-12 items-center justify-center border-2 border-white px-4 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black"
           >View All</NuxtLink
@@ -342,6 +376,7 @@ useHead({
         Need Something More Specific?
       </h2>
       <NuxtLink
+        aria-label="Get in touch with us"
         to="#contact"
         class="inline-flex h-12 items-center justify-center border-2 border-white px-4 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-black"
         >Get In Touch</NuxtLink
@@ -349,19 +384,10 @@ useHead({
     </section>
     <Form
       :heading="['Share your ideas', 'Let\'s make them real !']" 
-      address="Jl. Kepa Duri Mas, Duri Kepa, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11510"
-      :emails="['vartech.idn@gmail.com', 'vartech2025.id@gmail.com']"
-      :phones="[
-        { number: '+6285792190233', label: '(+62) 85792190233 (Ilham)' },
-        { number: '+6281288859869', label: '(+62) 81288859869 (Rudy)' },
-      ]"
-      :socials="[
-        {
-          href: 'https://www.instagram.com/vartech_idn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
-          label: 'Instagram',
-          icon: `<svg fill='#ffffff' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' stroke='#ffffff'><path d='M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z'/><path d='M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z'/><path d='M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z'/></svg>`,
-        },
-      ]"
+      :address="companyData.address"
+      :emails="companyData.emails"
+      :phones="companyData.phones"
+      :socials="companyData.socials"
     />
   </div>
 </template>

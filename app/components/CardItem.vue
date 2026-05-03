@@ -25,6 +25,9 @@ defineProps({
           :src="image"
           :alt="imageAlt || `Preview image for ${title}`"
           class="h-full w-full object-cover"
+          width="800"
+          height="500"
+          format="webp"
         />
       </div>
 

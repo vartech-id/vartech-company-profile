@@ -1,5 +1,5 @@
 <script setup>
-import { withSiteUrl } from "~/composables/useSiteSeo";
+import { getFullUrl } from "~/composables/useSiteSeo";
 
 const route = useRoute();
 
@@ -16,7 +16,7 @@ useHead(() => ({
     {
       key: "canonical",
       rel: "canonical",
-      href: withSiteUrl(route.path),
+      href: getFullUrl(route.path),
     },
   ],
 }));

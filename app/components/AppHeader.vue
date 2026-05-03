@@ -127,6 +127,8 @@ onBeforeUnmount(() => {
           height="525"
           alt="Vartech logo"
           preload
+          format="webp"
+          sizes="sm:152px md:168px lg:176px"
           @click="closeMenuLogo"
       /></NuxtLink>
 

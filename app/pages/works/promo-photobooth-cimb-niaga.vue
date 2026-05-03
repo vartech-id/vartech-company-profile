@@ -29,6 +29,33 @@ useHead({
       type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://vartech.id/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Works",
+            "item": "https://vartech.id/works"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Interactive Promo Awareness Photobooth Experience",
+            "item": "https://vartech.id/works/promo-photobooth-cimb-niaga"
+          }
+        ]
+      })
+    },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
         "@type": "CreativeWork",
         name: pageTitle,
         headline:

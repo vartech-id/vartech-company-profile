@@ -81,9 +81,12 @@ defineProps({
           class="overflow-hidden rounded-lg"
         >
           <NuxtImg
-            class="h-full w-full object-cover"
+            class="w-full aspect-[3/2] object-cover"
             :src="image.src"
             :alt="image.alt"
+            width="1200"
+            height="800"
+            format="webp"
           />
         </figure>
       </slot>

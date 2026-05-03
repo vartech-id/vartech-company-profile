@@ -2,7 +2,7 @@
 title: "How to Choose the Right Interactive Game for a Brand Activation Booth"
 subtitle: "Gamification & Interactive Games"
 image: "/images/blog/how-to-choose-right-game.webp"
-date: "2025-06-01"
+date: "2026-05-08"
 excerpt: "Choosing the right interactive game for a brand activation booth can increase engagement, attract more visitors, and make your event experience more memorable. Here is how to match the right game to the right booth goal."
 tags: ["Gamification", "Interactive Games", "Brand Activation", "Event Booth"]
 faqs:
