@@ -88,57 +88,6 @@ useHead({
       crossorigin: "anonymous",
     },
   ],
-  script: [
-    {
-      key: "schema-organization",
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        name: "Vartech.id",
-        url: homepageUrl,
-        logo: ogImageUrl,
-        description:
-          "Vartech.id builds custom event technology, AI photobooths, registration systems, interactive games, and live brand activation experiences.",
-        telephone: "+6285792190233",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Jl. Kepa Duri Mas, Duri Kepa",
-          addressLocality: "Kec. Kb. Jeruk, Kota Jakarta Barat",
-          addressRegion: "Daerah Khusus Ibukota Jakarta",
-          postalCode: "11510",
-          addressCountry: "ID",
-        },
-        sameAs: ["https://www.instagram.com/vartech_idn"],
-      }),
-    },
-    {
-      key: "schema-website",
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: "Vartech.id",
-        url: homepageUrl,
-      }),
-    },
-    {
-      key: "schema-faq",
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: faqItems.map((item) => ({
-          "@type": "Question",
-          name: item.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.answer,
-          },
-        })),
-      }),
-    },
-  ],
 });
 </script>
 <template>
@@ -197,7 +146,7 @@ useHead({
       <div
         class="lg:w-full flex flex-col items-center gap-10 xl:gap-20 lg:flex-row"
       >
-        <img
+        <NuxtImg
           class="h-24 sm:h-30 md:h-38 lg:h-74 xl:h-90 w-auto"
           :src="logoOnlySrc"
           width="253"
@@ -260,7 +209,7 @@ useHead({
           aria-label="Learn more about Registration System"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/registration-system"
-          >Learn more →</NuxtLink
+          >Explore Registration Systems →</NuxtLink
         >
       </article>
       <article
@@ -277,7 +226,7 @@ useHead({
           aria-label="Learn more about Gamification and Interactive Games"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/gamification"
-          >Learn more →</NuxtLink
+          >Explore Gamification & Games →</NuxtLink
         >
       </article>
       <article
@@ -293,7 +242,7 @@ useHead({
           aria-label="Learn more about Custom Photobooth Development"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/custom-photobooth"
-          >Learn more →</NuxtLink
+          >Explore Custom Photobooths →</NuxtLink
         >
       </article>
       <article
@@ -309,7 +258,7 @@ useHead({
           aria-label="Learn more about Interactive Live Experiences"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/interactive-experience"
-          >Learn more →</NuxtLink
+          >Explore Interactive Live Experiences →</NuxtLink
         >
       </article>
       <article
@@ -325,7 +274,7 @@ useHead({
           aria-label="Learn more about Ai Photobooth and Image Automation"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/ai-photobooth"
-          >Learn more →</NuxtLink
+          >Explore Ai Photobooths →</NuxtLink
         >
       </article>
       <NuxtLink

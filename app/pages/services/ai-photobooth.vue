@@ -107,6 +107,8 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
           src="/services/ai-photobooth/card-cover.webp"
           alt="AI photobooth experience for events with face swap, themed image generation, QR download, and branded photo output"
           class="h-full w-full object-cover"
+          fetchpriority="high"
+          preload
         />
       </div>
 

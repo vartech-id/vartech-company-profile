@@ -12,6 +12,29 @@ const props = defineProps({
 
 const activeFaqs = ref([]);
 
+useHead(() => {
+  if (!props.items || props.items.length === 0) return {};
+  return {
+    script: [
+      {
+        key: `schema-faq-${props.id}`,
+        type: "application/ld+json",
+        textContent: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: props.items.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        }),
+      },
+    ],
+  };
+});
 const sectionTitleId = computed(() => `${props.id}-title`);
 
 const getItemKey = (item, index) => item.id ?? index + 1;

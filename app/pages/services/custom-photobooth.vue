@@ -94,6 +94,8 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
             src="/services/custom-photobooth-development/card-cover.webp"
             alt="Custom photobooth software for branded events with camera capture, overlay design, QR download, and instant printing"
             class="w-full object-cover"
+            fetchpriority="high"
+            preload
           />
         </div>
 

@@ -57,6 +57,8 @@ const relatedProjects = getRelatedProjects("/services/gamification");
               class="h-full w-full object-cover"
               src="/services/gamification-interactive-games/scream-game-cover.webp"
               alt="People playing scream game at an event booth"
+              fetchpriority="high"
+              preload
             />
           </div>
 

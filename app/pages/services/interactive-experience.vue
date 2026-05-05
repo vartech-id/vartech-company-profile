@@ -57,6 +57,8 @@ const relatedProjects = getRelatedProjects("/services/interactive-experience");
               class="h-full w-full object-cover"
           src="/services/interactive-live-experience/card-cover.webp"
               alt="People playing scream game at an event booth"
+              fetchpriority="high"
+              preload
             />
           </div>
 

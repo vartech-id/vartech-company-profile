@@ -1,7 +1,8 @@
 <script setup>
-import { getFullUrl } from "~/composables/useSiteSeo";
+import { getFullUrl, SITE_LOGO } from "~/composables/useSiteSeo";
 
 const route = useRoute();
+const homepageUrl = getFullUrl("/");
 
 useHead(() => ({
   htmlAttrs: {
@@ -17,6 +18,41 @@ useHead(() => ({
       key: "canonical",
       rel: "canonical",
       href: getFullUrl(route.path),
+    },
+  ],
+  script: [
+    {
+      key: "schema-organization",
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        name: "Vartech.id",
+        url: homepageUrl,
+        logo: SITE_LOGO,
+        description:
+          "Vartech.id builds custom event technology, AI photobooths, registration systems, interactive games, and live brand activation experiences.",
+        telephone: "+6285792190233",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Jl. Kepa Duri Mas, Duri Kepa",
+          addressLocality: "Kec. Kb. Jeruk, Kota Jakarta Barat",
+          addressRegion: "Daerah Khusus Ibukota Jakarta",
+          postalCode: "11510",
+          addressCountry: "ID",
+        },
+        sameAs: ["https://www.instagram.com/vartech_idn"],
+      }),
+    },
+    {
+      key: "schema-website",
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Vartech.id",
+        url: homepageUrl,
+      }),
     },
   ],
 }));

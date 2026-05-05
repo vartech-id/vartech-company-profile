@@ -106,6 +106,8 @@ const relatedProjects = getRelatedProjects("/services/registration-system");
           src="/services/registration-system/card-cover.webp"
           alt="Guests using a QR-based registration system during an event check-in"
           class="w-full object-cover"
+          fetchpriority="high"
+          preload
         />
       </div>
 
