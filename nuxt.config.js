@@ -33,5 +33,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/image", "@nuxt/ui", "@nuxt/content", "@nuxtjs/sitemap"],
+  modules: ["@nuxt/image", "@nuxt/content", "@nuxtjs/sitemap"],
 });

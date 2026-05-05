@@ -4,7 +4,7 @@
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Chat WhatsApp"
-    class="fixed bottom-6 right-5 xl:right-15 z-50 flex h-16 w-16 md:h-19 md:w-19 items-center justify-center rounded-full border border-white bg-white/10 backdrop-blur-md shadow-lg transition-transform duration-300 hover:scale-105 animate-bounce"
+    class="fixed bottom-6 right-5 xl:right-15 z-50 flex h-16 w-16 md:h-19 md:w-19 items-center justify-center rounded-full border border-white bg-white/10 shadow-lg transition-transform duration-300 hover:scale-105 md:backdrop-blur-md md:animate-bounce"
   >
     <svg
       class="h-12 w-12 md:h-15 md:w-15"

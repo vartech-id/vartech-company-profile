@@ -70,6 +70,6 @@ useHead(() => ({
       <NuxtPage />
     </main>
     <AppFooter />
-    <FloatingWhatAppButton />
+    <LazyFloatingWhatAppButton hydrate-never />
   </div>
 </template>

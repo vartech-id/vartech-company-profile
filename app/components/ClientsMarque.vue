@@ -16,7 +16,7 @@ const clients = [
     alt: "FIF logo",
   },
   {
-    name: "blackmores",
+    name: "Blackmores",
     src: "/clients/blackmores-logo.webp",
     alt: "Blackmores logo",
   },
@@ -69,47 +69,47 @@ const clients = [
 </script>
 
 <template>
-  <div id="clients" class="clients-marquee">
+  <div id="clients" class="clients-marquee" aria-label="Our clients">
     <div class="clients-marquee__viewport">
       <div class="clients-marquee__track">
-        <!-- group 1 -->
+        <!-- Main logo group -->
         <ul class="clients-marquee__group" aria-label="Client logos">
           <li
             v-for="client in clients"
             :key="`group-a-${client.name}`"
             class="clients-marquee__item"
           >
-            <NuxtImg
+            <img
               :src="client.src"
               :alt="client.alt"
-              width="400"
-              height="200"
+              width="160"
+              height="80"
               class="clients-marquee__logo"
-              loading="eager"
+              loading="lazy"
+              decoding="async"
+              fetchpriority="low"
               draggable="false"
-              format="webp"
-              quality="80"
             />
           </li>
         </ul>
 
-        <!-- group 2 (exact duplicate) -->
+        <!-- Duplicate logo group for seamless marquee -->
         <ul class="clients-marquee__group" aria-hidden="true">
           <li
             v-for="client in clients"
             :key="`group-b-${client.name}`"
             class="clients-marquee__item"
           >
-            <NuxtImg
+            <img
               :src="client.src"
-              :alt="client.alt"
-              width="400"
-              height="200"
+              alt=""
+              width="160"
+              height="80"
               class="clients-marquee__logo"
               loading="lazy"
+              decoding="async"
+              fetchpriority="low"
               draggable="false"
-              format="webp"
-              quality="80"
             />
           </li>
         </ul>
@@ -121,10 +121,8 @@ const clients = [
 <style scoped>
 .clients-marquee {
   width: 100%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.18);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   padding: 0 0.75rem;
 }
 
@@ -135,20 +133,22 @@ const clients = [
 .clients-marquee__track {
   display: flex;
   width: max-content;
-  will-change: transform;
   animation: marquee-scroll 50s linear infinite;
-  animation-play-state: running;
 }
 
 .clients-marquee__group {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .clients-marquee__item {
-  height: 60px; /* Lebar baru untuk mobile */
+  height: 60px;
   padding-inline: 0.5rem;
+  flex: 0 0 auto;
 }
 
 .clients-marquee__logo {
@@ -162,21 +162,27 @@ const clients = [
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
 }
 
 @media (min-width: 768px) {
+  .clients-marquee {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
   .clients-marquee__item {
-    height: 70px; /* Lebar baru untuk tablet */
+    height: 70px;
     padding-inline: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .clients-marquee__item {
-    height: 70px; /* Lebar baru untuk desktop */
+    height: 70px;
     padding-inline: 2rem;
   }
 }

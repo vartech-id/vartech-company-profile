@@ -1,5 +1,5 @@
 <script setup>
-const logoSrc = "/images/logo.png";
+const logoSrc = "/images/logo.webp";
 const menuId = "primary-navigation";
 const isMenu = ref(false);
 const menuButtonRef = ref(null);
@@ -123,14 +123,16 @@ onBeforeUnmount(() => {
         <NuxtImg
           class="h-auto w-38 shrink-0 lg:w-42 xl:w-44"
           :src="logoSrc"
-          width="2243"
-          height="525"
+          width="224"
+          height="52"
           alt="Vartech logo"
-          preload
           format="webp"
           sizes="sm:152px md:168px lg:176px"
+          loading="eager"
+          decoding="async"
           @click="closeMenuLogo"
-      /></NuxtLink>
+        />
+      </NuxtLink>
 
       <button
         ref="menuButtonRef"

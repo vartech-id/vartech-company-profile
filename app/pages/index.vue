@@ -125,11 +125,11 @@ useHead({
       >
         <h2
           id="clients-title"
-          class="text-center font-roboto text-xs font-light"
+          class="text-center font-roboto text-xs"
         >
           Our Clients:
         </h2>
-        <ClientsMarque />
+        <LazyClientsMarque hydrate-never />
       </section>
     </section>
 
@@ -300,7 +300,7 @@ useHead({
         <article
           class="flex flex-col gap-5 w-full items-center overflow-hidden"
         >
-          <WorksSwiper :items="works" />
+          <LazyWorksSwiper hydrate-on-visible :items="works" />
         </article>
         <NuxtLink
           aria-label="View all works"
@@ -310,7 +310,8 @@ useHead({
         >
       </div>
     </section>
-    <FaqSection
+    <LazyFaqSection
+      hydrate-on-visible
       description="Answers to common questions about custom event tech, AI photobooths, and brand activation experiences."
       :items="faqItems"
     />
@@ -332,7 +333,8 @@ useHead({
         >Get In Touch</NuxtLink
       >
     </section>
-    <Form
+    <LazyForm
+      hydrate-on-visible
       :heading="['Share your ideas', 'Let\'s make them real !']"
       :address="companyData.address"
       :emails="companyData.emails"

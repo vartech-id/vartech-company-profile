@@ -1,5 +1,5 @@
 <script setup>
-import ImageSwiper from "~/components/ImageSwiper.vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 import {
   breadcrumbSchema,
   jsonLdScript,
@@ -79,6 +79,47 @@ const carouselAssets = [
 ];
 
 const relatedProjects = getRelatedProjects("/services/ai-photobooth");
+
+const compareSectionRef = ref(null);
+const carouselSectionRef = ref(null);
+const shouldLoadCompare = ref(false);
+const shouldLoadCarousel = ref(false);
+const deferredObservers = [];
+
+const observeDeferredSection = (sectionRef, loadState) => {
+  onMounted(() => {
+    const section = sectionRef.value;
+
+    if (!section || !("IntersectionObserver" in window)) {
+      loadState.value = true;
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) {
+          return;
+        }
+
+        loadState.value = true;
+        observer.disconnect();
+      },
+      {
+        rootMargin: "360px 0px",
+      },
+    );
+
+    observer.observe(section);
+    deferredObservers.push(observer);
+  });
+};
+
+observeDeferredSection(compareSectionRef, shouldLoadCompare);
+observeDeferredSection(carouselSectionRef, shouldLoadCarousel);
+
+onBeforeUnmount(() => {
+  deferredObservers.forEach((observer) => observer.disconnect());
+});
 </script>
 
 <template>
@@ -107,6 +148,13 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
           src="/services/ai-photobooth/card-cover.webp"
           alt="AI photobooth experience for events with face swap, themed image generation, QR download, and branded photo output"
           class="h-full w-full object-cover"
+          width="1800"
+          height="1200"
+          sizes="90vw lg:640px"
+          densities="1"
+          quality="72"
+          format="webp"
+          decoding="async"
           fetchpriority="high"
           preload
         />
@@ -575,13 +623,27 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
       </div>
 
       <div
+        ref="compareSectionRef"
         class="w-full max-w-2xl overflow-hidden border border-zinc-800 bg-zinc-900/70 p-2"
       >
         <ClientOnly>
-          <BeforeAfter
+          <LazyBeforeAfter
+            v-if="shouldLoadCompare"
+            hydrate-on-visible
             :before-image="beforeAfterImages[0].src"
             :after-image="beforeAfterImages[1].src"
           />
+          <div
+            v-else
+            class="aspect-[4/3] w-full bg-zinc-950"
+            aria-hidden="true"
+          ></div>
+          <template #fallback>
+            <div
+              class="aspect-[4/3] w-full bg-zinc-950"
+              aria-hidden="true"
+            ></div>
+          </template>
         </ClientOnly>
       </div>
     </section>
@@ -604,6 +666,14 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
               src="/services/ai-photobooth/how-it-works/step-1.webp"
               alt="Guest taking a source photo for AI photobooth face swap and image generation"
               class="w-full object-cover"
+              width="900"
+              height="600"
+              sizes="90vw md:30vw lg:384px"
+              densities="1"
+              quality="74"
+              format="webp"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <h3 class="py-3 text-center text-2xl font-bold text-white">
@@ -623,6 +693,14 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
               src="/services/ai-photobooth/how-it-works/step-2.webp"
               alt="AI photobooth processing guest photo into a themed branded image result"
               class="w-full object-cover"
+              width="900"
+              height="600"
+              sizes="90vw md:30vw lg:384px"
+              densities="1"
+              quality="74"
+              format="webp"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <h3 class="py-3 text-center text-2xl font-bold text-white">
@@ -642,6 +720,14 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
               src="/services/ai-photobooth/how-it-works/step-3.webp"
               alt="Guest downloading and sharing an AI photobooth result through QR code and email delivery"
               class="w-full object-cover"
+              width="900"
+              height="600"
+              sizes="90vw md:30vw lg:384px"
+              densities="1"
+              quality="74"
+              format="webp"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <h3 class="py-3 text-center text-2xl font-bold text-white">
@@ -658,8 +744,20 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
     </section>
 
     <!-- ENDLESS LOOP -->
-    <section class="flex w-full flex-col items-center p-4">
-      <EndlessLoop :slides="carouselAssets" />
+    <section
+      ref="carouselSectionRef"
+      class="flex min-h-[20rem] w-full flex-col items-center p-4"
+    >
+      <LazyEndlessLoop
+        v-if="shouldLoadCarousel"
+        hydrate-on-visible
+        :slides="carouselAssets"
+      />
+      <div
+        v-else
+        class="h-72 w-full max-w-sm border border-zinc-800 bg-zinc-950"
+        aria-hidden="true"
+      ></div>
     </section>
 
     <Cta />

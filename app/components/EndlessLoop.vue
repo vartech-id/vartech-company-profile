@@ -40,8 +40,12 @@ watch(
             :alt="slide.alt"
             width="400"
             height="400"
+            sizes="300px md:400px"
+            densities="1"
+            quality="30"
             format="webp"
             loading="lazy"
+            decoding="async"
           />
           <p v-if="slide.caption">{{ slide.caption }}</p>
         </div>
@@ -62,8 +66,12 @@ watch(
         :alt="slide.alt"
         width="400"
         height="400"
+        sizes="300px md:400px"
+        densities="1"
+        quality="74"
         format="webp"
         loading="lazy"
+        decoding="async"
       />
       <p v-if="slide.caption">{{ slide.caption }}</p>
     </div>

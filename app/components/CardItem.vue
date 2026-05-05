@@ -28,6 +28,9 @@ defineProps({
           width="800"
           height="500"
           format="webp"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
         />
       </div>
 
