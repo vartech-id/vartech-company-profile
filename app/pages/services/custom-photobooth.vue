@@ -8,9 +8,9 @@ import {
 import { getRelatedProjects } from "~/data/related-projects";
 
 const seoTitle =
-  "Custom Photobooth Development | Vartech.id - Branded Event Photo Systems";
+  "Custom Photobooth Development | Vartech.id - Branded Event Photobooth Software";
 const seoDescription =
-  "Create custom photobooth software for events with camera capture, branded overlays, instant delivery, QR sharing, and print-ready workflows.";
+  "Build custom photobooth software for corporate events, brand activations, weddings, and exhibitions with camera capture, branded overlays, QR sharing, instant download, and print-ready workflows.";
 
 usePageSeo({
   title: seoTitle,
@@ -34,27 +34,37 @@ usePageSeo({
 
 const imagesAsset = [
   {
-    name: "Custom UI",
-    src: "/services/custom-photobooth-development/key-features/ui-1.webp",
-    alt: "Custom Photobooth Interface",
+    name: "Branded Registration UI",
+    src: "/services/custom-photobooth-development/key-features/branded-registration-ui.webp",
+    alt: "Custom photobooth branded registration interface for event participant data collection",
+  },
+  {
+    name: "Product Selection Screen",
+    src: "/services/custom-photobooth-development/key-features/product-selection-screen.webp",
+    alt: "Custom photobooth product selection screen for branded event photo experience",
+  },
+  {
+    name: "Interactive Photo Start Modal",
+    src: "/services/custom-photobooth-development/key-features/interactive-photo-start-modal.webp",
+    alt: "Custom photobooth interactive photo start confirmation modal for gamified event experience",
   },
 ];
 
 const carouselAssets = [
   {
     image: "/services/custom-photobooth-development/card-cover.webp",
-    alt: "Custom Photobooth",
-    caption: "Custom Photobooth",
+    alt: "Custom photobooth setup for branded event photo activation with camera capture and guest interaction",
+    caption: "Custom Event Photobooth System",
   },
   {
     image: "/services/custom-photobooth-development/carousel-assets/label-photobooth.webp",
-    alt: "Label Photobooth",
-    caption: "Label Photobooth",
+    alt: "Branded photobooth label and interface design for custom event photo workflow",
+    caption: "Branded Photobooth Interface",
   },
   {
     image: "/services/custom-photobooth-development/carousel-assets/result-pb.webp",
-    alt: "Photobooth Result",
-    caption: "Photobooth Result",
+    alt: "Final photobooth result with custom event overlay, branded frame, and print-ready output",
+    caption: "Print-ready Photobooth Result",
   },
 ];
 
@@ -82,7 +92,7 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
         <div class="flex h-full w-full flex-1 overflow-hidden border border-zinc-800 bg-zinc-900">
           <NuxtImg
             src="/services/custom-photobooth-development/card-cover.webp"
-            alt="Guests using a QR-based registration system during an event check-in"
+            alt="Custom photobooth software for branded events with camera capture, overlay design, QR download, and instant printing"
             class="w-full object-cover"
           />
         </div>
@@ -92,17 +102,20 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
             id="overview-title"
             class="max-w-xs text-2xl font-semibold leading-tight text-white md:max-w-md md:text-3xl"
           >
-            Premium Photobooth Experience
+            Custom Photobooth Software for Branded Event Experiences
           </h2>
 
           <p class="text-sm leading-7 text-zinc-300 md:text-base">
-            From camera capture and branded overlays to instant delivery and
-            on-site printing, we develop custom photobooth workflows designed
-            for events, brand activations, and a smooth guest experience.
+            Vartech.id develops custom photobooth systems for corporate events,
+            brand activations, exhibitions, weddings, and private events. From
+            DSLR or webcam capture, branded photo overlays, custom user
+            interfaces, QR download, email delivery, and instant printing, every
+            photobooth workflow is built to match your event concept and create
+            a smooth guest experience.
           </p>
 
           <ul
-            aria-label="Registration system highlights"
+            aria-label="Custom photobooth system highlights"
             class="flex w-5/6 flex-col gap-4 sm:w-full lg:max-w-xs"
           >
             <li>
@@ -129,7 +142,8 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
                   </svg>
                 </span>
                 <p class="text-sm leading-6 text-zinc-200 md:text-base">
-                  DSLR or webcam capture workflow tailored for your event
+                  Custom DSLR or webcam capture flow tailored to your event
+                  setup
                 </p>
               </div>
             </li>
@@ -158,7 +172,7 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
                   </svg>
                 </span>
                 <p class="text-sm leading-6 text-zinc-200 md:text-base">
-                  Branded overlays and templates aligned with campaign visuals
+                  Branded overlays, campaign frames, and custom photo templates
                 </p>
               </div>
             </li>
@@ -187,7 +201,7 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
                   </svg>
                 </span>
                 <p class="text-sm leading-6 text-zinc-200 md:text-base">
-                  Instant photo delivery via QR, email, or sharing station
+                  Instant guest access through QR code, email, or download page
                 </p>
               </div>
             </li>
@@ -216,7 +230,8 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
                   </svg>
                 </span>
                 <p class="text-sm leading-6 text-zinc-200 md:text-base">
-                  On-site printing designed for fast and reliable guest output
+                  Print-ready photo output for fast and reliable on-site
+                  production
                 </p>
               </div>
             </li>
@@ -249,9 +264,9 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
           <p
             class="max-w-2xl text-center text-sm leading-7 text-zinc-300 md:text-base"
           >
-            A fully customized photobooth interface designed to match your event
-            branding, guide guests smoothly through each step, and create a
-            premium interactive experience.
+            A custom photobooth interface designed to match your event branding,
+            guide guests through each step, and make the photo-taking experience
+            feel premium, intuitive, and campaign-ready.
           </p>
           <div class="my-4 w-full border border-zinc-800 bg-zinc-900/70 p-2">
             <ClientOnly>
@@ -287,9 +302,9 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
                   Camera Capture Workflow
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Build a custom capture flow with countdown, live preview,
-                  retake options, and smooth guest interaction from start to
-                  finish.
+                  Build a smooth capture flow with live preview, countdown,
+                  retake option, camera trigger, and guided guest interaction
+                  for DSLR, webcam, or event camera setups.
                 </p>
               </div>
             </article>
@@ -344,8 +359,9 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
                   Branded Overlay System
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Apply custom frames, campaign graphics, and branded layouts
-                  automatically to every photo output.
+                  Apply branded frames, sponsor logos, campaign visuals, event
+                  themes, and custom photo layouts automatically to every final
+                  photobooth result.
                 </p>
               </div>
             </article>
@@ -386,8 +402,9 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
                   Instant Photo Delivery
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Deliver final photos instantly through QR code, email, or
-                  digital sharing flow for a faster guest experience.
+                  Deliver final photos instantly through QR code, email link, or
+                  a custom download page so guests can save and share their
+                  event photos without friction.
                 </p>
               </div>
             </article>
@@ -413,11 +430,12 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
               </div>
               <div class="min-w-0 flex-1">
                 <h3 class="text-lg font-semibold leading-snug text-white md:text-xl">
-                  Sharing and Download Flow
+                  QR Sharing and Download Flow
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Create a seamless post-capture flow for downloading, sharing,
-                  and accessing branded photo results.
+                  Create a seamless post-capture journey with QR scan, download
+                  access, sharing station, email delivery, and branded gallery
+                  options for event guests.
                 </p>
               </div>
             </article>
@@ -471,8 +489,9 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
                   On-site Technical Support
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Support live event operations with on-site setup,
-                  troubleshooting, and workflow monitoring when needed.
+                  Support live event operations with booth setup, camera
+                  configuration, workflow monitoring, guest assistance,
+                  troubleshooting, and reliable on-site execution.
                 </p>
               </div>
             </article>
@@ -525,8 +544,9 @@ const relatedProjects = getRelatedProjects("/services/custom-photobooth");
                   Print-ready Output
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Prepare final photo outputs for instant printing with layouts
-                  optimized for quality, speed, and reliable event production.
+                  Prepare final photo outputs for instant printing with
+                  high-resolution layouts, correct print sizing, branded
+                  composition, and production-ready event souvenirs.
                 </p>
               </div>
             </article>

@@ -14,11 +14,6 @@ const seoDescription =
 
 const team = [
   {
-    name: "Rudy T.",
-    role: "Founder & CEO",
-    photo: "/images/vartech-team/founder.webp",
-  },
-  {
     name: "Ilham D.",
     role: "Co-Founder & Developer",
     photo: "/images/vartech-team/co-founder.webp",
@@ -29,7 +24,12 @@ const team = [
     photo: "/images/vartech-team/head-operation.webp",
   },
   {
-    name: "Hafiz B.",
+    name: "Fajrul F.",
+    role: "Logistics Coordinator",
+    photo: "/images/vartech-team/logistics-coordinator.webp",
+  },
+  {
+    name: "Hafiz E.",
     role: "Warehouse Manager",
     photo: "/images/vartech-team/warehouse-manager.webp",
   },
@@ -83,7 +83,12 @@ usePageSeo({
     class="flex flex-col w-11/12 mx-auto max-w-[70rem] gap-15 pt-10 text-white"
   >
     <section class="flex flex-col gap-6">
-      <h1 class="text-3xl font-bold text-white md:text-4xl md:text-center" id="about-title">About Us</h1>
+      <h1
+        class="text-3xl font-bold text-white md:text-4xl md:text-center"
+        id="about-title"
+      >
+        About Us
+      </h1>
       <p class="md:text-center lg:w-5/6 mx-auto text-zinc-300">
         Vartech.id is a custom event technology team focused on building digital
         experiences that solve real problems in live events and brand
@@ -144,7 +149,9 @@ usePageSeo({
     </section>
 
     <section class="flex flex-col gap-6">
-      <h2 class="text-3xl font-bold lg:text-center text-white">Meet the Vartech Team</h2>
+      <h2 class="text-3xl font-bold lg:text-center text-white">
+        Meet the Vartech Team
+      </h2>
       <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <li v-for="member in team" :key="member.name">
           <div

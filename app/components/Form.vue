@@ -106,7 +106,7 @@ const handleContactSubmit = async () => {
       <div class="flex flex-col gap-6">
         <div v-if="address">
           <h3 class="font-bold uppercase text-xl">Address</h3>
-          <address class="not-italic font-normal text-sm">{{ address }}</address>
+          <address class="not-italic font-normal text-sm py-2">{{ address }}</address>
         </div>
         <div v-if="emails.length">
           <h3 class="font-bold uppercase text-xl">Email</h3>
@@ -132,7 +132,7 @@ const handleContactSubmit = async () => {
             <div
               v-for="social in socials"
               :key="social.href"
-              class="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white/20 backdrop-blur-md shadow-lg"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white/20 backdrop-blur-md shadow-lg py-2"
             >
               <a class="block w-8 h-8" :href="social.href" :aria-label="social.label">
                 <span v-html="social.icon" class="block h-full w-full" />

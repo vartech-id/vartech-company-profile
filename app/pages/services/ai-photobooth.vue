@@ -7,9 +7,10 @@ import {
 } from "~/composables/useSiteSeo";
 import { getRelatedProjects } from "~/data/related-projects";
 
-const seoTitle = "AI Photobooth | Vartech.id - AI Image Automation for Events";
+const seoTitle =
+  "AI Photobooth | Vartech.id - Face Swap, AI Photo Generation & Event Image Automation";
 const seoDescription =
-  "Build AI photobooth experiences with face swap, themed image generation, automated photo processing, QR delivery, and branded event output.";
+  "Create interactive AI photobooth experiences for events with face swap, AI image generation, themed photo transformation, branded overlays, QR download, email delivery, and print-ready output.";
 
 usePageSeo({
   title: seoTitle,
@@ -35,45 +36,45 @@ const beforeAfterImages = [
   {
     name: "original",
     src: "/services/ai-photobooth/before-ai.webp",
-    alt: "before ai photo",
+    alt: "Original guest photo before AI photobooth transformation",
   },
   {
     name: "ai",
     src: "/services/ai-photobooth/after-ai.webp",
-    alt: "after ai photo",
+    alt: "AI photobooth result after face swap and themed image generation",
   },
 ];
 
 const carouselAssets = [
   {
     image: "/services/ai-photobooth/carousel-assets/journey-1.webp",
-    alt: "AI photobooth result showing two guests transformed into a futuristic cyber city theme with branded event overlay",
-    caption: "Futuristic AI Photobooth Result",
+    alt: "AI photobooth result with futuristic theme, face transformation, and branded event visual output",
+    caption: "Futuristic AI Photo Transformation",
   },
   {
     image: "/services/ai-photobooth/carousel-assets/journey-2.webp",
-    alt: "Guest holding an AI-generated photobooth print with custom event branding and themed visual design",
-    caption: "Custom AI Photo Print",
+    alt: "Guest holding a printed AI photobooth result with custom event branding and campaign design",
+    caption: "Branded AI Photobooth Print",
   },
   {
     image: "/services/ai-photobooth/carousel-assets/journey-3.webp",
-    alt: "AI-generated tech enthusiast portrait with futuristic server room background and cinematic digital styling",
-    caption: "Themed AI Portrait Generation",
+    alt: "AI-generated portrait result created from guest photo using themed image automation for events",
+    caption: "Personalized AI Portrait Generation",
   },
   {
     image: "/services/ai-photobooth/carousel-assets/journey-4.webp",
-    alt: "Branded event photobooth output card displayed at a corporate activation booth with custom campaign visuals",
-    caption: "Branded Event Photo Output",
+    alt: "Corporate event AI photobooth output with custom campaign frame and branded photo design",
+    caption: "Corporate Event Photo Activation",
   },
   {
     image: "/services/ai-photobooth/carousel-assets/journey-5.webp",
-    alt: "Original guest photo captured before AI transformation for a personalized photobooth experience",
+    alt: "Original guest capture used as the source image for AI photobooth face swap and transformation",
     caption: "Original Guest Capture",
   },
   {
     image: "/services/ai-photobooth/carousel-assets/journey-6.webp",
-    alt: "Transparent AI photobooth photo card with Ramadan-themed event branding and decorative light display",
-    caption: "Themed Photo Card Display",
+    alt: "Themed AI photobooth photo card with event branding, decorative background, and shareable visual output",
+    caption: "Themed Shareable Photo Result",
   },
 ];
 
@@ -104,7 +105,7 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
       >
         <NuxtImg
           src="/services/ai-photobooth/card-cover.webp"
-          alt="Guests using a QR-based registration system during an event check-in"
+          alt="AI photobooth experience for events with face swap, themed image generation, QR download, and branded photo output"
           class="h-full w-full object-cover"
         />
       </div>
@@ -114,13 +115,16 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
           id="overview-title"
           class="max-w-xs text-2xl font-semibold leading-tight text-white md:max-w-md md:text-3xl"
         >
-          Premium Photobooth Experience
+          Interactive AI Photobooth for Branded Event Experiences
         </h2>
 
         <p class="text-sm leading-7 text-zinc-300 md:text-base">
-          From camera capture and branded overlays to instant delivery and
-          on-site printing, we develop custom photobooth workflows designed for
-          events, brand activations, and a smooth guest experience.
+          Vartech.id builds custom AI photobooth experiences for corporate
+          events, brand activations, exhibitions, weddings, and private events.
+          From guest photo capture, face swap, AI image generation, themed photo
+          transformation, branded overlays, QR download, email delivery, and
+          print-ready output, every workflow is designed to create a memorable
+          and shareable event experience.
         </p>
 
         <ul
@@ -151,7 +155,8 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
                 </svg>
               </span>
               <p class="text-sm leading-6 text-zinc-200 md:text-base">
-                DSLR or webcam capture workflow tailored for your event
+                AI face swap and themed photo generation for personalized event
+                content
               </p>
             </div>
           </li>
@@ -180,7 +185,8 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
                 </svg>
               </span>
               <p class="text-sm leading-6 text-zinc-200 md:text-base">
-                Branded overlays and templates aligned with campaign visuals
+                Custom themes, templates, and branded overlays aligned with your
+                campaign
               </p>
             </div>
           </li>
@@ -209,7 +215,8 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
                 </svg>
               </span>
               <p class="text-sm leading-6 text-zinc-200 md:text-base">
-                Instant photo delivery via QR, email, or sharing station
+                Instant QR download, email delivery, and digital sharing flow
+                for guests
               </p>
             </div>
           </li>
@@ -238,7 +245,8 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
                 </svg>
               </span>
               <p class="text-sm leading-6 text-zinc-200 md:text-base">
-                On-site printing designed for fast and reliable guest output
+                Print-ready AI photo output optimized for fast on-site event
+                production
               </p>
             </div>
           </li>
@@ -287,12 +295,12 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
                 <h3
                   class="text-lg font-semibold leading-snug text-white md:text-xl"
                 >
-                  Camera Capture Workflow
+                  Smart Guest Capture Flow
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Build a custom capture flow with countdown, live preview,
-                  retake options, and smooth guest interaction from start to
-                  finish.
+                  Create a guided photo session with live preview, countdown,
+                  retake option, and touch-friendly interaction so guests can
+                  capture the best source photo before AI processing begins.
                 </p>
               </div>
             </article>
@@ -348,11 +356,13 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
                 <h3
                   class="text-lg font-semibold leading-snug text-white md:text-xl"
                 >
-                  Branded Overlay System
+                  AI Face Swap & Image Generation
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Apply custom frames, campaign graphics, and branded layouts
-                  automatically to every photo output.
+                  Transform guest photos into custom AI portraits, campaign
+                  characters, cinematic themes, fantasy visuals, or branded
+                  story-based images while keeping the result personal and
+                  event-ready.
                 </p>
               </div>
             </article>
@@ -394,11 +404,12 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
                 <h3
                   class="text-lg font-semibold leading-snug text-white md:text-xl"
                 >
-                  Instant Photo Delivery
+                  Branded Theme & Overlay System
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Deliver final photos instantly through QR code, email, or
-                  digital sharing flow for a faster guest experience.
+                  Apply custom campaign visuals, event frames, product branding,
+                  sponsor logos, themed backgrounds, and final layouts
+                  automatically to every AI photobooth result.
                 </p>
               </div>
             </article>
@@ -429,11 +440,12 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
                 <h3
                   class="text-lg font-semibold leading-snug text-white md:text-xl"
                 >
-                  Sharing and Download Flow
+                  QR Download & Email Delivery
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Create a seamless post-capture flow for downloading, sharing,
-                  and accessing branded photo results.
+                  Let guests access their AI photo instantly through a QR code,
+                  email link, or digital download page, making the result easy
+                  to save, share, and post on social media.
                 </p>
               </div>
             </article>
@@ -488,11 +500,12 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
                 <h3
                   class="text-lg font-semibold leading-snug text-white md:text-xl"
                 >
-                  On-site Technical Support
+                  On-site AI Event Operation
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Support live event operations with on-site setup,
-                  troubleshooting, and workflow monitoring when needed.
+                  Support live event execution with booth setup, camera flow,
+                  AI processing monitoring, guest assistance, troubleshooting,
+                  and operational control during the event.
                 </p>
               </div>
             </article>
@@ -546,11 +559,12 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
                 <h3
                   class="text-lg font-semibold leading-snug text-white md:text-xl"
                 >
-                  Print-ready Output
+                  Print-ready Branded Output
                 </h3>
                 <p class="mt-2 break-words text-sm leading-6 text-zinc-300">
-                  Prepare final photo outputs for instant printing with layouts
-                  optimized for quality, speed, and reliable event production.
+                  Generate high-quality AI photo results with layouts prepared
+                  for instant printing, event souvenirs, brand activations,
+                  product campaigns, and premium guest takeaways.
                 </p>
               </div>
             </article>
@@ -578,7 +592,7 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
       <h2
         class="text-2xl font-bold uppercase tracking-wide text-white md:text-3xl"
       >
-        How It Works
+        How AI Photobooth Works
       </h2>
 
       <div class="flex flex-col gap-6 md:flex-row">
@@ -586,17 +600,18 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
           <div class="overflow-hidden border border-zinc-800">
             <NuxtImg
               src="/services/ai-photobooth/how-it-works/step-1.webp"
-              alt="Guests using a QR-based registration system during an event check-in"
+              alt="Guest taking a source photo for AI photobooth face swap and image generation"
               class="w-full object-cover"
             />
           </div>
           <h3 class="py-3 text-center text-2xl font-bold text-white">
-            Take a photo
+            Capture the Guest Photo
           </h3>
           <p class="leading-7 text-zinc-300">
-            Step into the photobooth or be photographed by a professional.
-            Capture your moments in high quality, whether you're at a wedding,
-            corporate event, or any special gathering.
+            Guests start by taking a clear source photo through the photobooth
+            camera or assisted capture setup. This photo becomes the base for
+            the AI transformation, face swap, themed portrait, or campaign-based
+            visual output.
           </p>
         </div>
 
@@ -604,18 +619,18 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
           <div class="overflow-hidden border border-zinc-800">
             <NuxtImg
               src="/services/ai-photobooth/how-it-works/step-2.webp"
-              alt="AI Enhanced Result"
+              alt="AI photobooth processing guest photo into a themed branded image result"
               class="w-full object-cover"
             />
           </div>
           <h3 class="py-3 text-center text-2xl font-bold text-white">
-            A.I Magic
+            Generate the AI Result
           </h3>
           <p class="leading-7 text-zinc-300">
-            Watch as our AI technology enhances your photo. Based on your chosen
-            theme or design prompt, the AI applies custom overlays, background
-            effects, and styling, transforming your image into something
-            extraordinary.
+            The system processes the guest photo using AI image automation based
+            on the selected theme, character, product concept, or brand
+            campaign. The final result can include face swap, background
+            transformation, cinematic styling, and branded overlay design.
           </p>
         </div>
 
@@ -623,15 +638,18 @@ const relatedProjects = getRelatedProjects("/services/ai-photobooth");
           <div class="overflow-hidden border border-zinc-800">
             <NuxtImg
               src="/services/ai-photobooth/how-it-works/step-3.webp"
-              alt="Guests using a QR-based registration system during an event check-in"
+              alt="Guest downloading and sharing an AI photobooth result through QR code and email delivery"
               class="w-full object-cover"
             />
           </div>
-          <h3 class="py-3 text-center text-2xl font-bold text-white">Share</h3>
+          <h3 class="py-3 text-center text-2xl font-bold text-white">
+            Download, Share, or Print
+          </h3>
           <p class="leading-7 text-zinc-300">
-            Instantly share your enhanced photo with friends and family. Whether
-            via QR code, social media, or email, your personalized photo is
-            ready to go, ensuring everyone can enjoy the fun instantly.
+            Once the AI photo is ready, guests can download it through QR code,
+            receive it by email, share it digitally, or print it on-site as a
+            branded souvenir. This makes the AI photobooth experience fast,
+            interactive, and memorable.
           </p>
         </div>
       </div>

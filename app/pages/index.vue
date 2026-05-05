@@ -29,7 +29,8 @@ const faqItems = [
       "Yes. Even if your idea or technical requirement is not listed as one of our main services, Vartech is happy to help understand your needs, explore possible solutions, and recommend a practical digital approach. We focus on helping you find the right solution, not only offering fixed service packages.",
   },
   {
-    question: "Can I consult with Vartech before choosing the right digital solution?",
+    question:
+      "Can I consult with Vartech before choosing the right digital solution?",
     answer:
       "Yes. You can discuss your event idea, campaign goal, booth flow, technical setup, and expected audience experience with Vartech before deciding the right solution. We can help translate your idea into a practical digital experience that fits your objective, timeline, budget, and production needs.",
   },
@@ -139,7 +140,6 @@ useHead({
     },
   ],
 });
-
 </script>
 <template>
   <div
@@ -208,28 +208,31 @@ useHead({
           class="text-[0.9rem] sm:text-base flex flex-col gap-4 lg:gap-6 border-blue-600 md:text-lg xl:text-xl"
         >
           <p>
-            Vartech.id is a digital event technology company that builds custom software,
-            interactive systems, and automation for live events, brand activations,
-            corporate campaigns, and business needs.
+            Vartech.id is a digital event technology company that builds custom
+            software, interactive systems, and automation for live events, brand
+            activations, corporate campaigns, and business needs.
           </p>
 
           <p>
-            We started Vartech after seeing how many creative event ideas were limited by
-            generic tools, manual workflows, and rigid systems. Our goal is to help brands,
-            agencies, and event organizers turn those ideas into practical digital
-            experiences that are reliable, engaging, and easy to operate on-site.
+            We started Vartech after seeing how many creative event ideas were
+            limited by generic tools, manual workflows, and rigid systems. Our
+            goal is to help brands, agencies, and event organizers turn those
+            ideas into practical digital experiences that are reliable,
+            engaging, and easy to operate on-site.
           </p>
 
           <p>
-            Instead of offering only fixed service packages, we focus on understanding the
-            problem behind each project. From registration flows and audience interaction
-            to AI-powered experiences and real-time displays, every solution is designed
-            around the event goal, user journey, technical setup, and production needs.
+            Instead of offering only fixed service packages, we focus on
+            understanding the problem behind each project. From registration
+            flows and audience interaction to AI-powered experiences and
+            real-time displays, every solution is designed around the event
+            goal, user journey, technical setup, and production needs.
           </p>
 
           <p>
-            Our mission is simple: transform complex technical ideas into seamless digital
-            experiences that audiences can instantly understand, enjoy, and remember.
+            Our mission is simple: transform complex technical ideas into
+            seamless digital experiences that audiences can instantly
+            understand, enjoy, and remember.
           </p>
         </div>
       </div>
@@ -263,38 +266,6 @@ useHead({
       <article
         class="border border-zinc-700 bg-zinc-950 shadow-sm flex flex-col gap-4 md:gap-6 p-4"
       >
-        <h3 class="text-2xl font-bold">Custom Photobooth Development</h3>
-        <p class="text-base md:text-lg lg:text-xl text-gray-400 font-semibold">
-          From camera capture to branded overlays, delivery, and printing, we
-          develop photobooth workflows that feel premium and intuitive designed
-          for speed on-site and a smooth guest experience.
-        </p>
-        <NuxtLink
-          aria-label="Learn more about Custom Photobooth Development"
-          class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
-          to="/services/custom-photobooth"
-          >Learn more →</NuxtLink
-        >
-      </article>
-      <article
-        class="border border-zinc-700 bg-zinc-950 shadow-sm flex flex-col gap-4 md:gap-6 p-4"
-      >
-        <h3 class="text-2xl font-bold">Ai Photobooth & Image Automation</h3>
-        <p class="text-base md:text-lg lg:text-xl text-gray-400 font-semibold">
-          From face swap to enhancement and automated processing, we turn AI
-          into practical event-ready features optimized for consistent results,
-          fast turnaround, and scalable output.
-        </p>
-        <NuxtLink
-          aria-label="Learn more about Ai Photobooth and Image Automation"
-          class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
-          to="/services/ai-photobooth"
-          >Learn more →</NuxtLink
-        >
-      </article>
-      <article
-        class="border border-zinc-700 bg-zinc-950 shadow-sm flex flex-col gap-4 md:gap-6 p-4"
-      >
         <h3 class="text-2xl font-bold">Gamification & Interactive Games</h3>
         <p class="text-base md:text-lg lg:text-xl text-gray-400 font-semibold">
           From quick mini-games to full gamification systems, we build
@@ -312,6 +283,22 @@ useHead({
       <article
         class="border border-zinc-700 bg-zinc-950 shadow-sm flex flex-col gap-4 md:gap-6 p-4"
       >
+        <h3 class="text-2xl font-bold">Custom Photobooth Development</h3>
+        <p class="text-base md:text-lg lg:text-xl text-gray-400 font-semibold">
+          From camera capture to branded overlays, delivery, and printing, we
+          develop photobooth workflows that feel premium and intuitive designed
+          for speed on-site and a smooth guest experience.
+        </p>
+        <NuxtLink
+          aria-label="Learn more about Custom Photobooth Development"
+          class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
+          to="/services/custom-photobooth"
+          >Learn more →</NuxtLink
+        >
+      </article>
+      <article
+        class="border border-zinc-700 bg-zinc-950 shadow-sm flex flex-col gap-4 md:gap-6 p-4"
+      >
         <h3 class="text-2xl font-bold">Interactive Live Experiences</h3>
         <p class="text-base md:text-lg lg:text-xl text-gray-400 font-semibold">
           From live message walls to real-time screen outputs, we power
@@ -322,6 +309,22 @@ useHead({
           aria-label="Learn more about Interactive Live Experiences"
           class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
           to="/services/interactive-experience"
+          >Learn more →</NuxtLink
+        >
+      </article>
+      <article
+        class="border border-zinc-700 bg-zinc-950 shadow-sm flex flex-col gap-4 md:gap-6 p-4"
+      >
+        <h3 class="text-2xl font-bold">Ai Photobooth & Image Automation</h3>
+        <p class="text-base md:text-lg lg:text-xl text-gray-400 font-semibold">
+          From face swap to enhancement and automated processing, we turn AI
+          into practical event-ready features optimized for consistent results,
+          fast turnaround, and scalable output.
+        </p>
+        <NuxtLink
+          aria-label="Learn more about Ai Photobooth and Image Automation"
+          class="sm:text-base md:text-lg lg:text-xl text-white underline decoration-dotted decoration-gray-400 underline-offset-4"
+          to="/services/ai-photobooth"
           >Learn more →</NuxtLink
         >
       </article>
@@ -344,9 +347,7 @@ useHead({
       >
         Works
       </h2>
-      <div
-        class="relative w-full flex flex-col gap-10 items-center py-8"
-      >
+      <div class="relative w-full flex flex-col gap-10 items-center py-8">
         <article
           class="flex flex-col gap-5 w-full items-center overflow-hidden"
         >
@@ -383,7 +384,7 @@ useHead({
       >
     </section>
     <Form
-      :heading="['Share your ideas', 'Let\'s make them real !']" 
+      :heading="['Share your ideas', 'Let\'s make them real !']"
       :address="companyData.address"
       :emails="companyData.emails"
       :phones="companyData.phones"

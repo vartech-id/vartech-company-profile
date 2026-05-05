@@ -31,29 +31,6 @@ usePageSeo({
   ],
 });
 
-const carouselAssets = [
-  {
-    image: "/services/gamification-interactive-games/card-cover.webp",
-    alt: "Gamification Event",
-    caption: "Gamification Event",
-  },
-  {
-    image: "/services/gamification-interactive-games/scream-game-cover.webp",
-    alt: "Scream Game",
-    caption: "Scream Game",
-  },
-  {
-    image: "/services/gamification-interactive-games/quiz-game-cover.webp",
-    alt: "Quiz Game",
-    caption: "Quiz Game",
-  },
-  {
-    image: "/services/gamification-interactive-games/scrabble-words-cover.webp",
-    alt: "Scrabble Words",
-    caption: "Scrabble Words",
-  },
-];
-
 const relatedProjects = getRelatedProjects("/services/gamification");
 </script>
 
@@ -336,11 +313,6 @@ const relatedProjects = getRelatedProjects("/services/gamification");
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- ENDLESS LOOP -->
-      <section class="w-full flex flex-col items-center">
-        <EndlessLoop :slides="carouselAssets" />
       </section>
 
       <Cta />

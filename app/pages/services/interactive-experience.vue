@@ -31,39 +31,6 @@ usePageSeo({
   ],
 });
 
-const carouselAssets = [
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-  {
-    image: "/images/carousel-ai-pb/sample-ai.jpeg",
-    alt: "example-a",
-    caption: "Blackmores Event Booth",
-  },
-];
-
 const relatedProjects = getRelatedProjects("/services/interactive-experience");
 </script>
 
@@ -229,11 +196,6 @@ const relatedProjects = getRelatedProjects("/services/interactive-experience");
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- ENDLESS LOOP -->
-      <section class="w-full flex flex-col items-center">
-        <EndlessLoop :slides="carouselAssets" />
       </section>
 
       <Cta />
