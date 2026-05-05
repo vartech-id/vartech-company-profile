@@ -70,6 +70,6 @@ useHead(() => ({
       <NuxtPage />
     </main>
     <AppFooter />
-    <FloatingWhatAppButton />
+    <LazyFloatingWhatAppButton />
   </div>
 </template>

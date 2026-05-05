@@ -123,12 +123,13 @@ onBeforeUnmount(() => {
         <NuxtImg
           class="h-auto w-38 shrink-0 lg:w-42 xl:w-44"
           :src="logoSrc"
-          width="2243"
-          height="525"
+          width="400"
+          height="94"
           alt="Vartech logo"
           preload
+          fetchpriority="high"
           format="webp"
-          sizes="sm:152px md:168px lg:176px"
+          sizes="152px md:168px lg:176px"
           @click="closeMenuLogo"
       /></NuxtLink>
 

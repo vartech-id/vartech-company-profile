@@ -82,13 +82,13 @@ const clients = [
             <NuxtImg
               :src="client.src"
               :alt="client.alt"
-              width="400"
-              height="200"
+              width="160"
+              height="80"
               class="clients-marquee__logo"
-              loading="eager"
+              loading="lazy"
               draggable="false"
               format="webp"
-              quality="80"
+              quality="60"
             />
           </li>
         </ul>
@@ -103,13 +103,13 @@ const clients = [
             <NuxtImg
               :src="client.src"
               :alt="client.alt"
-              width="400"
-              height="200"
+              width="160"
+              height="80"
               class="clients-marquee__logo"
               loading="lazy"
               draggable="false"
               format="webp"
-              quality="80"
+              quality="60"
             />
           </li>
         </ul>
@@ -121,10 +121,7 @@ const clients = [
 <style scoped>
 .clients-marquee {
   width: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.12);
   padding: 0 0.75rem;
 }
 

@@ -125,17 +125,17 @@ useHead({
       >
         <h2
           id="clients-title"
-          class="text-center font-roboto text-xs font-light"
+          class="text-center font-roboto text-xs"
         >
           Our Clients:
         </h2>
-        <ClientsMarque />
+        <LazyClientsMarque />
       </section>
     </section>
 
     <section
       aria-labelledby="about"
-      class="flex flex-col gap-10 items-center sm:max-w-prose md:max-w-2xl lg:max-w-5xl xl:max-w-7xl"
+      class="offscreen-section flex flex-col gap-10 items-center sm:max-w-prose md:max-w-2xl lg:max-w-5xl xl:max-w-7xl"
     >
       <h2
         id="about"
@@ -152,6 +152,7 @@ useHead({
           width="253"
           height="232"
           alt="Vartech logo only"
+          loading="lazy"
         />
         <div
           class="text-[0.9rem] sm:text-base flex flex-col gap-4 lg:gap-6 border-blue-600 md:text-lg xl:text-xl"
@@ -188,7 +189,7 @@ useHead({
     </section>
     <section
       aria-labelledby="services"
-      class="flex flex-col items-center gap-10 justify-center md:max-w-4xl lg:max-w-5xl"
+      class="offscreen-section flex flex-col items-center gap-10 justify-center md:max-w-4xl lg:max-w-5xl"
     >
       <h2
         id="services"
@@ -288,7 +289,7 @@ useHead({
     <section
       id="works"
       aria-labelledby="works-title"
-      class="relative w-full flex flex-col gap-10 items-center"
+      class="offscreen-section relative w-full flex flex-col gap-10 items-center"
     >
       <h2
         id="works-title"
@@ -300,7 +301,7 @@ useHead({
         <article
           class="flex flex-col gap-5 w-full items-center overflow-hidden"
         >
-          <WorksSwiper :items="works" />
+          <LazyWorksSwiper :items="works" />
         </article>
         <NuxtLink
           aria-label="View all works"
@@ -310,7 +311,7 @@ useHead({
         >
       </div>
     </section>
-    <FaqSection
+    <LazyFaqSection
       description="Answers to common questions about custom event tech, AI photobooths, and brand activation experiences."
       :items="faqItems"
     />
@@ -332,7 +333,7 @@ useHead({
         >Get In Touch</NuxtLink
       >
     </section>
-    <Form
+    <LazyForm
       :heading="['Share your ideas', 'Let\'s make them real !']"
       :address="companyData.address"
       :emails="companyData.emails"
@@ -342,6 +343,11 @@ useHead({
   </div>
 </template>
 <style scoped>
+.offscreen-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
 @media (max-width: 387px) {
   #hero-title {
     font-size: 2.5rem;

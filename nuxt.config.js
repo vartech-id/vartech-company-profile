@@ -17,9 +17,26 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://vartech.id',
   },
 
+  nitro: {
+    compressPublicAssets: {
+      gzip: true,
+      brotli: true,
+    },
+  },
+
   vite: {
     build: {
       sourcemap: false,
+      cssCodeSplit: true,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('embla-carousel')) {
+              return 'embla';
+            }
+          },
+        },
+      },
     },
     plugins: [tailwindcss()],
     optimizeDeps: {
